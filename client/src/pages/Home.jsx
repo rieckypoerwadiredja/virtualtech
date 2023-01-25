@@ -8,7 +8,7 @@ import LoadingScreen from "../component/Loading/LoadingScreen";
 import useFetch from "../hooks/useFetch";
 
 function Home() {
-  const { data, error } = useFetch("/api/name");
+  const { data, error } = useFetch("/api/porto");
   const [isLoading, setIsLoading] = useState(true);
   const [animationDone, setAnimationDone] = useState(false); // seluruh animasi telah selesai (termasuk slide pada hlm ini)
   const [porto, setPorto] = useState(false); // apakah data sudah diload ?? -> ksh tau untuk jalankan fungsi animasi slide
