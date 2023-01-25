@@ -1,0 +1,11 @@
+{
+  "name": "webster",
+  "version": "1.0.0",
+  "description": "Webster company website development project using Node.js, Express, and React.js. Professional and responsive design, and thorough testing for optimal performance.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
