@@ -7,7 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"npm run client\" \"npm run server\"",
     "client": "cd client && npm start",
-    "server": "cd server && npm start"
+    "server": "cd server && npm start",
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "concurrently \"npm install\" \"npm run install-client\" \"npm run install-server\"",
+    "test-client": "cd client && npm test",
+    "test-server": "cd server && npm test"
   },
   "author": "",
   "license": "MIT",
