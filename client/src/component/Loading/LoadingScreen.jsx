@@ -7,7 +7,7 @@ function LoadingScreen({getdata, onLoadingAnimationDone}) {
     const [loadingAnim, setLoadingAnim] = useState(false);
     
     useEffect(() => {
-        console.log(loadingAnim)
+        // console.log(loadingAnim)
         if(loadingAnim) {
             onLoadingAnimationDone(true)
         }
@@ -21,7 +21,7 @@ function LoadingScreen({getdata, onLoadingAnimationDone}) {
             initial={{ width: 0}}
             variants={{
                 slide: {
-                    width:["0vw","100vw"],
+                    width:["0%","100%"],
                     transition:{duration:0.8, delay:0.5}
                 }
             }}
