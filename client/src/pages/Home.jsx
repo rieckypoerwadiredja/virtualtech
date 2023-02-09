@@ -78,7 +78,7 @@ function Home() {
             className="absolute top-0 left-0 z-10 bg-custome-green-400 w-full h-screen">                
         </motion.div>
 
-        {/* menu section for navigation */}
+        {/* menu for navigation */}
         {menuOpen && <Menu />}
         
         <MenuProvider value={{menuOpen, setMenuOpen}}>
