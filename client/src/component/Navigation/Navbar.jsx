@@ -1,27 +1,46 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Context
-import {
-    MenuConsumer,
-} from "../../context/Menu";
+import { MenuConsumer } from "../../context/Menu";
+// Component
+import Paragraph from "../Desc/Paragraph";
+import BurgerButton from "../Button/BurgerButton";
+// Icon
+import { FaCircleNotch } from "react-icons/fa";
 
 function Navbar() {
-    return(
-        <div className="w-full h-[75px] px-[20px] border-2 border-trans-white-400 flex justify-between items-center">
-            <span className="font-semibold text-2xl">VirtualTeach ©</span>
-            {/* <Menu /> */}
+  return (
+    <div className="w-full h-[75px] px-[20px] border-2 border-trans-white-400 flex justify-between items-center">
+      <Link
+        className="font-semibold text-2xl min-w-fit w-[40%] hover:underline"
+        to="/"
+      >
+        VirtualTeach ©
+      </Link>
+      {/* <Menu /> */}
 
-             <MenuConsumer>
-                {({ menuOpen, setMenuOpen }) => {
-                   return <div className="relative burger-menu pl-5 flex flex-col items-center" onClick={() => setMenuOpen(!menuOpen)}>
-                            <span className={`w-[45px] h-[2px] bg-white duration-300 ${menuOpen && 'absolute top-1/2 right-0 rotate-45 origin-center'}`}></span>
-                            <span className={`w-[45px] h-[2px] mt-[6px] bg-white duration-300 ${menuOpen && 'absolute top-1/2 right-0 -rotate-45 origin-center mt-0'}`}></span>
-                          </div> 
-                }}
-            </MenuConsumer>
-             
+      <MenuConsumer>
+        {({ menuOpen, setMenuOpen }) => {
+          return (
+            <div
+              className="relative burger-menu pl-5 h-full mdXL:pl-0 flex flex-col justify-center items-center cursor-pointer"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <BurgerButton menuOpen={menuOpen} />
+            </div>
+          );
+        }}
+      </MenuConsumer>
+
+      <div className="hidden mdXL:flex justify-end items-center min-w-fit w-[40%]">
+        <div className="p-2 flex justify-center items-center">
+          <FaCircleNotch className="text-[14px]" />
         </div>
-    )
+        <Paragraph text="Drone photography services" medium />
+      </div>
+    </div>
+  );
 }
 
 export default Navbar;

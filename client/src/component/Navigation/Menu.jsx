@@ -1,15 +1,15 @@
 import React from "react";
 
-// Component 
+// Component
 import Copyright from "../Footer/Copyright";
 
 function Menu() {
-    return(
-        <div>
-            Menu
-            <Copyright/>
-        </div>
-    )
+  return (
+    <div className="absolute top-0 left-0 w-full h-screen bg-blackScreen-800">
+      Menu
+      <Copyright />
+    </div>
+  );
 }
 
 export default Menu;

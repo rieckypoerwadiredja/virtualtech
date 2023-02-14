@@ -1,14 +1,23 @@
 import React from "react";
-
+import { Routes, Route } from "react-router-dom";
 // Page
 import HomePage from "./pages/Home.jsx";
 
 // style
 import "./input.css";
-function App() {  
+
+if (process.env.NODE_ENV !== "development") {
+  console.error = (message) => {
+    throw new Error(message);
+  };
+}
+
+function App() {
   return (
     <div className="App">
-      <HomePage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
