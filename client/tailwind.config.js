@@ -6,6 +6,8 @@ module.exports = {
       padding: {
         "web-sm": "1.25rem",
         "web-md": "2.50rem",
+        "web-lg": "4rem",
+        "section-sm": "1.75rem",
       },
       fontSize: {
         "title-xs": [
@@ -34,6 +36,45 @@ module.exports = {
           {
             lineHeight: "1",
             letterSpacing: "-0.050em",
+          },
+        ],
+        "h2-sm": [
+          "44px",
+          {
+            lineHeight: "1",
+            letterSpacing: "-0.050em",
+          },
+        ],
+        "h2-md": [
+          "48px",
+          {
+            lineHeight: "1",
+            letterSpacing: "-0.050em",
+          },
+        ],
+        "h2-lg": [
+          "68px",
+          {
+            lineHeight: "1",
+            letterSpacing: "-0.050em",
+          },
+        ],
+        "quote-sm": [
+          "27px",
+          {
+            lineHeight: "1.5",
+          },
+        ],
+        "quote-md": [
+          "30px",
+          {
+            lineHeight: "1.5",
+          },
+        ],
+        "quote-lg": [
+          "40px",
+          {
+            lineHeight: "1.5",
           },
         ],
       },

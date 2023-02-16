@@ -11,7 +11,7 @@ import { FaCircleNotch } from "react-icons/fa";
 
 function Navbar() {
   return (
-    <div className="w-full h-[75px] px-[20px] border-2 border-trans-white-400 flex justify-between items-center">
+    <nav className="w-full h-[75px] px-[20px] border-2 border-trans-white-400 flex justify-between items-center">
       <Link
         className="font-semibold text-2xl min-w-fit w-[40%] hover:underline"
         to="/"
@@ -39,7 +39,7 @@ function Navbar() {
         </div>
         <Paragraph text="Drone photography services" medium />
       </div>
-    </div>
+    </nav>
   );
 }
 

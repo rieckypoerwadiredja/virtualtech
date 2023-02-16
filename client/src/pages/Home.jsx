@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 
 // Compoent
 import LoadingScreen from "../component/Loading/LoadingScreen";
-import Hero from "../component/Hero/Hero";
 import Menu from "../component/Navigation/Menu";
+import Hero from "../component/Hero/Hero";
+import SectionCompanyWords from "../component/Section/SectionCompanyWords";
 
 // Hooks API
 import useFetch from "../hooks/useFetch";
 
-// COntext
+// Context
 import { MenuProvider } from "../context/Menu";
 function Home() {
   const { data, error } = useFetch("/api/porto");
@@ -85,6 +86,9 @@ function Home() {
       <MenuProvider value={{ menuOpen, setMenuOpen }}>
         <Hero />
       </MenuProvider>
+      <main className="px-web-sm smXL:px-web-md xlX:px-web-lg">
+        <SectionCompanyWords />
+      </main>
 
       {/* <Hero animationDone={animationDone} /> */}
 
