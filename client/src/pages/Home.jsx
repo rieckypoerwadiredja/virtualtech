@@ -6,6 +6,8 @@ import LoadingScreen from "../component/Loading/LoadingScreen";
 import Menu from "../component/Navigation/Menu";
 import Hero from "../component/Hero/Hero";
 import SectionCompanyWords from "../component/Section/SectionCompanyWords";
+import SectionImageTitle from "../component/Section/SectionImageTitle";
+import SectionDescription from "../component/Section/SectionDescription";
 
 // Hooks API
 import useFetch from "../hooks/useFetch";
@@ -88,6 +90,10 @@ function Home() {
       </MenuProvider>
       <main className="px-web-sm smXL:px-web-md xlX:px-web-lg">
         <SectionCompanyWords />
+        <div className="flex flex-col mdXL:flex-row">
+          <SectionImageTitle />
+          <SectionDescription />
+        </div>
       </main>
 
       {/* <Hero animationDone={animationDone} /> */}
