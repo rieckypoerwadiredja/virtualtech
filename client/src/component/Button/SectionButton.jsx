@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Component
-import ExcessButoon from "../Button/ExcessButoon";
+import ExcessButoon from "./ExcessButoon";
 
 function SectionButton({ texts }) {
   return (
@@ -13,6 +13,7 @@ function SectionButton({ texts }) {
           text={text.text}
           redirectTo={text.redirectTo}
           bigText
+          animate
         />
       ))}
     </>

@@ -1,19 +1,27 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 // Component
 import BigText from "../Desc/BigText";
 import TitleSection from "../Desc/TitleSection";
 import Paragraph from "../Desc/Paragraph";
 
-function SectionTitleDescWithBigText() {
+function SectionTitleDescWithBigText({ bigText, title, desc }) {
   return (
     <div className="py-section-sm pt-14">
-      <BigText text="1400+" />
+      <BigText text={bigText} />
       <div className="mt-4 mb-12">
-        <TitleSection text="Minutes spent controlling devices drone the air." />
+        <TitleSection text={title} />
       </div>
-      <Paragraph text="So many people have already trusted us. This number is constantly growing thanks to the positive feedback from our customers." />
+      <Paragraph text={desc} />
     </div>
   );
 }
+
+SectionTitleDescWithBigText.propTypes = {
+  bigText: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+};
 
 export default SectionTitleDescWithBigText;

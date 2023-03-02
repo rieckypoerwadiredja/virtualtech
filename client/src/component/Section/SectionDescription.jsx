@@ -1,7 +1,7 @@
 import React from "react";
 // component
 import SectionTitleDesc from "./SectionTitleDesc";
-import SectionButton from "./SectionButton";
+import SectionButton from "../Button/SectionButton";
 import ImageRounded from "../Image/ImageRounded";
 
 function SectionDescription() {
@@ -15,6 +15,10 @@ function SectionDescription() {
         "We provide professional photo and video creation services during drone flights. We have the necessary equipment and skills to carry out the most advanced projects that are used in internet marketing. We have been operating in the industry for 8 years and during this time we have created many projects for our clients.",
         "We also conduct training and support young people to expand their knowledge in the field of aviation",
       ],
+      image: {
+        src: "./street-view.jpg",
+        name: "street drone view",
+      },
     },
     button: [
       {
@@ -45,7 +49,7 @@ function SectionDescription() {
       </div>
 
       <div className="relative overflow-x-visible w-[calc(100%+(1.75rem*2))] smXL:w-[calc(100%+((1.75rem+1.25rem)*2))] -ml-section-sm smXL:-ml-[calc(1.75rem+1.25rem)]">
-        <ImageRounded img="./street-view.jpg" overlap />
+        <ImageRounded img={data.section.image} overlap />
       </div>
     </div>
   );
