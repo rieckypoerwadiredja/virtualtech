@@ -15,7 +15,9 @@ import useFetch from "../hooks/useFetch";
 // Context
 import { MenuProvider } from "../context/Menu";
 function Home() {
-  const { data, error } = useFetch("/api/porto");
+  const { data, error } = useFetch(
+    "https://webster-backend.vercel.app/api/porto"
+  );
   const [isLoading, setIsLoading] = useState(true);
   const [animationDone, setAnimationDone] = useState(false); // seluruh animasi telah selesai (termasuk slide pada hlm ini)
   const [porto, setPorto] = useState(false); // apakah data sudah diload ?? -> ksh tau untuk jalankan fungsi animasi slide
