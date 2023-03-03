@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      margin: {
+        "section-sm": "1.75rem",
+      },
       padding: {
         "web-sm": "1.25rem",
         "web-md": "2.50rem",
@@ -59,6 +62,20 @@ module.exports = {
             letterSpacing: "-0.050em",
           },
         ],
+        "h3-sm": [
+          "38px",
+          {
+            lineHeight: "1",
+            letterSpacing: "-0.050em",
+          },
+        ],
+        "h3-md": [
+          "50px",
+          {
+            lineHeight: "1",
+            letterSpacing: "-0.050em",
+          },
+        ],
         "quote-sm": [
           "27px",
           {
@@ -75,6 +92,20 @@ module.exports = {
           "40px",
           {
             lineHeight: "1.5",
+          },
+        ],
+        "big-text-sm": [
+          "90px",
+          {
+            lineHeight: "1",
+            letterSpacing: "1",
+          },
+        ],
+        "big-text-md": [
+          "111px",
+          {
+            lineHeight: "1",
+            letterSpacing: "1",
           },
         ],
       },

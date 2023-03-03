@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== "development") {
 
 function App() {
   return (
-    <div className="App">
+    <div className="App max-w-[100%] overflow-hidden">
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>

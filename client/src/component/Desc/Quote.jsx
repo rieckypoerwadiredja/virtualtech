@@ -1,12 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function Quote() {
+function Quote({ text }) {
   return (
     <p className="text-quote-sm smXL:text-quote-md font-medium xlX:text-quote-lg">
-      Virtual© — creative agency that creating content design. We have knowledge
-      and provide landscape photography services for our advanced clients.
+      {text}
     </p>
   );
 }
+
+Quote.propTypes = {
+  text: PropTypes.string.isRequired,
+};
 
 export default Quote;

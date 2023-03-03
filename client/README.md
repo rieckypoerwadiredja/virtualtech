@@ -11,19 +11,19 @@ Cara Kerjanya:
 1.
 
 ```
-const { data, error, loading } = useFetch("/api/name"); 
+const { data, error, loading } = useFetch("/api/name");
 ```
 
 akan mengambil data dari api, selama proses akan diberikan nilai loading true sehingga section loading bisa tampil.
 
-2. Pada section Loading diberikan parameter getdata. getdata Mewakilkan apakah data sudah load dari api, jika sudah nilai true.  Nilai diambil dari state porto yang mewakili pemisalan (bukan data asli, cmn ngasih tau udh ada blm) data portfolio bisnis yang diambil.
+2. Pada section Loading diberikan parameter getdata. getdata Mewakilkan apakah data sudah load dari api, jika sudah nilai true. Nilai diambil dari state porto yang mewakili pemisalan (bukan data asli, cmn ngasih tau udh ada blm) data portfolio bisnis yang diambil.
 
 ```
   useEffect(()=>{
-      setTimeout(() => {  
+      setTimeout(() => {
         if(data) {
             setPorto(true)
-        } 
+        }
       }, 1600);
   },[data])
 
@@ -39,7 +39,7 @@ parameter pada LoadingScreen GetData sudah true, maka akan menjalankan animasi s
 animate={getdata && "slide"}
 ```
 
-Jika animasi slide selesai akan ngasih nilai  yang digunakan untuk ksh tau klo semua animasi telah selesai dijalankan.
+Jika animasi slide selesai akan ngasih nilai yang digunakan untuk ksh tau klo semua animasi telah selesai dijalankan.
 
 ```
 onAnimationComplete={() => setLoadingAnim(true)}
@@ -60,6 +60,7 @@ fungsi pada home.js --> meminta konfirmasi apakah semua animasi telah dijalankan
 
 FUNGSI dipanggil untuk mengirimkan bahwa animasi telah selesai semua
 (fungsi di loading section)
+
 ```
 useEffect(() => {
         console.log(loadingAnim)
@@ -69,13 +70,12 @@ useEffect(() => {
    }, [loadingAnim])
 ```
 
-5. 
-onLoadingAnimationDone true --> mengganti loading section ke konten utama dengan setIsLoading(false).
+5.  onLoadingAnimationDone true --> mengganti loading section ke konten utama dengan setIsLoading(false).
 
 nanti dibaca mengganti konten ke error atau data.
 
 Maka ada 2 seksi yang akan tampil error atau render datanya. Keduanya memilki mekanisme sama, yaitu slide pada Home Page.
-pada seksi keduanya memiliki : 
+pada seksi keduanya memiliki :
 
 ```bash
 <motion.div
@@ -90,4 +90,57 @@ pada seksi keduanya memiliki :
   className="absolute top-0 left-0 z-10 bg-custome-green-400 w-h-screen">
   </motion.div>
 ```
+
 Pada fungsi ini akan slide (awalnya pada loading hanya menutupi dengan slide green), disini kita buat untuk membukanya. Dengan triger jika animasi pada loading telah selesai.
+
+### IntersectionObserver
+
+langkah - langkah:
+
+1. penggunaannya menggunakan
+
+```
+  const ref = useRef(null);
+   const isIntersecting = useIntersectionObserver(ref, {
+    threshold: 0.8,
+    once: true,
+  });
+```
+
+```
+<div className={`${isIntersecting ? "bg-red-500" : ""}`} ref={ref}>
+</div>
+```
+
+Ref: akan mengembalikan nilai dari div (mengambil nilai DOM)
+variabel isIntersecting: Menjalankan hook untuk mendapatkan nilai boolean
+Jika true: Elemen berada pada screen user
+Jika falseL Element diluar screen user (masih dibawah atau atas screen usr hrs scroll lg)
+
+2. cara kerja pada hooks
+
+```
+const [isIntersecting, setIsIntersecting] = useState(false);
+```
+
+state untuk menyimpan nilai akhir (apakah emelen pada screen user atau tidak?)
+
+```
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsIntersecting(entry.isIntersecting);
+      console.log("aa");
+    }, option);
+
+    if (ref.current) {
+      console.log("tes");
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.unobserve(ref.current);
+    };
+```
+
+pada fungsi observer: untuk mengecek apakah element berada pada screen user atau tidak
+if (ref.current) : untuk menjalankan fungsi observer (hanya dijalankan ketika nilai DOM dari ref valid)
+setelah itu element ditak dipantau lagi
