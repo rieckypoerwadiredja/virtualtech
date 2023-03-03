@@ -2,10 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-var corsOptions = {
-  origin: ["https://vercel.com/", "http://localhost:3000"],
-  optionsSuccessStatus: 200, // For legacy browser support
-};
+
 app.use(cors());
 // Controller
 const portofolio = require("./controllers/portfolio");
