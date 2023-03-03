@@ -26,6 +26,8 @@ function Home() {
     setTimeout(() => {
       if (data) {
         setPorto(true);
+        console.log(data);
+        console.log(error);
       }
     }, 1600);
   }, [data]);
