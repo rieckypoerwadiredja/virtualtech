@@ -1,5 +1,5 @@
 async function Name() {
-  fetch("/api/name", {
+  fetch("/api/proto", {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
