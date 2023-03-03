@@ -3,7 +3,15 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: "GET",
+    allowedHeaders:
+      "Content-Type, Authorization, Origin, X-Requested-With, Accept",
+    credentials: true,
+  })
+);
 // Controller
 const portofolio = require("./controllers/portfolio");
 const notFound = require("./controllers/notFound");
