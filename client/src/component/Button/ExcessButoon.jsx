@@ -19,9 +19,7 @@ function ExcessButoon({ text, redirectTo, animate = false }) {
   if (animate) {
     return (
       <AnimatePresence>
-        <motion.Link
-          className="w-full min-w-fit text-left py-5 smXL:px-6 flex justify-between items-center h-[70px] group transition-all ease-out hover:bg-[#EAEDE1] border-b-[0.3px] border-gray-300 hover:border-[#BCC98C] hover:duration-500 hover:text-blackFont-800"
-          to={redirectTo}
+        <motion.div
           ref={ref}
           initial={{ opacity: 0, translateY: "40px" }}
           animate={
@@ -31,10 +29,18 @@ function ExcessButoon({ text, redirectTo, animate = false }) {
           }
           transition={{ duration: 0.5 }}
         >
-          <BigParagraph bold text={text} />
+          <Link
+            className="w-full min-w-fit text-left py-5 smXL:px-6 flex justify-between items-center h-[70px] group transition-all ease-out hover:bg-[#EAEDE1] border-b-[0.3px] border-gray-300 hover:border-[#BCC98C] hover:duration-500 hover:text-blackFont-800"
+            to={redirectTo}
+          >
+            <BigParagraph bold text={text} />
 
-          <FaLongArrowAltRight size={20} className="ml-0 sm:ml-[40px] w-fit" />
-        </motion.Link>
+            <FaLongArrowAltRight
+              size={20}
+              className="ml-0 sm:ml-[40px] w-fit"
+            />
+          </Link>
+        </motion.div>
       </AnimatePresence>
     );
   }

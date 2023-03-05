@@ -92,7 +92,7 @@ function Home() {
       <MenuProvider value={{ menuOpen, setMenuOpen }}>
         <Hero />
       </MenuProvider>
-      <main className="px-web-sm smXL:px-web-md xlX:px-web-lg">
+      <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto">
         <SectionCompanyWords />
         <div className="flex flex-col mdXL:flex-row">
           <SectionImageTitle />

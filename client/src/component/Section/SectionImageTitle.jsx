@@ -22,7 +22,7 @@ function SectionImageTitle() {
     },
   };
   return (
-    <div className="flex flex-col py-section-sm w-full mdXL:w-1/2 mdXL:mr-10">
+    <div className="flex flex-col py-section-sm w-full mdXL:w-1/2 mdXL:mr-10 xlX:mr-16">
       <div className="flex flex-col">
         <ImageRounded img={data.sectionImage.image} />
         <div className="mt-8">

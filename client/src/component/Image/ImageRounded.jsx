@@ -40,7 +40,7 @@ function ImageRounded({ img, overlap = false }) {
   return (
     <AnimatePresence>
       <motion.img
-        className="w-full h-[330px] smXL:h-auto rounded-bl-[3rem] bg-center object-cover"
+        className="w-full h-[330px] mdXL:h-[620px] rounded-bl-[3rem] bg-center object-cover"
         src={img.src}
         alt={img.name}
         ref={ref}

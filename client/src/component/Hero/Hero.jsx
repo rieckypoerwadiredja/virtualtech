@@ -5,7 +5,7 @@ import HeroSection from "./HeroSection";
 
 function Hero() {
   return (
-    <header className="relative w-full h-[732px] smXL:h-[110vh] smXL:min-h-[650px] px-web-sm smXL:px-web-md pt-5 text-white flex flex-col justify-between items-start overflow-hidden">
+    <header className="relative w-full h-[732px] smXL:h-[110vh] smXL:min-h-[650px] px-web-sm smXL:px-web-md xlX:px-web-lg pt-5 text-white flex flex-col justify-between items-start overflow-hidden">
       <Navbar />
       <img
         src="./drone.jpg"

@@ -9,7 +9,7 @@ module.exports = {
       padding: {
         "web-sm": "1.25rem",
         "web-md": "2.50rem",
-        "web-lg": "4rem",
+        "web-lg": "5rem",
         "section-sm": "1.75rem",
       },
       fontSize: {
