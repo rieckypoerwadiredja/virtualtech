@@ -1,5 +1,7 @@
 import React from "react";
+
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
 // Component
 import Paragraph from "../Desc/Paragraph";
@@ -7,16 +9,33 @@ import PageTitle from "../Heading/PageTitle";
 import MainButton from "../Button/MainButton";
 import CircleButton from "../Button/CircleButton";
 import MiniTitleDesc from "../Desc/MiniTItleDesc";
+import List from "../Navigation/List";
 
-function HeroSection({ data }) {
+function NavSection({ data, navigation = false }) {
   return (
     <div className="w-full h-[60%] smXL:h-fit flex flex-col mdXL:flex-row mdXL:justify-between max-w-[1532px] mx-auto">
-      <div className="w-full sm:w-[60%] text-white">
+      <motion.div
+        initial={{ opacity: 0, translateY: "8%" }}
+        animate={{
+          opacity: 1,
+          translateY: "0%",
+          transition: { duration: 0.8, delay: 0 },
+        }}
+        className="w-full sm:w-[60%] text-white"
+      >
         <Paragraph text="01" bold />
-        <PageTitle
-          highlighter={data.heading.highlighter}
-          text={data.heading.heading}
-        />
+        {navigation ? (
+          <div className="flex flex-col">
+            {data.nav.map((list) => (
+              <List text={list.text} redirectTo={list.redirectTo} />
+            ))}
+          </div>
+        ) : (
+          <PageTitle
+            highlighter={data.heading.highlighter}
+            text={data.heading.heading}
+          />
+        )}
         <div className="my-[40px] text-whiteFont-400">
           <Paragraph text={data.desc} />
         </div>
@@ -24,9 +43,17 @@ function HeroSection({ data }) {
           text={data.mainButton.text}
           redirectTo={data.mainButton.redirectTo}
         />
-      </div>
+      </motion.div>
 
-      <div className="hidden mdXL:flex flex-col w-[30%] justify-end items-end">
+      <motion.div
+        initial={{ opacity: 0, translateY: "8%" }}
+        animate={{
+          opacity: 1,
+          translateY: "0%",
+          transition: { duration: 0.6, delay: 0.2 },
+        }}
+        className="hidden mdXL:flex flex-col w-[30%] justify-end items-end"
+      >
         <div className="w-full flex justify-end items-start pb-10">
           <CircleButton
             text={data.circleButton.text}
@@ -41,13 +68,12 @@ function HeroSection({ data }) {
             desc={data.titleDesc.desc}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
-
-HeroSection.propTypes = {
-  animation: PropTypes.bool,
+NavSection.propTypes = {
+  data: PropTypes.object.isRequired,
+  navigation: PropTypes.bool,
 };
-
-export default HeroSection;
+export default NavSection;

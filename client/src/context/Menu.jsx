@@ -1,5 +1,5 @@
-import { createContext } from 'react';
- 
+import { createContext } from "react";
+
 const MenuContext = createContext();
 
 export const MenuProvider = MenuContext.Provider;

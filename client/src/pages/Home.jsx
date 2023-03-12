@@ -8,12 +8,16 @@ import Hero from "../component/Hero/Hero";
 import SectionCompanyWords from "../component/Section/SectionCompanyWords";
 import SectionImageTitle from "../component/Section/SectionImageTitle";
 import SectionDescription from "../component/Section/SectionDescription";
-
+import Navbar from "../component/Navigation/Navbar";
 // Hooks API
 import useFetch from "../hooks/useFetch";
 
 // Context
 import { MenuProvider } from "../context/Menu";
+import { NavigationProvider } from "../context/NavigationContext";
+// Data
+import jsonData from "../data/data.json";
+
 function Home() {
   const { data, error } = useFetch(
     "https://webster-backend.vercel.app/api/porto"
@@ -83,15 +87,18 @@ function Home() {
         onAnimationComplete={() => {
           setAnimationDone(true);
         }}
-        className="absolute top-0 left-0 z-10 bg-custome-green-400 w-full h-screen"
+        className="absolute top-0 left-0 z-20 bg-custome-green-400 w-full h-screen"
       ></motion.div>
 
-      {/* menu for navigation */}
-      {menuOpen && <Menu />}
-
       <MenuProvider value={{ menuOpen, setMenuOpen }}>
-        <Hero />
+        <Hero data={jsonData.hero} />
+        <Navbar fixed dark />
+        <NavigationProvider value={{ jsonData: jsonData.navigationHero }}>
+          {menuOpen && <Menu />}
+        </NavigationProvider>
+        {/* menu for navigation */}
       </MenuProvider>
+
       <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto">
         <SectionCompanyWords />
         <div className="flex flex-col mdXL:flex-row">

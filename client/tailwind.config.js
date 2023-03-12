@@ -3,6 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      inset: {
+        "web-sm": "1.25rem",
+        "web-md": "2.50rem",
+        "web-lg": "5rem",
+      },
       margin: {
         "section-sm": "1.75rem",
       },

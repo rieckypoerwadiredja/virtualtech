@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "img": {
+      "src": "./drone.jpg",
+      "alt": "Drone"
+    },
+    "heading": {
+      "highlighter": "Services",
+      "heading": "Photography"
+    },
+    "desc": "Beautiful views and photography services of views or public places",
+    "mainButton": {
+      "text": "Read Description",
+      "redirectTo": "/portfolio"
+    },
+    "circleButton": {
+      "text": "Start Discovery",
+      "redirectTo": "#about-company"
+    },
+    "titleDesc": {
+      "title": "Photography Articles",
+      "desc": "We created posts and tutorials"
+    }
+  },
+  "navigationHero": {
+    "nav": [
+      {
+        "text": "About Us",
+        "redirectTo": "/aboutus"
+      },
+      {
+        "text": "Our Portfolio",
+        "redirectTo": "/portfolio"
+      }
+    ],
+    "desc": "Discover our tabs and browse through interesting items in our portfolio.",
+    "mainButton": {
+      "text": "Privacy Policy",
+      "redirectTo": "/policy"
+    },
+    "circleButton": {
+      "text": "Contact Now",
+      "redirectTo": "/contact"
+    },
+    "titleDesc": {
+      "title": "Social Media",
+      "desc": "Check our post and follow our profiles"
+    }
+  },
+  "section": {
+    "companyWord": {
+      "title": {
+        "title": "Working with technology",
+        "subTitle": "We created photography from drones."
+      },
+      "quote": "Virtual© — creative agency that creating content design. We have knowledge and provide landscape photography services for our advanced clients."
+    },
+    "description": {
+      "title": {
+        "title": "Professional shots",
+        "subTitle": "Photography and video"
+      },
+      "desc": [
+        "We provide professional photo and video creation services during drone flights. We have the necessary equipment and skills to carry out the most advanced projects that are used in internet marketing. We have been operating in the industry for 8 years and during this time we have created many projects for our clients.",
+        "We also conduct training and support young people to expand their knowledge in the field of aviation"
+      ],
+      "image": {
+        "src": "./street-view.jpg",
+        "name": "street drone view"
+      },
+      "button": [
+        {
+          "id": 1,
+          "text": "High quality 8K",
+          "redirectTo": "/aboutus"
+        },
+        {
+          "id": 2,
+          "text": "Great experience",
+          "redirectTo": "/aboutus"
+        },
+        {
+          "id": 3,
+          "text": "Attractive price offer",
+          "redirectTo": "/aboutus"
+        }
+      ]
+    },
+    "imageTitle": {
+      "sectionImage": {
+        "title": "Start Drone",
+        "author": "Photo by unsplash.com",
+        "image": {
+          "name": "drone man",
+          "src": "./drone-man.jpg"
+        }
+      },
+      "sectionBigText": {
+        "bigText": "1400+",
+        "title": "Minutes spent controlling devices drone the air.",
+        "desc": "So many people have already trusted us. This number is constantly growing thanks to the positive feedback from our customers."
+      }
+    }
+  }
+}

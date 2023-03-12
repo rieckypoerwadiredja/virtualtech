@@ -9,17 +9,11 @@ import Quote from "../Desc/Quote";
 // Hooks
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
+// data
+import jsonData from "../../data/data.json";
+
 function SectionCompanyWords() {
-  const data = {
-    section: {
-      title: {
-        title: "Working with technology",
-        subTitle: "We created photography from drones.",
-      },
-      quote:
-        "Virtual© — creative agency that creating content design. We have knowledge and provide landscape photography services for our advanced clients.",
-    },
-  };
+  const data = jsonData.section.companyWord;
   const ref = useRef(null);
   const isIntersecting = useIntersectionObserver(ref, {
     threshold: 0.5,
@@ -43,14 +37,14 @@ function SectionCompanyWords() {
           <SectionTitleHeadingTwo textParser="Technology <br/> drones" />
           <div className="mt-7">
             <MiniTitleDesc
-              title={data.section.title.title}
-              desc={data.section.title.subTitle}
+              title={data.title.title}
+              desc={data.title.subTitle}
               dark
             />
           </div>
         </div>
         <div className="mdXL:w-1/2 mdXL:pl-12 xlX:pl-16">
-          <Quote text={data.section.quote} />
+          <Quote text={data.quote} />
         </div>
       </motion.div>
     </AnimatePresence>

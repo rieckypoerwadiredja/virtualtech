@@ -5,22 +5,11 @@ import ImageRounded from "../Image/ImageRounded";
 import PhotoAuthor from "../Desc/PhotoAuthor";
 import SectionTitleDescWithBigText from "./SectionTitleDescWithBigText";
 
+import jsonData from "../../data/data.json";
+
 function SectionImageTitle() {
-  const data = {
-    sectionImage: {
-      title: "Start Drone",
-      author: "Photo by unsplash.com",
-      image: {
-        name: "drone man",
-        src: "./drone-man.jpg",
-      },
-    },
-    sectionBigText: {
-      bigText: "1400+",
-      title: "Minutes spent controlling devices drone the air.",
-      desc: "So many people have already trusted us. This number is constantly growing thanks to the positive feedback from our customers.",
-    },
-  };
+  const data = jsonData.section.imageTitle;
+
   return (
     <div className="flex flex-col py-section-sm w-full mdXL:w-1/2 mdXL:mr-10 xlX:mr-16">
       <div className="flex flex-col">
