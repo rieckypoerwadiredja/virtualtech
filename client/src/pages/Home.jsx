@@ -87,7 +87,7 @@ function Home() {
         onAnimationComplete={() => {
           setAnimationDone(true);
         }}
-        className="absolute top-0 left-0 z-20 bg-custome-green-400 w-full h-screen"
+        className="fixed top-0 left-0 z-20 bg-custome-green-400 w-full h-screen"
       ></motion.div>
 
       <MenuProvider value={{ menuOpen, setMenuOpen }}>
