@@ -12,13 +12,11 @@ app.use(
     credentials: true,
   })
 );
-// Controller
-const portofolio = require("./controllers/portfolio");
-const notFound = require("./controllers/notFound");
 
-app.get("/api/porto", portofolio.getPorto);
+// Router
+const dataRouter = require("./routes/routes");
 
-app.use(notFound.notFound);
+app.use("/api", dataRouter);
 
 const PORT = 5000;
 app.listen(PORT, () => {
