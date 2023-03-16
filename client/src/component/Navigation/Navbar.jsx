@@ -16,7 +16,8 @@ function Navbar({ dark = false, fixed = false }) {
       className={`w-full h-[75px] px-[20px] border-[1px] z-[9] ${
         dark ? "border-slate-300 shadow-md" : "border-trans-white-400"
       } ${
-        fixed && "fixed inset-5 top-5 w-full max-w-[calc(100%-40px)] bg-white"
+        fixed &&
+        "fixed inset-[40px] top-5 w-full max-w-[calc(100%-80px)] bg-white"
       } flex justify-between items-center`}
     >
       <Link
