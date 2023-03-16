@@ -12,11 +12,17 @@ app.use(
     credentials: true,
   })
 );
+// Controllers
+const notFound = require("./error/notFound");
+const serverError = require("./error/serverError");
 
 // Router
-const dataRouter = require("./routes/routes");
+const api = require("./routes/routes");
 
-app.use("/api", dataRouter);
+app.use("/api", api);
+
+app.use(serverError.serverError);
+app.use(notFound.notFound);
 
 const PORT = 5000;
 app.listen(PORT, () => {
