@@ -8,6 +8,8 @@
     "start": "concurrently \"npm run client\" \"npm run server\"",
     "client": "cd client && npm start",
     "server": "cd server && npm start",
+    "start-dev": "concurrently \"npm run client\" \"npm run server\"",
+    "server-dev": "cd server && npm start-dev",
     "build": "npm run build-client && npm run build-server",
     "build-client": "cd client && npm install && npm run build",
     "build-server": "cd server && npm install && npm run build",
