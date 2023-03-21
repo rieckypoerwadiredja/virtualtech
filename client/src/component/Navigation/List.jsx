@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+// Icon
 import { AiOutlineArrowRight } from "react-icons/ai";
 // Component
 function List({ text, redirectTo }) {
@@ -18,5 +20,10 @@ function List({ text, redirectTo }) {
     </Link>
   );
 }
+
+List.propTypes = {
+  text: PropTypes.string.isRequired,
+  redirectTo: PropTypes.string.isRequired,
+};
 
 export default List;

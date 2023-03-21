@@ -81,6 +81,20 @@ module.exports = {
             letterSpacing: "-0.050em",
           },
         ],
+        "h3-card-sm": [
+          "26px",
+          {
+            lineHeight: "1",
+            letterSpacing: "-0.050em",
+          },
+        ],
+        "h3-card-lg": [
+          "32px",
+          {
+            lineHeight: "1",
+            letterSpacing: "-0.050em",
+          },
+        ],
         "quote-sm": [
           "27px",
           {
@@ -132,6 +146,7 @@ module.exports = {
         },
         "trans-white": {
           400: "#ffffff33",
+          800: "#ffffff80",
         },
       },
       screens: {

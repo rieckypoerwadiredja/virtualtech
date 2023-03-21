@@ -17,7 +17,7 @@ function Navbar({ dark = false, fixed = false }) {
         dark ? "border-slate-300 shadow-md" : "border-trans-white-400"
       } ${
         fixed &&
-        "fixed inset-[40px] top-5 w-full max-w-[calc(100%-80px)] bg-white"
+        "fixed inset-web-sm smXL:inset-web-md xlX:inset-web-lg max-w-[calc(100%-40px)] smXL:max-w-[calc(100%-80px)] xlX:max-w-[calc(100%-160px)] top-5 w-full bg-white"
       } flex justify-between items-center`}
     >
       <Link

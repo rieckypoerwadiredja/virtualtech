@@ -17,6 +17,7 @@ function App() {
     <div className="App max-w-[100%] overflow-hidden">
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/portfolio" element={<h1>Porfolio page</h1>} />
       </Routes>
     </div>
   );

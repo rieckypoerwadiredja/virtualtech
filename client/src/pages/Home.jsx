@@ -9,6 +9,10 @@ import SectionCompanyWords from "../component/Section/SectionCompanyWords";
 import SectionImageTitle from "../component/Section/SectionImageTitle";
 import SectionDescription from "../component/Section/SectionDescription";
 import Navbar from "../component/Navigation/Navbar";
+import IntermedietesSection from "../component/Intermediates/IntermedietesSection";
+import Slider from "../component/Slider/Slider";
+import Footer from "../component/Footer/Footer";
+
 // Hooks API
 import useFetch from "../hooks/useFetch";
 
@@ -105,7 +109,15 @@ function Home() {
           <SectionImageTitle />
           <SectionDescription />
         </div>
+        <IntermedietesSection
+          btnText="Awesome portfolio"
+          redirectTo="/portfolio"
+          text="About Virtual Strategy"
+        />
+        <Slider />
       </main>
+
+      <Footer />
 
       {/* <Hero animationDone={animationDone} /> */}
 
