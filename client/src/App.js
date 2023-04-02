@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 // Page
 import HomePage from "./pages/Home.jsx";
 
@@ -17,7 +17,7 @@ function App() {
     <div className="App max-w-[100%] overflow-hidden">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/portfolio" element={<h1>Porfolio page</h1>} />
+        <Route path="/aboutus" element={<Link to="/">Porfolio page</Link>} />
       </Routes>
     </div>
   );
