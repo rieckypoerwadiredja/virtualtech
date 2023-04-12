@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 // Context
 import MenuContext from "../../context/Menu";
+import HeaderContext from "../../context/HeaderContext";
 // Component
 import Paragraph from "../Desc/Paragraph";
 import BurgerButton from "../Button/BurgerButton";
@@ -11,6 +12,9 @@ import { FaCircleNotch } from "react-icons/fa";
 
 function Navbar({ dark = false, fixed = false }) {
   const { menuOpen, setMenuOpen } = useContext(MenuContext);
+  const { navBrand, navRight } =
+    useContext(HeaderContext).jsonData.navigationHero.navbar;
+
   return (
     <nav
       className={`w-full h-[75px] px-[20px] border-[1px] z-[9] ${
@@ -24,7 +28,7 @@ function Navbar({ dark = false, fixed = false }) {
         className="font-semibold text-2xl min-w-fit w-[40%] hover:underline"
         to="/"
       >
-        VirtualTeach ©
+        {navBrand}
       </Link>
 
       {/* <Menu /> */}
@@ -39,7 +43,7 @@ function Navbar({ dark = false, fixed = false }) {
         <div className="p-2 flex justify-center items-center">
           <FaCircleNotch className="text-[14px]" />
         </div>
-        <Paragraph text="Drone photography services" medium />
+        <Paragraph text={navRight} medium />
       </div>
     </nav>
   );

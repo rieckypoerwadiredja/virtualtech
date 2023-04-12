@@ -46,6 +46,27 @@ module.exports = {
             letterSpacing: "-0.050em",
           },
         ],
+        "footer-sm": [
+          "50px",
+          {
+            lineHeight: "1",
+            letterSpacing: "-0.050em",
+          },
+        ],
+        "footer-md": [
+          "67px",
+          {
+            lineHeight: "1",
+            letterSpacing: "-0.050em",
+          },
+        ],
+        "footer-xl": [
+          "90px",
+          {
+            lineHeight: "1",
+            letterSpacing: "-0.050em",
+          },
+        ],
         "h2-sm": [
           "44px",
           {

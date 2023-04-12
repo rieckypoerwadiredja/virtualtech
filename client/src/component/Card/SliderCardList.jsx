@@ -8,9 +8,9 @@ function SliderCardList({ data }) {
   return (
     <div className="flex flex-shrink-0 flex-grow-0 basis-0 w-auto text-white">
       {data.map((slide, index) => {
-        if (index === 0)
-          return <SliderCard key={slide.id} firstIndex data={slide} />;
-        return <SliderCard key={slide.id} data={slide} />;
+        return (
+          <SliderCard key={slide.id} index={index} data={slide} animation />
+        );
       })}
     </div>
   );

@@ -20,33 +20,40 @@
     "titleDesc": {
       "title": "Photography Articles",
       "desc": "We created posts and tutorials"
-    }
-  },
-  "navigationHero": {
-    "nav": [
-      {
-        "text": "About Us",
-        "redirectTo": "/aboutus"
+    },
+    "navigationHero": {
+      "menu": [
+        {
+          "id": 1,
+          "text": "About Us",
+          "redirectTo": "/aboutus"
+        },
+        {
+          "id": 2,
+          "text": "Our Portfolio",
+          "redirectTo": "/portfolio"
+        }
+      ],
+      "desc": "Discover our tabs and browse through interesting items in our portfolio.",
+      "mainButton": {
+        "text": "Privacy Policy",
+        "redirectTo": "/policy"
       },
-      {
-        "text": "Our Portfolio",
-        "redirectTo": "/portfolio"
+      "circleButton": {
+        "text": "Contact Now",
+        "redirectTo": "/contact"
+      },
+      "titleDesc": {
+        "title": "Social Media",
+        "desc": "Check our post and follow our profiles"
+      },
+      "navbar": {
+        "navRight": "Drone photography services",
+        "navBrand": "VirtualTeach ©"
       }
-    ],
-    "desc": "Discover our tabs and browse through interesting items in our portfolio.",
-    "mainButton": {
-      "text": "Privacy Policy",
-      "redirectTo": "/policy"
-    },
-    "circleButton": {
-      "text": "Contact Now",
-      "redirectTo": "/contact"
-    },
-    "titleDesc": {
-      "title": "Social Media",
-      "desc": "Check our post and follow our profiles"
     }
   },
+
   "section": {
     "companyWord": {
       "title": {
@@ -100,6 +107,66 @@
         "title": "Minutes spent controlling devices drone the air.",
         "desc": "So many people have already trusted us. This number is constantly growing thanks to the positive feedback from our customers."
       }
-    }
+    },
+    "slide": [
+      {
+        "id": 1,
+        "image": {
+          "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+          "alt": "Remote Drone"
+        },
+        "heading": "Experienced crew",
+        "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
+        "link": {
+          "text": "About us",
+          "url": "/aboutus"
+        }
+      },
+      {
+        "id": 2,
+        "image": {
+          "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+          "alt": "Remote Drone"
+        },
+        "heading": "Experienced crew",
+        "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
+        "link": {
+          "text": "About us",
+          "url": "/aboutus"
+        }
+      },
+      {
+        "id": 3,
+        "image": {
+          "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+          "alt": "Remote Drone"
+        },
+        "heading": "Experienced crew",
+        "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
+        "link": {
+          "text": "About us",
+          "url": "/aboutus"
+        }
+      }
+    ]
+  },
+
+  "footer": {
+    "title": "Start photography together",
+    "desc": "We visited many interesting places and created a photo session with lanscapes and building.",
+    "img": {
+      "src": "./photo.avif",
+      "alt": "photo"
+    },
+    "contact": [
+      {
+        "name": "example@gmail.com",
+        "redirectTo": "example@gmail.com"
+      },
+      {
+        "name": "Go to road map",
+        "redirectTo": "/roadmap"
+      }
+    ]
   }
 }

@@ -7,9 +7,7 @@ import SectionTitleDescWithBigText from "./SectionTitleDescWithBigText";
 
 import jsonData from "../../data/data.json";
 
-function SectionImageTitle() {
-  const data = jsonData.section.imageTitle;
-
+function SectionImageTitle({ data }) {
   return (
     <div className="flex flex-col py-section-sm w-full mdXL:w-1/2 mdXL:mr-10 xlX:mr-16">
       <div className="flex flex-col">

@@ -13,19 +13,17 @@ import IntermedietesSection from "../component/Intermediates/IntermedietesSectio
 import Slider from "../component/Slider/Slider";
 import Footer from "../component/Footer/Footer";
 
-// Hooks API
-import useFetch from "../hooks/useFetch";
-
 // Context
 import { MenuProvider } from "../context/Menu";
-import { NavigationProvider } from "../context/NavigationContext";
+import { PortoState } from "../context/PortoContext";
+import { HeaderContextProvider } from "../context/HeaderContext";
 // Data
 import jsonData from "../data/data.json";
+import { FooterProvider } from "../context/FooterContext";
 
 function Home() {
-  const { data, error } = useFetch(
-    "https://webster-backend.vercel.app/api/porto"
-  );
+  const { data, error } = PortoState();
+
   const [isLoading, setIsLoading] = useState(true);
   const [animationDone, setAnimationDone] = useState(false); // seluruh animasi telah selesai (termasuk slide pada hlm ini)
   const [porto, setPorto] = useState(false); // apakah data sudah diload ?? -> ksh tau untuk jalankan fungsi animasi slide
@@ -36,10 +34,8 @@ function Home() {
     setTimeout(() => {
       if (data) {
         setPorto(true);
-        console.log(data);
-        console.log(error);
       }
-    }, 1600);
+    }, 1600); // 1.6 dtk untuk total animasi (delay+duration) text "Loading" sblm slide hijau jika sdh ada data
   }, [data]);
 
   function onLoadingAnimationDone(loadingStatus) {
@@ -94,52 +90,31 @@ function Home() {
         className="fixed top-0 left-0 z-20 bg-custome-green-400 w-full h-screen"
       ></motion.div>
 
-      <MenuProvider value={{ menuOpen, setMenuOpen }}>
-        <Hero data={jsonData.hero} />
-        <Navbar fixed dark />
-        <NavigationProvider value={{ jsonData: jsonData.navigationHero }}>
+      <HeaderContextProvider value={{ jsonData: jsonData.hero }}>
+        <MenuProvider value={{ menuOpen, setMenuOpen }}>
+          <Hero />
+          <Navbar fixed dark />
           {menuOpen && <Menu />}
-        </NavigationProvider>
-        {/* menu for navigation */}
-      </MenuProvider>
+          {/* menu for navigation */}
+        </MenuProvider>
+      </HeaderContextProvider>
 
       <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto">
-        <SectionCompanyWords />
+        <SectionCompanyWords data={jsonData.section.companyWord} />
         <div className="flex flex-col mdXL:flex-row">
-          <SectionImageTitle />
-          <SectionDescription />
+          <SectionImageTitle data={jsonData.section.imageTitle} />
+          <SectionDescription data={jsonData.section.description} />
         </div>
         <IntermedietesSection
           btnText="Awesome portfolio"
           redirectTo="/portfolio"
           text="About Virtual Strategy"
         />
-        <Slider />
+        <Slider data={jsonData.section.slide} />
       </main>
-
-      <Footer />
-
-      {/* <Hero animationDone={animationDone} /> */}
-
-      {/* https://www.youtube.com/watch?v=hkhskSrT5SY */}
-      {/* useInView */}
-      <div className="w-full h-screen bg-orange-400 grid place-content-center">
-        <motion.h1
-          className="text-xl font-bold"
-          initial={{ marginRight: 400, opacity: 0 }}
-          variants={{
-            opacity: {
-              opacity: 1,
-              transition: { duration: 1 },
-              marginRight: 0,
-            },
-          }}
-          whileInView={animationDone && "opacity"}
-          viewport={{ once: true, amount: "all" }}
-        >
-          {data.portfolio}
-        </motion.h1>
-      </div>
+      <FooterProvider value={jsonData.footer}>
+        <Footer />
+      </FooterProvider>
     </>
   );
 }

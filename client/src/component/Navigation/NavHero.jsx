@@ -1,19 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 // component
 import Navbar from "./Navbar";
 import NavSection from "./NavSection";
-// Context
-import NavigationContext from "../../context/NavigationContext";
 
 function NavHero({ navigation = false }) {
-  const { jsonData } = useContext(NavigationContext);
-
   return (
     <header className="relative z-10 w-full h-[732px] smXL:h-[110vh] smXL:min-h-[650px] px-web-sm smXL:px-web-md xlX:px-web-lg pt-5 text-white flex flex-col justify-between items-start overflow-hidden">
       <Navbar />
 
-      <NavSection data={jsonData} navigation={navigation} />
+      <NavSection navigation={navigation} />
       <div className="relative ml-[56%] smXL:ml-[59%] w-1/2 h-[50px] bg-white"></div>
     </header>
   );

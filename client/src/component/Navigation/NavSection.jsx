@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
@@ -10,8 +10,11 @@ import MainButton from "../Button/MainButton";
 import CircleButton from "../Button/CircleButton";
 import MiniTitleDesc from "../Desc/MiniTItleDesc";
 import List from "../Navigation/List";
+import HeaderContext from "../../context/HeaderContext";
 
-function NavSection({ data, navigation = false }) {
+function NavSection({ navigation = false }) {
+  const { menu, heading, desc, mainButton, circleButton, titleDesc } =
+    useContext(HeaderContext).jsonData.navigationHero;
   return (
     <div className="w-full h-[60%] smXL:h-fit flex flex-col mdXL:flex-row mdXL:justify-between max-w-[1532px] mx-auto">
       <motion.div
@@ -26,23 +29,21 @@ function NavSection({ data, navigation = false }) {
         <Paragraph text="01" bold />
         {navigation ? (
           <div className="flex flex-col">
-            {data.nav.map((list) => (
-              <List text={list.text} redirectTo={list.redirectTo} />
+            {menu.map((list) => (
+              <List
+                key={list.id}
+                text={list.text}
+                redirectTo={list.redirectTo}
+              />
             ))}
           </div>
         ) : (
-          <PageTitle
-            highlighter={data.heading.highlighter}
-            text={data.heading.heading}
-          />
+          <PageTitle highlighter={heading.highlighter} text={heading.heading} />
         )}
         <div className="my-[40px] text-whiteFont-400">
-          <Paragraph text={data.desc} />
+          <Paragraph text={desc} />
         </div>
-        <MainButton
-          text={data.mainButton.text}
-          redirectTo={data.mainButton.redirectTo}
-        />
+        <MainButton text={mainButton.text} redirectTo={mainButton.redirectTo} />
       </motion.div>
 
       <motion.div
@@ -56,24 +57,21 @@ function NavSection({ data, navigation = false }) {
       >
         <div className="w-full flex justify-end items-start pb-10">
           <CircleButton
-            text={data.circleButton.text}
-            redirectTo={data.circleButton.redirectTo}
+            text={circleButton.text}
+            redirectTo={circleButton.redirectTo}
+            dark
           />
         </div>
         <div className="w-full flex flex-col">
           <Paragraph text="02" bold />
           <span className="w-full h-[2px] bg-trans-white-400 my-2"></span>
-          <MiniTitleDesc
-            title={data.titleDesc.title}
-            desc={data.titleDesc.desc}
-          />
+          <MiniTitleDesc title={titleDesc.title} desc={titleDesc.desc} />
         </div>
       </motion.div>
     </div>
   );
 }
 NavSection.propTypes = {
-  data: PropTypes.object.isRequired,
   navigation: PropTypes.bool,
 };
 export default NavSection;

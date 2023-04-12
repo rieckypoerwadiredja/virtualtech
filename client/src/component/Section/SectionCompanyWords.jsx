@@ -9,11 +9,7 @@ import Quote from "../Desc/Quote";
 // Hooks
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
-// data
-import jsonData from "../../data/data.json";
-
-function SectionCompanyWords() {
-  const data = jsonData.section.companyWord;
+function SectionCompanyWords({ data }) {
   const ref = useRef(null);
   const isIntersecting = useIntersectionObserver(ref, {
     threshold: 0.5,

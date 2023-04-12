@@ -14,7 +14,7 @@ function CircleButton({ text, redirectTo, dark = false }) {
       to={redirectTo}
     >
       {dark && (
-        <div className="absolute z-[-1] inset-2 w-auto h-auto scale-0 group-hover:scale-100 duration-700 aspect-square bg-white rounded-full"></div>
+        <div className="absolute z-[-1] inset-2 w-auto h-auto scale-0 group-hover:scale-100 duration-300 aspect-square bg-white rounded-full"></div>
       )}
       <p className="font-semibold text-lg xlX::text-[22px] tracking-wide">
         {text}

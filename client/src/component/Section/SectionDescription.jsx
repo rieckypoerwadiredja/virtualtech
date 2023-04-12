@@ -5,9 +5,7 @@ import SectionButton from "../Button/SectionButton";
 import ImageRounded from "../Image/ImageRounded";
 import jsonData from "../../data/data.json";
 
-function SectionDescription() {
-  const data = jsonData.section.description;
-
+function SectionDescription({ data }) {
   return (
     <div className="py-section-sm overflow-x-visible text-blackFont-800 mdXL:w-1/2 mdXL:mt-[70px] lg:mt-40 mdXL:ml-10 xlX:ml-16 flex flex-col justify-between">
       <div>
