@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 // Context
 import MenuContext from "../../context/Menu";
 import HeaderContext from "../../context/HeaderContext";
@@ -49,4 +49,8 @@ function Navbar({ dark = false, fixed = false }) {
   );
 }
 
+Navbar.propTypes = {
+  dark: PropTypes.bool,
+  fixed: PropTypes.bool,
+};
 export default Navbar;

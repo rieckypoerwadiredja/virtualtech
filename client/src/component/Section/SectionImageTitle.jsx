@@ -1,28 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 
 // Component
 import ImageRounded from "../Image/ImageRounded";
 import PhotoAuthor from "../Desc/PhotoAuthor";
 import SectionTitleDescWithBigText from "./SectionTitleDescWithBigText";
+import MainContext from "../../context/MainContext";
 
-import jsonData from "../../data/data.json";
+function SectionImageTitle() {
+  const { sectionImage, sectionBigText } = useContext(MainContext).imageTitle;
 
-function SectionImageTitle({ data }) {
   return (
     <div className="flex flex-col py-section-sm w-full mdXL:w-1/2 mdXL:mr-10 xlX:mr-16">
       <div className="flex flex-col">
-        <ImageRounded img={data.sectionImage.image} />
+        <ImageRounded img={sectionImage.image} />
         <div className="mt-8">
           <PhotoAuthor
-            title={data.sectionImage.title}
-            author={data.sectionImage.author}
+            title={sectionImage.title}
+            author={sectionImage.author}
           />
         </div>
       </div>
       <SectionTitleDescWithBigText
-        bigText={data.sectionBigText.bigText}
-        title={data.sectionBigText.title}
-        desc={data.sectionBigText.desc}
+        bigText={sectionBigText.bigText}
+        title={sectionBigText.title}
+        desc={sectionBigText.desc}
       />
     </div>
   );

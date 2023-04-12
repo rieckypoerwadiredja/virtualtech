@@ -59,6 +59,7 @@ function ExcessButoon({ text, redirectTo, animate = false }) {
 ExcessButoon.protoTypes = {
   text: PropTypes.string.isRequired,
   redirectTo: PropTypes.string.isRequired,
+  animate: PropTypes.bool,
 };
 
 export default ExcessButoon;

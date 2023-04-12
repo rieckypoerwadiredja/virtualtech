@@ -85,7 +85,9 @@ function SliderCard({ index, data, animation = false }) {
 }
 
 SliderCard.propTypes = {
-  firstIndex: PropTypes.bool,
+  index: PropTypes.number.isRequired,
+  data: PropTypes.object.isRequired,
+  animation: PropTypes.bool,
 };
 
 export default SliderCard;

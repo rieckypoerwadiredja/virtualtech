@@ -16,7 +16,9 @@ import Footer from "../component/Footer/Footer";
 // Context
 import { MenuProvider } from "../context/Menu";
 import { PortoState } from "../context/PortoContext";
-import { HeaderContextProvider } from "../context/HeaderContext";
+import { HeaderProvider } from "../context/HeaderContext";
+import { MainProvider } from "../context/MainContext";
+
 // Data
 import jsonData from "../data/data.json";
 import { FooterProvider } from "../context/FooterContext";
@@ -90,28 +92,31 @@ function Home() {
         className="fixed top-0 left-0 z-20 bg-custome-green-400 w-full h-screen"
       ></motion.div>
 
-      <HeaderContextProvider value={{ jsonData: jsonData.hero }}>
+      <HeaderProvider value={{ jsonData: jsonData.hero }}>
         <MenuProvider value={{ menuOpen, setMenuOpen }}>
           <Hero />
           <Navbar fixed dark />
           {menuOpen && <Menu />}
           {/* menu for navigation */}
         </MenuProvider>
-      </HeaderContextProvider>
+      </HeaderProvider>
 
-      <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto">
-        <SectionCompanyWords data={jsonData.section.companyWord} />
-        <div className="flex flex-col mdXL:flex-row">
-          <SectionImageTitle data={jsonData.section.imageTitle} />
-          <SectionDescription data={jsonData.section.description} />
-        </div>
-        <IntermedietesSection
-          btnText="Awesome portfolio"
-          redirectTo="/portfolio"
-          text="About Virtual Strategy"
-        />
-        <Slider data={jsonData.section.slide} />
-      </main>
+      <MainProvider value={jsonData.section}>
+        <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto">
+          <SectionCompanyWords />
+          <div className="flex flex-col mdXL:flex-row">
+            <SectionImageTitle />
+            <SectionDescription />
+          </div>
+          <IntermedietesSection
+            btnText="Awesome portfolio"
+            redirectTo="/portfolio"
+            text="About Virtual Strategy"
+          />
+          <Slider />
+        </main>
+      </MainProvider>
+
       <FooterProvider value={jsonData.footer}>
         <Footer />
       </FooterProvider>

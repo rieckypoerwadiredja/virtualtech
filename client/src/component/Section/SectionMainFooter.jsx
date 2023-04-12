@@ -48,6 +48,7 @@ function SectionMainFooter({ title, desc, button }) {
 SectionMainFooter.propTypes = {
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+  button: PropTypes.array.isRequired,
 };
 
 export default SectionMainFooter;

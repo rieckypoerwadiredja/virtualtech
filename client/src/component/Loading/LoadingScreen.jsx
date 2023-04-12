@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
 function LoadingScreen({ getdata, onLoadingAnimationDone }) {
@@ -46,5 +47,10 @@ function LoadingScreen({ getdata, onLoadingAnimationDone }) {
     </div>
   );
 }
+
+LoadingScreen.propTypes = {
+  getdata: PropTypes.bool.isRequired,
+  onLoadingAnimationDone: PropTypes.func.isRequired,
+};
 
 export default LoadingScreen;

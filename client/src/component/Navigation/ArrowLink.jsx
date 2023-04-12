@@ -31,6 +31,7 @@ ArrowLink.propTypes = {
   redirectTo: PropTypes.string.isRequired,
   bold: PropTypes.bool,
   medium: PropTypes.bool,
+  dark: PropTypes.bool,
 };
 
 export default ArrowLink;

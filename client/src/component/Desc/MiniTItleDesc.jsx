@@ -22,6 +22,7 @@ function MiniTitleDesc({ title, desc, dark = false }) {
 MiniTitleDesc.propTypes = {
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+  dark: PropTypes.bool,
 };
 
 export default MiniTitleDesc;
