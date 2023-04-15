@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 import { motion, AnimatePresence } from "framer-motion";
 // Hooks
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import useImageOnLoad from "../../hooks/useImageOnLoad";
 
 function ImageRounded({ img, overlap = false }) {
   const ref = useRef(null);
+  const { handleImageOnLoad, style } = useImageOnLoad();
   const isIntersecting = useIntersectionObserver(ref, {
     threshold: 0.25,
     once: true,
@@ -15,7 +17,8 @@ function ImageRounded({ img, overlap = false }) {
     return (
       <AnimatePresence>
         <motion.img
-          className="w-[110%] h-[330px] lg:h-[470px] rounded-bl-[3rem] bg-center object-cover"
+          onLoad={handleImageOnLoad}
+          className={`w-[110%] h-[330px] lg:h-[470px] rounded-bl-[3rem] bg-center object-cover ${style}`}
           src={img.src}
           alt={img.name}
           ref={ref}
@@ -40,7 +43,8 @@ function ImageRounded({ img, overlap = false }) {
   return (
     <AnimatePresence>
       <motion.img
-        className="w-full h-[330px] mdXL:h-[620px] rounded-bl-[3rem] bg-center object-cover"
+        onLoad={handleImageOnLoad}
+        className={`w-full h-[330px] mdXL:h-[620px] rounded-bl-[3rem] bg-center object-cover ${style}`}
         src={img.src}
         alt={img.name}
         ref={ref}

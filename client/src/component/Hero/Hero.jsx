@@ -4,18 +4,21 @@ import PropTypes from "prop-types";
 import Navbar from "../Navigation/Navbar";
 import HeroSection from "./HeroSection";
 import HeaderContext from "../../context/HeaderContext";
+// hooks
+import useImageOnLoad from "../../hooks/useImageOnLoad";
 
 function Hero({ navigation = false }) {
   const { img } = useContext(HeaderContext).jsonData;
-
+  const { handleImageOnLoad, style } = useImageOnLoad();
   return (
     <header className="relative z-10 w-full h-[732px] smXL:h-[110vh] smXL:min-h-[650px] px-web-sm smXL:px-web-md xlX:px-web-lg pt-5 text-white flex flex-col justify-between items-start overflow-hidden">
       <Navbar />
       {img.src && img.alt && (
         <img
+          onLoad={handleImageOnLoad}
           src={img.src}
           alt={img.alt}
-          className="absolute top-0 left-0 -z-10 w-full h-full object-cover brightness-50"
+          className={`absolute top-0 left-0 -z-10 w-full h-full object-cover brightness-50 ${style}`}
         />
       )}
 
