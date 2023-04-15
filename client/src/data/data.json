@@ -167,6 +167,20 @@
         "name": "Go to road map",
         "redirectTo": "/roadmap"
       }
+    ],
+    "social": [
+      {
+        "name": "Linkedin",
+        "link": "https://www.linkedin.com/"
+      },
+      {
+        "name": "Instagram",
+        "link": "https://www.instagram.com/"
+      },
+      {
+        "name": "Facebook",
+        "link": "https://www.facebook.com/"
+      }
     ]
   }
 }
