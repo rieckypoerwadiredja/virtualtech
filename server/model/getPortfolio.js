@@ -10,7 +10,6 @@ const portofolio = [
       image: "./drone.jpg",
       alt: "drone",
     },
-    cardImage: "",
     background: null,
   },
   {
@@ -24,8 +23,8 @@ const portofolio = [
       image: "./drone.jpg",
       alt: "drone",
     },
-    cardImage: null,
-    background: "",
+    background:
+      "https://images.unsplash.com/photo-1431036101494-66a36de47def?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80",
   },
 ];
 
