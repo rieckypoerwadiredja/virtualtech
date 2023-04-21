@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
@@ -10,8 +10,11 @@ import ArrowLink from "../Navigation/ArrowLink";
 
 // hooks
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import SliderCardContext from "../../context/SliderCardContext";
 
-function SliderCard({ index, data, animation = false }) {
+function SliderCard({ index, animation = false }) {
+  const { image, heading, desc, link } = useContext(SliderCardContext);
+
   const ref = useRef(null);
   const isIntersecting = useIntersectionObserver(ref, {
     threshold: 0,
@@ -37,20 +40,16 @@ function SliderCard({ index, data, animation = false }) {
       cursor-pointer group 
       flex flex-col justify-between  mr-[20px] py-[50px] px-[30px] min-h-fit h-auto w-[calc(85%-20px)] smXL:w-[calc(66%-20px)] mdXL:w-[calc(33.33%-20px)] min-w-[calc(85%-20px)] smXL:min-w-[calc(66%-20px)] mdXL:min-w-[calc(33.33%-20px)]`}
       >
-        <ImageCircle src={data.image.src} alt={data.image.alt} hover />
+        <ImageCircle src={image.src} alt={image.alt} hover />
         <div className="pt-[37px]">
-          <CardHeading text={data.heading} dark={index !== 0 && true} bold />
+          <CardHeading text={heading} dark={index !== 0 && true} bold />
         </div>
         <div className="py-[50px]">
-          <Paragraph
-            text={data.desc}
-            transparent={index === 0 && true}
-            medium
-          />
+          <Paragraph text={desc} transparent={index === 0 && true} medium />
         </div>
         <ArrowLink
-          text={data.link.text}
-          redirectTo={data.link.url}
+          text={link.text}
+          redirectTo={link.url}
           bold
           dark={index !== 0 && true}
         />
@@ -67,16 +66,16 @@ function SliderCard({ index, data, animation = false }) {
       cursor-pointer group 
       flex flex-col justify-between  mr-[20px] py-[50px] px-[30px] min-h-fit h-auto w-[calc(85%-20px)] smXL:w-[calc(66%-20px)] mdXL:w-[calc(33.33%-20px)] min-w-[calc(85%-20px)] smXL:min-w-[calc(66%-20px)] mdXL:min-w-[calc(33.33%-20px)]`}
     >
-      <ImageCircle src={data.image.src} alt={data.image.alt} />
+      <ImageCircle src={image.src} alt={image.alt} />
       <div className="pt-[37px]">
-        <CardHeading text={data.heading} dark={index !== 0 && true} />
+        <CardHeading text={heading} dark={index !== 0 && true} />
       </div>
       <div className="py-[50px]">
-        <Paragraph text={data.desc} transparent={index === 0 && true} medium />
+        <Paragraph text={desc} transparent={index === 0 && true} medium />
       </div>
       <ArrowLink
-        text={data.link.text}
-        redirectTo={data.link.url}
+        text={link.text}
+        redirectTo={link.url}
         bold
         dark={index !== 0 && true}
       />
@@ -86,7 +85,6 @@ function SliderCard({ index, data, animation = false }) {
 
 SliderCard.propTypes = {
   index: PropTypes.number.isRequired,
-  data: PropTypes.object.isRequired,
   animation: PropTypes.bool,
 };
 
