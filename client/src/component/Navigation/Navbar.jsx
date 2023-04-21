@@ -30,7 +30,7 @@ function Navbar({ dark = false, fixed = false, animation = false }) {
           dark ? "border-slate-300 shadow-md" : "border-trans-white-400"
         } ${
           fixed &&
-          "fixed inset-web-sm smXL:inset-web-md xlX:inset-web-lg max-w-[calc(100%-40px)] smXL:max-w-[calc(100%-80px)] xlX:max-w-[calc(100%-160px)] top-5 w-full bg-white"
+          "fixed inset-web-sm smXL:inset-web-md xlX:inset-web-lg max-w-[calc(100%-40px)] smXL:max-w-[calc(100%-80px)] xlX:max-w-[calc(100%-160px)] top-0 w-full bg-white"
         } flex justify-between items-center`}
         initial={{ opacity: 0, translateY: "30px" }}
         ref={ref}

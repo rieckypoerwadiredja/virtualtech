@@ -11,12 +11,14 @@ import SectionDescription from "../component/Section/SectionDescription";
 import Navbar from "../component/Navigation/Navbar";
 import IntermedietesSection from "../component/Intermediates/IntermedietesSection";
 import Slider from "../component/Slider/Slider";
+import Footer from "../component/Footer/Footer";
 
 // Context
 import { MenuProvider } from "../context/Menu";
 import { PortoState } from "../context/PortoContext";
 import { HeaderProvider } from "../context/HeaderContext";
 import { MainProvider } from "../context/MainContext";
+import { FooterProvider } from "../context/FooterContext";
 
 // Data
 import jsonData from "../data/data.json";
@@ -114,10 +116,9 @@ function Home() {
           <Slider />
         </main>
       </MainProvider>
-      {/* 
       <FooterProvider value={jsonData.homePage.footer}>
         <Footer />
-      </FooterProvider> */}
+      </FooterProvider>
     </>
   );
 }

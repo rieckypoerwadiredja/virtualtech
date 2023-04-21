@@ -1,7 +1,5 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-// Component
-import Footer from "./component/Footer/Footer.jsx";
 // Page
 import HomePage from "./pages/Home.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
@@ -10,7 +8,6 @@ import "./input.css";
 
 // Context
 import PortoContext from "./context/PortoContext.js";
-import { FooterProvider } from "./context/FooterContext.js";
 // Data
 import jsonData from "./data/data.json";
 
@@ -32,10 +29,6 @@ function App() {
       <Routes>
         <Route path="/aboutus" element={<Link to="/">about page</Link>} />
       </Routes>
-
-      <FooterProvider value={jsonData.homePage.footer}>
-        <Footer />
-      </FooterProvider>
     </div>
   );
 }
