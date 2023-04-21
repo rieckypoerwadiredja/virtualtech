@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 // Component
 import PortoCardContent from "./PortoCardContent";
 // Context
@@ -7,6 +7,11 @@ import GreenStars from "../Profile/defaultProfile/GreenStars";
 
 function PortoCard() {
   const { background, bgPadding, image } = useContext(PortoCardContext);
+  const [imageOnLoad, setImageOnLoad] = useState(true);
+
+  const onLoad = () => {
+    setImageOnLoad(!imageOnLoad);
+  };
   return (
     <div
       className={`relative w-full text-white overflow-hidden group hover:scale-95 duration-1000 cursor-pointer ${
@@ -20,8 +25,11 @@ function PortoCard() {
         <>
           <div className="absolute top-0 left-0 w-full h-full -z-10 bg-black/50"></div>
           <img
-            className="absolute top-0 left-0 w-full h-full object-cover -z-20"
+            className={`absolute top-0 left-0 w-full h-full object-cover -z-20 ${
+              imageOnLoad && "bg-slate-300 animate-pulse"
+            }`}
             src={background}
+            onLoad={onLoad}
             alt="google"
           />
         </>
@@ -33,8 +41,11 @@ function PortoCard() {
               <GreenStars />
             </div>
             <img
-              className="relative h-fit w-full object-cover object-center"
+              className={`relative h-fit w-full object-cover object-center ${
+                imageOnLoad && "bg-slate-300 animate-pulse"
+              }`}
               src={image}
+              onLoad={onLoad}
               alt="google"
             />
           </div>

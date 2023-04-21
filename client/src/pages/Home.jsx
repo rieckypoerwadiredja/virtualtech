@@ -11,7 +11,6 @@ import SectionDescription from "../component/Section/SectionDescription";
 import Navbar from "../component/Navigation/Navbar";
 import IntermedietesSection from "../component/Intermediates/IntermedietesSection";
 import Slider from "../component/Slider/Slider";
-import Footer from "../component/Footer/Footer";
 
 // Context
 import { MenuProvider } from "../context/Menu";
@@ -21,7 +20,6 @@ import { MainProvider } from "../context/MainContext";
 
 // Data
 import jsonData from "../data/data.json";
-import { FooterProvider } from "../context/FooterContext";
 
 function Home() {
   const { data, error } = PortoState();

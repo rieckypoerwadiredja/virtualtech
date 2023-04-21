@@ -15,6 +15,6 @@ function CardHeading({ text, dark = false, bold = false }) {
 
 CardHeading.propTypes = {
   text: PropTypes.string.isRequired,
-  dark: PropTypes.bool.isRequired,
+  dark: PropTypes.bool,
 };
 export default CardHeading;
