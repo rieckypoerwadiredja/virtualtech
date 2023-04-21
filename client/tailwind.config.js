@@ -105,14 +105,14 @@ module.exports = {
         "h3-card-sm": [
           "26px",
           {
-            lineHeight: "1",
+            lineHeight: "1.5",
             letterSpacing: "-0.050em",
           },
         ],
         "h3-card-lg": [
           "32px",
           {
-            lineHeight: "1",
+            lineHeight: "1.5",
             letterSpacing: "-0.050em",
           },
         ],
@@ -164,10 +164,12 @@ module.exports = {
         "custome-green": {
           800: "#2d9d6e",
           400: "#adbf64",
+          300: "#adbf6433",
         },
         "trans-white": {
-          400: "#ffffff33",
           800: "#ffffff80",
+          500: "#1C201Cb3",
+          400: "#ffffff33",
         },
       },
       screens: {

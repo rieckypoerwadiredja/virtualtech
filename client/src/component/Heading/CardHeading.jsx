@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function CardHeading({ text, dark = false }) {
+function CardHeading({ text, dark = false, bold = false }) {
   return (
     <h3
-      className={`font-semibold text-h3-card-sm xlX:h3-card-lg ${
-        dark && "text-black"
-      }`}
+      className={`${
+        bold ? "font-semibold" : "font-medium"
+      } text-h3-card-sm xlX:h3-card-lg ${dark && "text-black"}`}
     >
       {text}
     </h3>

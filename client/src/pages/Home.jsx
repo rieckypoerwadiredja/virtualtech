@@ -92,7 +92,7 @@ function Home() {
         className="fixed top-0 left-0 z-20 bg-custome-green-400 w-full h-screen"
       ></motion.div>
 
-      <HeaderProvider value={{ jsonData: jsonData.hero }}>
+      <HeaderProvider value={{ jsonData: jsonData.homePage.hero }}>
         <MenuProvider value={{ menuOpen, setMenuOpen }}>
           <Hero />
           <Navbar fixed dark />
@@ -101,7 +101,7 @@ function Home() {
         </MenuProvider>
       </HeaderProvider>
 
-      <MainProvider value={jsonData.section}>
+      <MainProvider value={jsonData.homePage.section}>
         <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto">
           <SectionCompanyWords />
           <div className="flex flex-col mdXL:flex-row">
@@ -116,10 +116,10 @@ function Home() {
           <Slider />
         </main>
       </MainProvider>
-
-      <FooterProvider value={jsonData.footer}>
+      {/* 
+      <FooterProvider value={jsonData.homePage.footer}>
         <Footer />
-      </FooterProvider>
+      </FooterProvider> */}
     </>
   );
 }

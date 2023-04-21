@@ -1,186 +1,275 @@
 {
-  "hero": {
-    "img": {
-      "src": "./drone.jpg",
-      "alt": "Drone"
-    },
-    "heading": {
-      "highlighter": "Services",
-      "heading": "Photography"
-    },
-    "desc": "Beautiful views and photography services of views or public places",
-    "mainButton": {
-      "text": "Read Description",
-      "redirectTo": "/portfolio"
-    },
-    "circleButton": {
-      "text": "Start Discovery",
-      "redirectTo": "#about-company"
-    },
-    "titleDesc": {
-      "title": "Photography Articles",
-      "desc": "We created posts and tutorials"
-    },
-    "navigationHero": {
-      "menu": [
-        {
-          "id": 1,
-          "text": "About Us",
-          "redirectTo": "/aboutus"
-        },
-        {
-          "id": 2,
-          "text": "Our Portfolio",
-          "redirectTo": "/portfolio"
-        }
-      ],
-      "desc": "Discover our tabs and browse through interesting items in our portfolio.",
+  "homePage": {
+    "hero": {
+      "img": {
+        "src": "./drone.jpg",
+        "alt": "Drone"
+      },
+      "heading": {
+        "highlighter": "Services",
+        "heading": "Photography"
+      },
+      "desc": "Beautiful views and photography services of views or public places",
       "mainButton": {
-        "text": "Privacy Policy",
-        "redirectTo": "/policy"
+        "text": "Read Description",
+        "redirectTo": "/portfolio"
       },
       "circleButton": {
-        "text": "Contact Now",
-        "redirectTo": "/contact"
+        "text": "Start Discovery",
+        "redirectTo": "#about-company"
       },
       "titleDesc": {
-        "title": "Social Media",
-        "desc": "Check our post and follow our profiles"
+        "title": "Photography Articles",
+        "desc": "We created posts and tutorials"
       },
-      "navbar": {
-        "navRight": "Drone photography services",
-        "navBrand": "VirtualTeach ©"
+      "navigationHero": {
+        "menu": [
+          {
+            "id": 1,
+            "text": "About Us",
+            "redirectTo": "/aboutus"
+          },
+          {
+            "id": 2,
+            "text": "Our Portfolio",
+            "redirectTo": "/portfolio"
+          }
+        ],
+        "desc": "Discover our tabs and browse through interesting items in our portfolio.",
+        "mainButton": {
+          "text": "Privacy Policy",
+          "redirectTo": "/policy"
+        },
+        "circleButton": {
+          "text": "Contact Now",
+          "redirectTo": "/contact"
+        },
+        "titleDesc": {
+          "title": "Social Media",
+          "desc": "Check our post and follow our profiles"
+        },
+        "navbar": {
+          "navRight": "Drone photography services",
+          "navBrand": "VirtualTeach ©"
+        }
       }
-    }
-  },
-
-  "section": {
-    "companyWord": {
-      "title": {
-        "title": "Working with technology",
-        "subTitle": "We created photography from drones."
-      },
-      "quote": "Virtual© — creative agency that creating content design. We have knowledge and provide landscape photography services for our advanced clients."
     },
-    "description": {
-      "title": {
-        "title": "Professional shots",
-        "subTitle": "Photography and video"
+
+    "section": {
+      "companyWord": {
+        "title": {
+          "title": "Working with technology",
+          "subTitle": "We created photography from drones."
+        },
+        "quote": "Virtual© — creative agency that creating content design. We have knowledge and provide landscape photography services for our advanced clients."
       },
-      "desc": [
-        "We provide professional photo and video creation services during drone flights. We have the necessary equipment and skills to carry out the most advanced projects that are used in internet marketing. We have been operating in the industry for 8 years and during this time we have created many projects for our clients.",
-        "We also conduct training and support young people to expand their knowledge in the field of aviation"
-      ],
-      "image": {
-        "src": "./street-view.jpg",
-        "name": "street drone view"
+      "description": {
+        "title": {
+          "title": "Professional shots",
+          "subTitle": "Photography and video"
+        },
+        "desc": [
+          "We provide professional photo and video creation services during drone flights. We have the necessary equipment and skills to carry out the most advanced projects that are used in internet marketing. We have been operating in the industry for 8 years and during this time we have created many projects for our clients.",
+          "We also conduct training and support young people to expand their knowledge in the field of aviation"
+        ],
+        "image": {
+          "src": "./street-view.jpg",
+          "name": "street drone view"
+        },
+        "button": [
+          {
+            "id": 1,
+            "text": "High quality 8K",
+            "redirectTo": "/aboutus"
+          },
+          {
+            "id": 2,
+            "text": "Great experience",
+            "redirectTo": "/aboutus"
+          },
+          {
+            "id": 3,
+            "text": "Attractive price offer",
+            "redirectTo": "/aboutus"
+          }
+        ]
       },
-      "button": [
+      "imageTitle": {
+        "sectionImage": {
+          "title": "Start Drone",
+          "author": "Photo by unsplash.com",
+          "image": {
+            "name": "drone man",
+            "src": "./drone-man.jpg"
+          }
+        },
+        "sectionBigText": {
+          "bigText": "1400+",
+          "title": "Minutes spent controlling devices drone the air.",
+          "desc": "So many people have already trusted us. This number is constantly growing thanks to the positive feedback from our customers."
+        }
+      },
+      "slide": [
         {
           "id": 1,
-          "text": "High quality 8K",
-          "redirectTo": "/aboutus"
+          "image": {
+            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+            "alt": "Remote Drone"
+          },
+          "heading": "Experienced crew",
+          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
+          "link": {
+            "text": "About us",
+            "url": "/aboutus"
+          }
         },
         {
           "id": 2,
-          "text": "Great experience",
-          "redirectTo": "/aboutus"
+          "image": {
+            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+            "alt": "Remote Drone"
+          },
+          "heading": "Experienced crew",
+          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
+          "link": {
+            "text": "About us",
+            "url": "/aboutus"
+          }
         },
         {
           "id": 3,
-          "text": "Attractive price offer",
-          "redirectTo": "/aboutus"
+          "image": {
+            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+            "alt": "Remote Drone"
+          },
+          "heading": "Experienced crew",
+          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
+          "link": {
+            "text": "About us",
+            "url": "/aboutus"
+          }
         }
       ]
     },
-    "imageTitle": {
-      "sectionImage": {
-        "title": "Start Drone",
-        "author": "Photo by unsplash.com",
-        "image": {
-          "name": "drone man",
-          "src": "./drone-man.jpg"
-        }
-      },
-      "sectionBigText": {
-        "bigText": "1400+",
-        "title": "Minutes spent controlling devices drone the air.",
-        "desc": "So many people have already trusted us. This number is constantly growing thanks to the positive feedback from our customers."
-      }
-    },
-    "slide": [
-      {
-        "id": 1,
-        "image": {
-          "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
-          "alt": "Remote Drone"
-        },
-        "heading": "Experienced crew",
-        "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
-        "link": {
-          "text": "About us",
-          "url": "/aboutus"
-        }
-      },
-      {
-        "id": 2,
-        "image": {
-          "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
-          "alt": "Remote Drone"
-        },
-        "heading": "Experienced crew",
-        "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
-        "link": {
-          "text": "About us",
-          "url": "/aboutus"
-        }
-      },
-      {
-        "id": 3,
-        "image": {
-          "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
-          "alt": "Remote Drone"
-        },
-        "heading": "Experienced crew",
-        "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
-        "link": {
-          "text": "About us",
-          "url": "/aboutus"
-        }
-      }
-    ]
-  },
 
-  "footer": {
-    "title": "Start photography together",
-    "desc": "We visited many interesting places and created a photo session with lanscapes and building.",
-    "img": {
-      "src": "./photo.avif",
-      "alt": "photo"
+    "footer": {
+      "title": "Start photography together",
+      "desc": "We visited many interesting places and created a photo session with lanscapes and building.",
+      "img": {
+        "src": "./photo.avif",
+        "alt": "photo"
+      },
+      "contact": [
+        {
+          "name": "example@gmail.com",
+          "redirectTo": "example@gmail.com"
+        },
+        {
+          "name": "Go to road map",
+          "redirectTo": "/roadmap"
+        }
+      ],
+      "social": [
+        {
+          "name": "Linkedin",
+          "link": "https://www.linkedin.com/"
+        },
+        {
+          "name": "Instagram",
+          "link": "https://www.instagram.com/"
+        },
+        {
+          "name": "Facebook",
+          "link": "https://www.facebook.com/"
+        }
+      ]
+    }
+  },
+  "portfolioPage": {
+    "hero": {
+      "heading": {
+        "highlighter": "Together",
+        "heading": "Starting work"
+      },
+      "desc": "Interesting places in your city to create design and elegant photography.",
+      "circleButton": {
+        "text": "Start Discovery",
+        "redirectTo": "#about-company"
+      },
+      "navigationHero": {
+        "menu": [
+          {
+            "id": 1,
+            "text": "About Us",
+            "redirectTo": "/aboutus"
+          },
+          {
+            "id": 2,
+            "text": "Our Portfolio",
+            "redirectTo": "/portfolio"
+          }
+        ],
+        "desc": "Discover our tabs and browse through interesting items in our portfolio.",
+        "mainButton": {
+          "text": "Privacy Policy",
+          "redirectTo": "/policy"
+        },
+        "circleButton": {
+          "text": "Contact Now",
+          "redirectTo": "/contact"
+        },
+        "titleDesc": {
+          "title": "Social Media",
+          "desc": "Check our post and follow our profiles"
+        },
+        "navbar": {
+          "navRight": "Drone photography services",
+          "navBrand": "VirtualTeach ©"
+        }
+      }
     },
-    "contact": [
-      {
-        "name": "example@gmail.com",
-        "redirectTo": "example@gmail.com"
-      },
-      {
-        "name": "Go to road map",
-        "redirectTo": "/roadmap"
-      }
-    ],
-    "social": [
-      {
-        "name": "Linkedin",
-        "link": "https://www.linkedin.com/"
-      },
-      {
-        "name": "Instagram",
-        "link": "https://www.instagram.com/"
-      },
-      {
-        "name": "Facebook",
-        "link": "https://www.facebook.com/"
-      }
-    ]
+    "section": {
+      "slide": [
+        {
+          "id": 1,
+          "image": {
+            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+            "alt": "Remote Drone"
+          },
+          "heading": "Experienced crew",
+          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
+          "link": {
+            "text": "About us",
+            "url": "/aboutus"
+          }
+        },
+        {
+          "id": 2,
+          "image": {
+            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+            "alt": "Remote Drone"
+          },
+          "heading": "Experienced crew",
+          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
+          "link": {
+            "text": "About us",
+            "url": "/aboutus"
+          }
+        },
+        {
+          "id": 3,
+          "image": {
+            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+            "alt": "Remote Drone"
+          },
+          "heading": "Experienced crew",
+          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
+          "link": {
+            "text": "About us",
+            "url": "/aboutus"
+          }
+        }
+      ]
+    }
   }
 }

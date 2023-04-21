@@ -22,7 +22,7 @@ function Hero({ navigation = false }) {
         />
       )}
 
-      <HeroSection navigation={navigation} />
+      <HeroSection navigation={navigation} withImage />
       <div className="relative ml-[56%] smXL:ml-[59%] w-1/2 h-[50px] bg-white"></div>
     </header>
   );

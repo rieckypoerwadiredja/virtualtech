@@ -37,9 +37,9 @@ function SliderCard({ index, data, animation = false }) {
       cursor-pointer group 
       flex flex-col justify-between  mr-[20px] py-[50px] px-[30px] min-h-fit h-auto w-[calc(85%-20px)] smXL:w-[calc(66%-20px)] mdXL:w-[calc(33.33%-20px)] min-w-[calc(85%-20px)] smXL:min-w-[calc(66%-20px)] mdXL:min-w-[calc(33.33%-20px)]`}
       >
-        <ImageCircle src={data.image.src} alt={data.image.alt} />
+        <ImageCircle src={data.image.src} alt={data.image.alt} hover />
         <div className="pt-[37px]">
-          <CardHeading text={data.heading} dark={index !== 0 && true} />
+          <CardHeading text={data.heading} dark={index !== 0 && true} bold />
         </div>
         <div className="py-[50px]">
           <Paragraph
