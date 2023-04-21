@@ -40,14 +40,14 @@ function SectionPortoCard() {
       <div className="flex flex-col smXL:w-1/2 mt-[10%] gap-5">
         {porto.map((porto, index) => (
           <PortoCardProvider key={index} value={porto}>
-            {porto.id % 2 !== 0 && <PortoCard />}
+            {porto.id % 2 !== 0 && <PortoCard animation />}
           </PortoCardProvider>
         ))}
       </div>
       <div className="flex flex-col smXL:w-1/2 gap-5">
         {porto.map((porto, index) => (
           <PortoCardProvider key={index} value={porto}>
-            {porto.id % 2 === 0 && <PortoCard />}
+            {porto.id % 2 === 0 && <PortoCard animation />}
           </PortoCardProvider>
         ))}
       </div>
