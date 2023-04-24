@@ -25,7 +25,7 @@ function PortoCard({ animation = false }) {
   if (animation) {
     return (
       <motion.div
-        className={`relative w-full text-white overflow-hidden group hover:scale-95 duration-1000 cursor-pointer ${
+        className={`relative w-full text-white overflow-hidden cursor-pointer ${
           bgPadding && "pb-[50%]"
         } ${!background && !image ? "bg-custome-green-800" : null}
        ${image && "bg-[#1c201c]"}`}
@@ -37,6 +37,7 @@ function PortoCard({ animation = false }) {
             : { opacity: 0, translateY: "40px" }
         }
         transition={{ duration: 0.5 }}
+        whileHover={{ scale: 0.95 }}
       >
         <PortoCardContent hover profile={!image} />{" "}
         {/* pada image true sudah ada image secara default !!lihat bawah!! */}
@@ -76,7 +77,7 @@ function PortoCard({ animation = false }) {
 
   return (
     <div
-      className={`relative w-full text-white overflow-hidden group hover:scale-95 duration-1000 cursor-pointer ${
+      className={`relative w-full text-white overflow-hidden cursor-pointer ${
         bgPadding && "pb-[50%]"
       } ${!background && !image ? "bg-custome-green-800" : null}
        ${image && "bg-[#1c201c]"}`}
