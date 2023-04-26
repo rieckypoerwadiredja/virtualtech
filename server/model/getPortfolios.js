@@ -1,4 +1,4 @@
-const portofolio = [
+const portofolios = [
   {
     id: 1,
     type: "Landscapes",
@@ -73,10 +73,10 @@ const portofolio = [
 ];
 
 // eslint-disable-next-line arrow-body-style
-const getPortfolio = async () => {
-  return portofolio;
+const getPortfolios = async () => {
+  return portofolios;
 };
 
 module.exports = {
-  getPortfolio,
+  getPortfolios,
 };

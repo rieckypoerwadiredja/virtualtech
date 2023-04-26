@@ -1,10 +1,10 @@
 // MODEL
-const { getPortfolio } = require("../model/getPortfolio");
+const { getPortfolios } = require("../model/getPortfolios");
 
 module.exports = {
   getPorto: async (req, res, next) => {
     try {
-      const portfolio = await getPortfolio();
+      const portfolio = await getPortfolios();
       res.setHeader("Content-Type", "application/json");
       res.json({
         portfolio,
