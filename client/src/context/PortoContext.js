@@ -6,7 +6,7 @@ const Porto = createContext();
 
 function PortoContext({ children }) {
   const { data, error, loading } = useFetch(
-    "https://webster-backend.vercel.app/api/porto"
+    "https://webster-backend.vercel.app/api/portofolios"
   );
   return (
     <Porto.Provider value={{ data, error, loading }}>{children}</Porto.Provider>
