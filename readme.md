@@ -17,6 +17,7 @@ Here are the steps that need to be done to run this project on your local comput
 What needs to be installed on your computer to run this project?
 
 - Node.js v18.12.1
+- React.js v18.2.0
 - NPM v8.19.2
 
 ### Instalasi
@@ -35,7 +36,7 @@ Here are the installation steps for this project:
     cd webster
 ```
 
-3. install semua dependency projek.
+3. install all project dependencies.
 
 ```
     npm install
@@ -53,7 +54,7 @@ Here are the installation steps for this project:
     npm start
 ```
 
-### Menjalankan Test
+### Running Tests
 
 #### Client Test:
 
