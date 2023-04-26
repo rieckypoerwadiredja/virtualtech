@@ -28,6 +28,18 @@ const portofolio = [
     background:
       "https://images.unsplash.com/photo-1553165558-424ffa9c4303?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     bgPadding: false,
+    portofolio: {
+      img: {
+        src: "https://images.unsplash.com/photo-1553165558-424ffa9c4303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        alt: "flying drone",
+        name: "flying drone",
+        source: "unsplash.com",
+      },
+      portoDesc: {
+        title: "Create professional shots",
+        desc: "What are the best software for Windows and Mac in 2022 according to our agency? After testing many free and paid applications, we have prepared a list of the 10 best and safest programs. We were guided by whether a given program is free and offers the best solutions. What is the best program in your opinion? Write us a message, if you have any other interesting software, we will be happy to check it!",
+      },
+    },
   },
   {
     id: 3,
