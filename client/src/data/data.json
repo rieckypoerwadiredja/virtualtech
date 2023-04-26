@@ -271,5 +271,49 @@
         }
       ]
     }
+  },
+  "detailPortofolioPage": {
+    "hero": {
+      "heading": {
+        "highlighter": "software",
+        "heading": "Best equipment"
+      },
+      "desc": "Interesting places in your city to create design and elegant photography.",
+      "circleButton": {
+        "text": "Start Discovery",
+        "redirectTo": "#read-more"
+      },
+      "navigationHero": {
+        "menu": [
+          {
+            "id": 1,
+            "text": "About Us",
+            "redirectTo": "/aboutus"
+          },
+          {
+            "id": 2,
+            "text": "Our Portfolio",
+            "redirectTo": "/portfolio"
+          }
+        ],
+        "desc": "Discover our tabs and browse through interesting items in our portfolio.",
+        "mainButton": {
+          "text": "Privacy Policy",
+          "redirectTo": "/policy"
+        },
+        "circleButton": {
+          "text": "Contact Now",
+          "redirectTo": "/contact"
+        },
+        "titleDesc": {
+          "title": "Social Media",
+          "desc": "Check our post and follow our profiles"
+        },
+        "navbar": {
+          "navRight": "Drone photography services",
+          "navBrand": "VirtualTeach ©"
+        }
+      }
+    }
   }
 }

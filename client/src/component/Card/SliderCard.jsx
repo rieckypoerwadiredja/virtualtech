@@ -38,7 +38,7 @@ function SliderCard({ index, animation = false }) {
       }
       ${index === 0 && "bg-custome-green-800 rounded-bl-[60px]"}
       cursor-pointer group 
-      flex flex-col justify-between  mr-[20px] py-[50px] px-[30px] min-h-fit h-auto w-[calc(85%-20px)] smXL:w-[calc(66%-20px)] mdXL:w-[calc(33.33%-20px)] min-w-[calc(85%-20px)] smXL:min-w-[calc(66%-20px)] mdXL:min-w-[calc(33.33%-20px)]`}
+      flex flex-col flex-grow-0 justify-between  mr-[20px] py-[50px] px-[30px] min-h-fit h-auto w-[calc(85%-20px)] smXL:w-[calc(66%-20px)] mdXL:w-[calc(33.33%-20px)] min-w-[calc(85%-20px)] smXL:min-w-[calc(66%-20px)] mdXL:min-w-[calc(33.33%-20px)]`}
       >
         <ImageCircle src={image.src} alt={image.alt} hover />
         <div className="pt-[37px]">

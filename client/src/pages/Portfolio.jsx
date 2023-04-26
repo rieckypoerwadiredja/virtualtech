@@ -4,16 +4,16 @@ import React, { useEffect } from "react";
 import IntermedietesSection from "../component/Intermediates/IntermedietesSection";
 import Slider from "../component/Slider/Slider";
 import Footer from "../component/Footer/Footer";
+import SectionPortoCard from "../component/Section/SectionPortoCard";
 
 // Context
 import HeroPortoPage from "../component/Hero/HeroPortoPage";
 import { HeaderProvider } from "../context/HeaderContext";
 import { FooterProvider } from "../context/FooterContext";
+import { MainProvider } from "../context/MainContext";
 
 // Data
 import jsonData from "../data/data.json";
-import { MainProvider } from "../context/MainContext";
-import SectionPortoCard from "../component/Section/SectionPortoCard";
 
 function Portfolio() {
   useEffect(() => {
@@ -30,7 +30,7 @@ function Portfolio() {
           <SectionPortoCard />
           <IntermedietesSection
             btnText="Contact with agency"
-            redirectTo="/portfolio"
+            redirectTo="/contact"
             text="About Virtual Strategy"
           />
           <Slider />

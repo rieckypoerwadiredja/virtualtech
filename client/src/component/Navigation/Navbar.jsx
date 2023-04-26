@@ -30,15 +30,11 @@ function Navbar({ dark = false, fixed = false, animation = false }) {
           dark ? "border-slate-300 shadow-md" : "border-trans-white-400"
         } ${
           fixed &&
-          "fixed inset-web-sm smXL:inset-web-md xlX:inset-web-lg max-w-[calc(100%-40px)] smXL:max-w-[calc(100%-80px)] xlX:max-w-[calc(100%-160px)] top-0 w-full bg-white"
+          "fixed inset-x-web-sm smXL:inset-x-web-md xlX:inset-x-web-lg max-w-[calc(100%-40px)] smXL:max-w-[calc(100%-80px)] xlX:max-w-[calc(100%-160px)] top-5 w-full bg-white"
         } flex justify-between items-center`}
         initial={{ opacity: 0, translateY: "30px" }}
         ref={ref}
-        animate={
-          isIntersecting
-            ? { opacity: 1, translateY: "0px" }
-            : { opacity: 0, translateY: "30px" }
-        }
+        animate={isIntersecting && { opacity: 1, translateY: "0px" }}
         transition={{ duration: 0.5 }}
       >
         <Link
@@ -50,7 +46,7 @@ function Navbar({ dark = false, fixed = false, animation = false }) {
 
         {/* <Menu /> */}
         <div
-          className="relative burger-menu pl-5 h-full mdXL:pl-0 flex flex-col justify-center items-center cursor-pointer"
+          className="relative burger-menu h-full w-14 hover:bg-white/20 duration-300 mdXL:pl-0 flex flex-col justify-center items-center cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <BurgerButton menuOpen={menuOpen} dark={dark} />
@@ -71,7 +67,7 @@ function Navbar({ dark = false, fixed = false, animation = false }) {
         dark ? "border-slate-300 shadow-md" : "border-trans-white-400"
       } ${
         fixed &&
-        "fixed inset-web-sm smXL:inset-web-md xlX:inset-web-lg max-w-[calc(100%-40px)] smXL:max-w-[calc(100%-80px)] xlX:max-w-[calc(100%-160px)] top-5 w-full bg-white"
+        "fixed inset-x-web-sm smXL:inset-x-web-md xlX:inset-x-web-lg max-w-[calc(100%-40px)] smXL:max-w-[calc(100%-80px)] xlX:max-w-[calc(100%-160px)] top-5 w-full bg-white"
       } flex justify-between items-center`}
     >
       <Link
@@ -83,7 +79,7 @@ function Navbar({ dark = false, fixed = false, animation = false }) {
 
       {/* <Menu /> */}
       <div
-        className="relative burger-menu pl-5 h-full mdXL:pl-0 flex flex-col justify-center items-center cursor-pointer"
+        className="relative burger-menu h-full w-14 hover:bg-white/20 duration-300 mdXL:pl-0 flex flex-col justify-center items-center cursor-pointer"
         onClick={() => setMenuOpen(!menuOpen)}
       >
         <BurgerButton menuOpen={menuOpen} dark={dark} />

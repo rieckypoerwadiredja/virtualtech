@@ -32,7 +32,7 @@ function HeroSection({
 
   return (
     <div className="w-full h-[60%] smXL:h-fit flex flex-col mdXL:flex-row mdXL:justify-between max-w-[1532px] mx-auto">
-      <div className="w-full min-h-fit sm:w-[40%]">
+      <div className="w-full min-h-fit sm:w-[50%]">
         <Paragraph text="01" bold />
         <PageTitle
           withImage={withImage}

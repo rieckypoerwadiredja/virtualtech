@@ -15,7 +15,7 @@ function ArrowLink({
   dark = false,
 }) {
   return (
-    <Link className="relative flex items-center" to={redirectTo}>
+    <Link className="relative flex items-center w-fit group" to={redirectTo}>
       <div
         className={`w-0 group-hover:w-full duration-300 h-[2px] rounded absolute -bottom-1 left-0
          ${dark ? "bg-black" : "bg-white"}`}

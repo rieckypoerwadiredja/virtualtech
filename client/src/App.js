@@ -3,13 +3,12 @@ import { Routes, Route, Link } from "react-router-dom";
 // Page
 import HomePage from "./pages/Home.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
+import DetailPortofolio from "./pages/DetailPortofolio.jsx";
 // style
 import "./input.css";
 
 // Context
 import PortoContext from "./context/PortoContext.js";
-// Data
-import jsonData from "./data/data.json";
 
 if (process.env.NODE_ENV !== "development") {
   console.error = (message) => {
@@ -23,7 +22,10 @@ function App() {
       <PortoContext>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio">
+            <Route index element={<Portfolio />} />
+            <Route path=":creator/:title" element={<DetailPortofolio />} />
+          </Route>
         </Routes>
       </PortoContext>
       <Routes>

@@ -8,8 +8,7 @@ function BurgerButton({ menuOpen, dark = false }) {
         className={`w-[45px] h-[2px] ${
           dark ? "bg-blackScreen-400" : "bg-white"
         } duration-300 ${
-          menuOpen &&
-          "absolute top-1/2 right-0 mdXL:-right-[calc(1.12rem+43%)] rotate-45 origin-center"
+          menuOpen && "absolute top-1/2 left-auto rotate-45 origin-center"
         }`}
       ></span>
       <span
@@ -17,7 +16,7 @@ function BurgerButton({ menuOpen, dark = false }) {
           dark ? "bg-blackScreen-400" : "bg-white"
         } duration-300 ${
           menuOpen &&
-          "absolute top-[43%] right-0 mdXL:-right-[calc(1.12rem+43%)] -rotate-45 origin-center mt-0"
+          "absolute top-[43%] left-auto -rotate-45 origin-center mt-0"
         }`}
       ></span>
     </>
