@@ -4,13 +4,16 @@ import PropTypes from "prop-types";
 import useImageOnLoad from "../../hooks/useImageOnLoad";
 
 function ImageCircle({ src, alt, hover = false }) {
-  const { handleImageOnLoad, style } = useImageOnLoad();
+  const { handleImageOnLoad, imgLoading } = useImageOnLoad();
+
   return (
     <img
       onLoad={handleImageOnLoad}
       className={`w-16 aspect-square rounded-full ${
         hover && "group-hover:scale-[115%]"
-      } duration-300 ${style} object-cover object-center`}
+      } duration-300  object-cover object-center ${
+        imgLoading && "bg-gray-100"
+      }`}
       src={src}
       alt={alt}
     />

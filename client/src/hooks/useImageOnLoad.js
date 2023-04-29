@@ -1,17 +1,15 @@
 import { useState } from "react";
 
 function useImageOnLoad() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(true);
 
   const handleImageOnLoad = () => {
-    setIsLoaded(true);
+    setIsLoaded(false);
   };
-
-  const style = isLoaded ? "" : "bg-slate-100 animate-pulse";
 
   return {
     handleImageOnLoad,
-    style,
+    imgLoading: isLoaded,
   };
 }
 

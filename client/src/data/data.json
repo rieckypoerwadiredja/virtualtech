@@ -2,7 +2,7 @@
   "homePage": {
     "hero": {
       "img": {
-        "src": "./drone.jpg",
+        "src": "./tiny_image/drone.jpg",
         "alt": "Drone"
       },
       "heading": {
@@ -73,7 +73,7 @@
           "We also conduct training and support young people to expand their knowledge in the field of aviation"
         ],
         "image": {
-          "src": "./street-view.jpg",
+          "src": "./tiny_image/street-view.jpg",
           "name": "street drone view"
         },
         "button": [
@@ -100,7 +100,7 @@
           "author": "Photo by unsplash.com",
           "image": {
             "name": "drone man",
-            "src": "./drone-man.jpg"
+            "src": "./tiny_image/drone-man.jpg"
           }
         },
         "sectionBigText": {
@@ -191,11 +191,14 @@
         "highlighter": "Together",
         "heading": "Starting work"
       },
+
       "desc": "Interesting places in your city to create design and elegant photography.",
+
       "circleButton": {
         "text": "Start Discovery",
         "redirectTo": "#about-company"
       },
+
       "navigationHero": {
         "menu": [
           {

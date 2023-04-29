@@ -63,7 +63,7 @@ function PortoCard({ animation = false, darkGreen = true, redirect = false }) {
             <div className="absolute top-0 left-0 w-full h-full -z-10 bg-black/50"></div>
             <img
               className={`absolute top-0 left-0 w-full h-full object-cover -z-20 ${
-                imageOnLoad && "bg-slate-300 animate-pulse"
+                imageOnLoad && "bg-slate-300"
               }`}
               src={background}
               onLoad={onLoad}
@@ -74,12 +74,15 @@ function PortoCard({ animation = false, darkGreen = true, redirect = false }) {
         {image && (
           <>
             <div className="relative w-full h-auto">
+              <div className="absolute top-0 left-0 w-full h-full -z-10 bg-black/50"></div>
+
               <div className="absolute -top-[6%] left-[5%] z-[2]">
                 <DarkGreenStars />
               </div>
+
               <img
                 className={`relative h-fit w-full object-cover object-center ${
-                  imageOnLoad && "bg-slate-300 animate-pulse"
+                  imageOnLoad && "bg-slate-300"
                 }`}
                 src={image}
                 onLoad={onLoad}
@@ -113,7 +116,7 @@ function PortoCard({ animation = false, darkGreen = true, redirect = false }) {
           <div className="absolute top-0 left-0 w-full h-full -z-10 bg-black/50"></div>
           <img
             className={`absolute top-0 left-0 w-full h-full object-cover -z-20 ${
-              imageOnLoad && "bg-slate-300 animate-pulse"
+              imageOnLoad && "bg-slate-300"
             }`}
             src={background}
             onLoad={onLoad}
@@ -129,7 +132,7 @@ function PortoCard({ animation = false, darkGreen = true, redirect = false }) {
             </div>
             <img
               className={`relative h-fit w-full object-cover object-center ${
-                imageOnLoad && "bg-slate-300 animate-pulse"
+                imageOnLoad && "bg-slate-300"
               }`}
               src={image}
               onLoad={onLoad}
