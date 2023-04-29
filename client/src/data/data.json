@@ -2,7 +2,7 @@
   "homePage": {
     "hero": {
       "img": {
-        "src": "./tiny_image/drone.jpg",
+        "src": "./assets/images/tiny_image/drone.jpg",
         "alt": "Drone"
       },
       "heading": {
@@ -73,7 +73,7 @@
           "We also conduct training and support young people to expand their knowledge in the field of aviation"
         ],
         "image": {
-          "src": "./tiny_image/street-view.jpg",
+          "src": "./assets/images/tiny_image/street-view.jpg",
           "name": "street drone view"
         },
         "button": [
@@ -100,7 +100,7 @@
           "author": "Photo by unsplash.com",
           "image": {
             "name": "drone man",
-            "src": "./tiny_image/drone-man.jpg"
+            "src": "./assets/images/tiny_image/drone-man.jpg"
           }
         },
         "sectionBigText": {
@@ -156,7 +156,7 @@
       "title": "Start photography together",
       "desc": "We visited many interesting places and created a photo session with lanscapes and building.",
       "img": {
-        "src": "./photo.avif",
+        "src": "./assets/images/photo.avif",
         "alt": "photo"
       },
       "contact": [
