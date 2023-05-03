@@ -10,19 +10,18 @@ function Copyright({ socialMedia }) {
       <p className="text-[14px] xlX:text-3xl">
         Check our Social Media —
         {socialMedia.map((social, idx) => (
-          <>
+          <React.Fragment key={idx}>
             {" "}
             <a
               className="underline text-white"
               href={social.link}
               target="_blank"
               rel="noreferrer"
-              key={idx}
             >
               {social.name}
             </a>
             {idx !== socialMedia.length - 1 && <span className="mx-1">|</span>}
-          </>
+          </React.Fragment>
         ))}
       </p>
     </div>

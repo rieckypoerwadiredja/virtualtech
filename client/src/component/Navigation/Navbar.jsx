@@ -12,6 +12,7 @@ import BurgerButton from "../Button/BurgerButton";
 import { FaCircleNotch } from "react-icons/fa";
 // Hooks
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import { NavbarState } from "../../context/NavbarContext";
 
 function Navbar({ dark = false, fixed = false, animation = false }) {
   const { menuOpen, setMenuOpen } = useContext(MenuContext);
@@ -20,8 +21,7 @@ function Navbar({ dark = false, fixed = false, animation = false }) {
     threshold: 0.25,
     once: true,
   });
-  const { navBrand, navRight } =
-    useContext(HeaderContext).jsonData.navigationHero.navbar;
+  const { navBrand, navRight } = NavbarState();
 
   if (animation) {
     return (

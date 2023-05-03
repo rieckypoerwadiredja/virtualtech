@@ -16,7 +16,7 @@ function ImageWithAuthor({ img, title, author }) {
 }
 
 ImageWithAuthor.propTypes = {
-  img: PropTypes.string.isRequired,
+  img: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };

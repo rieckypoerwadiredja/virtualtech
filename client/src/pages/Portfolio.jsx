@@ -37,7 +37,7 @@ function Portfolio() {
         </main>
       </MainProvider>
 
-      <FooterProvider value={jsonData.homePage.footer}>
+      <FooterProvider value={jsonData.footer}>
         <Footer />
       </FooterProvider>
     </>

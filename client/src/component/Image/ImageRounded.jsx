@@ -34,7 +34,7 @@ function ImageRounded({ img, overlap = false }) {
             alt={img.name}
           />
           {imgLoading && (
-            <div class="absolute top-0 left-0 w-full h-full before:block before:content-center before:z-10 bg-blackScreen-800 before:opacity-50"></div>
+            <div className="absolute top-0 left-0 w-full h-full before:block before:content-center before:z-10 bg-blackScreen-800 before:opacity-50"></div>
           )}
         </motion.div>
       </AnimatePresence>
@@ -60,7 +60,7 @@ function ImageRounded({ img, overlap = false }) {
           alt={img.name}
         />
         {imgLoading && (
-          <div class="absolute top-0 left-0 w-full h-full before:block before:content-center before:z-10 bg-blackScreen-800 before:opacity-50"></div>
+          <div className="absolute top-0 left-0 w-full h-full before:block before:content-center before:z-10 bg-blackScreen-800 before:opacity-50"></div>
         )}
       </motion.div>
     </AnimatePresence>
@@ -68,7 +68,7 @@ function ImageRounded({ img, overlap = false }) {
 }
 
 ImageRounded.protTypes = {
-  img: PropTypes.objectOf(PropTypes.string).isRequired,
+  img: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   overlap: PropTypes.bool,
 };
 export default ImageRounded;

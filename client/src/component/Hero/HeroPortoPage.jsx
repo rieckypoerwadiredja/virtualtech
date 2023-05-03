@@ -5,6 +5,7 @@ import Menu from "../Navigation/Menu";
 import HeroSection from "./HeroSection";
 // Context
 import { MenuProvider } from "../../context/Menu";
+import NavbarPrivider from "../../context/NavbarContext";
 
 function HeroPortoPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +13,9 @@ function HeroPortoPage() {
   return (
     <header className="relative z-10 w-full h-auto mt-28 px-web-sm smXL:px-web-md xlX:px-web-lg pt-5 text-black flex flex-col justify-between items-start overflow-hidden">
       <MenuProvider value={{ menuOpen, setMenuOpen }}>
-        <Navbar dark fixed animation />
+        <NavbarPrivider>
+          <Navbar dark fixed animation />
+        </NavbarPrivider>
         {menuOpen && <Menu />}
       </MenuProvider>
       <HeroSection
@@ -20,7 +23,6 @@ function HeroPortoPage() {
         sectionButton={false}
         sectionContentType={false}
       />
-      {/* <div className="relative ml-[56%] smXL:ml-[59%] w-1/2 h-[50px] bg-white"></div> */}
     </header>
   );
 }

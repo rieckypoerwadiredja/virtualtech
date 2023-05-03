@@ -1,4 +1,39 @@
 {
+  "navigation": {
+    "navRight": "Drone photography services",
+    "navBrand": "VirtualTeach ©"
+  },
+  "navigationOpen": {
+    "menu": [
+      {
+        "id": 1,
+        "text": "About Us",
+        "redirectTo": "/aboutus"
+      },
+      {
+        "id": 2,
+        "text": "Our Portfolio",
+        "redirectTo": "/portfolio"
+      }
+    ],
+    "desc": "Discover our tabs and browse through interesting items in our portfolio.",
+    "mainButton": {
+      "text": "Privacy Policy",
+      "redirectTo": "/policy"
+    },
+    "circleButton": {
+      "text": "Contact Now",
+      "redirectTo": "/contact"
+    },
+    "titleDesc": {
+      "title": "Social Media",
+      "desc": "Check our post and follow our profiles"
+    },
+    "navbar": {
+      "navRight": "Drone photography services",
+      "navBrand": "VirtualTeach ©"
+    }
+  },
   "homePage": {
     "hero": {
       "img": {
@@ -21,37 +56,6 @@
       "titleDesc": {
         "title": "Photography Articles",
         "desc": "We created posts and tutorials"
-      },
-      "navigationHero": {
-        "menu": [
-          {
-            "id": 1,
-            "text": "About Us",
-            "redirectTo": "/aboutus"
-          },
-          {
-            "id": 2,
-            "text": "Our Portfolio",
-            "redirectTo": "/portfolio"
-          }
-        ],
-        "desc": "Discover our tabs and browse through interesting items in our portfolio.",
-        "mainButton": {
-          "text": "Privacy Policy",
-          "redirectTo": "/policy"
-        },
-        "circleButton": {
-          "text": "Contact Now",
-          "redirectTo": "/contact"
-        },
-        "titleDesc": {
-          "title": "Social Media",
-          "desc": "Check our post and follow our profiles"
-        },
-        "navbar": {
-          "navRight": "Drone photography services",
-          "navBrand": "VirtualTeach ©"
-        }
       }
     },
 
@@ -150,39 +154,6 @@
           }
         }
       ]
-    },
-
-    "footer": {
-      "title": "Start photography together",
-      "desc": "We visited many interesting places and created a photo session with lanscapes and building.",
-      "img": {
-        "src": "./assets/images/photo.avif",
-        "alt": "photo"
-      },
-      "contact": [
-        {
-          "name": "example@gmail.com",
-          "redirectTo": "example@gmail.com"
-        },
-        {
-          "name": "Go to road map",
-          "redirectTo": "/roadmap"
-        }
-      ],
-      "social": [
-        {
-          "name": "Linkedin",
-          "link": "https://www.linkedin.com/"
-        },
-        {
-          "name": "Instagram",
-          "link": "https://www.instagram.com/"
-        },
-        {
-          "name": "Facebook",
-          "link": "https://www.facebook.com/"
-        }
-      ]
     }
   },
   "portfolioPage": {
@@ -197,38 +168,6 @@
       "circleButton": {
         "text": "Start Discovery",
         "redirectTo": "#about-company"
-      },
-
-      "navigationHero": {
-        "menu": [
-          {
-            "id": 1,
-            "text": "About Us",
-            "redirectTo": "/aboutus"
-          },
-          {
-            "id": 2,
-            "text": "Our Portfolio",
-            "redirectTo": "/portfolio"
-          }
-        ],
-        "desc": "Discover our tabs and browse through interesting items in our portfolio.",
-        "mainButton": {
-          "text": "Privacy Policy",
-          "redirectTo": "/policy"
-        },
-        "circleButton": {
-          "text": "Contact Now",
-          "redirectTo": "/contact"
-        },
-        "titleDesc": {
-          "title": "Social Media",
-          "desc": "Check our post and follow our profiles"
-        },
-        "navbar": {
-          "navRight": "Drone photography services",
-          "navBrand": "VirtualTeach ©"
-        }
       }
     },
     "section": {
@@ -285,38 +224,39 @@
       "circleButton": {
         "text": "Start Discovery",
         "redirectTo": "#read-more"
-      },
-      "navigationHero": {
-        "menu": [
-          {
-            "id": 1,
-            "text": "About Us",
-            "redirectTo": "/aboutus"
-          },
-          {
-            "id": 2,
-            "text": "Our Portfolio",
-            "redirectTo": "/portfolio"
-          }
-        ],
-        "desc": "Discover our tabs and browse through interesting items in our portfolio.",
-        "mainButton": {
-          "text": "Privacy Policy",
-          "redirectTo": "/policy"
-        },
-        "circleButton": {
-          "text": "Contact Now",
-          "redirectTo": "/contact"
-        },
-        "titleDesc": {
-          "title": "Social Media",
-          "desc": "Check our post and follow our profiles"
-        },
-        "navbar": {
-          "navRight": "Drone photography services",
-          "navBrand": "VirtualTeach ©"
-        }
       }
     }
+  },
+  "footer": {
+    "title": "Start photography together",
+    "desc": "We visited many interesting places and created a photo session with lanscapes and building.",
+    "img": {
+      "src": "./assets/images/photo.avif",
+      "alt": "photo"
+    },
+    "contact": [
+      {
+        "name": "example@gmail.com",
+        "redirectTo": "example@gmail.com"
+      },
+      {
+        "name": "Go to road map",
+        "redirectTo": "/roadmap"
+      }
+    ],
+    "social": [
+      {
+        "name": "Linkedin",
+        "link": "https://www.linkedin.com/"
+      },
+      {
+        "name": "Instagram",
+        "link": "https://www.instagram.com/"
+      },
+      {
+        "name": "Facebook",
+        "link": "https://www.facebook.com/"
+      }
+    ]
   }
 }

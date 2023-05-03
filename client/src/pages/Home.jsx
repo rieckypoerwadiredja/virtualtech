@@ -15,16 +15,17 @@ import Footer from "../component/Footer/Footer";
 
 // Context
 import { MenuProvider } from "../context/Menu";
-import { PortoState } from "../context/PortoContext";
+import { PortosState } from "../context/PortosContext";
 import { HeaderProvider } from "../context/HeaderContext";
 import { MainProvider } from "../context/MainContext";
 import { FooterProvider } from "../context/FooterContext";
 
 // Data
 import jsonData from "../data/data.json";
+import NavbarPrivider from "../context/NavbarContext";
 
 function Home() {
-  const { data, error } = PortoState();
+  const { data, error } = PortosState();
 
   const [isLoading, setIsLoading] = useState(true);
   const [animationDone, setAnimationDone] = useState(false); // seluruh animasi telah selesai (termasuk slide pada hlm ini)
@@ -95,7 +96,9 @@ function Home() {
       <HeaderProvider value={{ jsonData: jsonData.homePage.hero }}>
         <MenuProvider value={{ menuOpen, setMenuOpen }}>
           <Hero />
-          <Navbar fixed dark />
+          <NavbarPrivider>
+            <Navbar fixed dark />
+          </NavbarPrivider>
           {menuOpen && <Menu />}
           {/* menu for navigation */}
         </MenuProvider>
@@ -116,7 +119,7 @@ function Home() {
           <Slider />
         </main>
       </MainProvider>
-      <FooterProvider value={jsonData.homePage.footer}>
+      <FooterProvider value={jsonData.footer}>
         <Footer />
       </FooterProvider>
     </>

@@ -11,10 +11,11 @@ import CircleButton from "../Button/CircleButton";
 import MiniTitleDesc from "../Desc/MiniTItleDesc";
 import List from "../Navigation/List";
 import HeaderContext from "../../context/HeaderContext";
+import { NavbarOpenState } from "../../context/NavbarOpen";
 
 function NavSection({ navigation = false }) {
   const { menu, heading, desc, mainButton, circleButton, titleDesc } =
-    useContext(HeaderContext).jsonData.navigationHero;
+    NavbarOpenState();
   return (
     <div className="w-full h-[60%] smXL:h-fit flex flex-col mdXL:flex-row mdXL:justify-between max-w-[1532px] mx-auto">
       <motion.div

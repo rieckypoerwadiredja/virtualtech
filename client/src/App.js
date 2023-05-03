@@ -8,7 +8,7 @@ import DetailPortofolio from "./pages/DetailPortofolio.jsx";
 import "./input.css";
 
 // Context
-import PortoContext from "./context/PortoContext.js";
+import PortosContext from "./context/PortosContext.js";
 
 if (process.env.NODE_ENV !== "development") {
   console.error = (message) => {
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV !== "development") {
 function App() {
   return (
     <div className="App max-w-[100%] overflow-hidden">
-      <PortoContext>
+      <PortosContext>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/portfolio">
@@ -27,7 +27,7 @@ function App() {
             <Route path=":creator/:title" element={<DetailPortofolio />} />
           </Route>
         </Routes>
-      </PortoContext>
+      </PortosContext>
       <Routes>
         <Route path="/aboutus" element={<Link to="/">about page</Link>} />
       </Routes>

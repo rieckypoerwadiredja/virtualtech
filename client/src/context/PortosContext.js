@@ -4,17 +4,17 @@ import useFetch from "../hooks/useFetch";
 
 const Porto = createContext();
 
-function PortoContext({ children }) {
+function PortosContext({ children }) {
   const { data, error, loading } = useFetch(
-    "https://webster-backend.vercel.app/api/portofolios"
+    "https://webster-backend.vercel.app/api/portfolios"
   );
   return (
     <Porto.Provider value={{ data, error, loading }}>{children}</Porto.Provider>
   );
 }
 
-export const PortoState = () => {
+export const PortosState = () => {
   return useContext(Porto);
 };
 
-export default PortoContext;
+export default PortosContext;

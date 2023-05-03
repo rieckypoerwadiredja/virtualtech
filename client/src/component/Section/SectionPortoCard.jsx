@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import PortoCard from "../Card/PortoCard";
 // Context
 import { PortoCardProvider } from "../../context/PortoCardContext";
-import { PortoState } from "../../context/PortoContext";
+import { PortosState } from "../../context/PortosContext";
 
 function SectionPortoCard() {
   const [porto, setPorto] = useState([]);
-  const { data, error, loading } = PortoState();
+  const { data, error, loading } = PortosState();
 
   useEffect(() => {
     if (data) {
