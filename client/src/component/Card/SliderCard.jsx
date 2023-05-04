@@ -22,6 +22,7 @@ function SliderCard({ index, animation = false, redirect = false }) {
     once: true,
   });
 
+  // ! Problem ketika navigasi halaman
   const navigate = useNavigate();
   const pushTo = (e) => {
     e.preventDefault();
@@ -68,6 +69,7 @@ function SliderCard({ index, animation = false, redirect = false }) {
   }
   return (
     <div
+      onClick={pushTo}
       className={`
       ${
         index === 0 && "text-black border-l-[2px] border-slate-100 rounded-none"

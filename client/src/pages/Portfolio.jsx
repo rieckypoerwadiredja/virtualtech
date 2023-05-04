@@ -23,7 +23,7 @@ function Portfolio() {
 
   return (
     <>
-      <HeaderProvider value={{ jsonData: jsonData.portfolioPage.hero }}>
+      <HeaderProvider value={jsonData.portfolioPage.hero}>
         <HeroPortoPage />
       </HeaderProvider>
 

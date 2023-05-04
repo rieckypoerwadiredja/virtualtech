@@ -94,7 +94,7 @@ function Home() {
         className="fixed top-0 left-0 z-20 bg-custome-green-400 w-full h-screen"
       ></motion.div>
 
-      <HeaderProvider value={{ jsonData: jsonData.homePage.hero }}>
+      <HeaderProvider value={jsonData.homePage.hero}>
         <MenuProvider value={{ menuOpen, setMenuOpen }}>
           <Hero />
           <NavbarPrivider>

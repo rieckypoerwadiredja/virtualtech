@@ -11,8 +11,8 @@ import SectionDetailPorto from "../component/Section/SectionDetailPorto";
 import Slider from "../component/Slider/Slider";
 // Data
 import jsonData from "../data/data.json";
-import useFetch from "../hooks/useFetch";
 import { MainProvider } from "../context/MainContext";
+import { PortosState } from "../context/PortosContext";
 
 function DetailPortofolio() {
   useEffect(() => {
@@ -20,28 +20,37 @@ function DetailPortofolio() {
   }, []);
 
   const { id, title, creator } = useParams();
-
-  const { data, error, loading } = useFetch(
-    `https://webster-backend.vercel.app/api/portfolios/${creator}/${id}/${title}`
-  );
+  const { data, error, loading } = PortosState();
 
   if (loading) {
     return <h1>Loading...</h1>;
   }
 
-  if (error) {
+  if (error || !data) {
     return <h1>error...</h1>;
   }
 
+  const findData = data.portfolio.filter((porto) => {
+    const searchId = porto.id === parseInt(id.replace("%", " "));
+
+    const searchCreator =
+      porto.creator.name.toLowerCase() ===
+      creator.replace("%", " ").toLowerCase();
+
+    const searchTitle =
+      porto.title.toLowerCase() === title.replace("%", " ").toLowerCase();
+    // console.log(searchId, searchCreator, searchTitle);
+    if (!searchId || !searchCreator || !searchTitle) return null;
+    return porto;
+  });
+
   return (
     <>
-      <HeaderProvider
-        value={{ jsonData: data.portfolio[0].portofolio.portoHeader }}
-      >
+      <HeaderProvider value={findData[0].portofolio.portoHeader}>
         <HeroPortoPage />
       </HeaderProvider>
 
-      <MainProvider value={data.portfolio[0]}>
+      <MainProvider value={findData[0]}>
         <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto flex flex-col gap-y-14">
           <SectionDetailPorto />
           <SliderProvider>

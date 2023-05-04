@@ -15,7 +15,7 @@ function HeroSection({
   sectionContentType = true,
 }) {
   const { heading, mainButton, circleButton, desc, titleDesc } =
-    useContext(HeaderContext).jsonData;
+    useContext(HeaderContext);
 
   const rightSection = useRef(null);
 

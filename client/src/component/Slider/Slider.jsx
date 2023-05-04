@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 
 // Component
 import SliderCardList from "../Card/SliderCardList";
 // Context
-import MainContext from "../../context/MainContext";
 import { SliderState } from "../../context/SliderContext";
 
 function Slider() {
