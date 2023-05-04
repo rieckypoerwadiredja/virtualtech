@@ -3,11 +3,12 @@ import { useParams } from "react-router-dom";
 // Context
 import { HeaderProvider } from "../context/HeaderContext";
 import { FooterProvider } from "../context/FooterContext";
-import { DetailPortoState } from "../context/DetailPortoContext";
+import SliderProvider from "../context/SliderContext";
 // Component
 import HeroPortoPage from "../component/Hero/HeroPortoPage";
 import Footer from "../component/Footer/Footer";
 import SectionDetailPorto from "../component/Section/SectionDetailPorto";
+import Slider from "../component/Slider/Slider";
 // Data
 import jsonData from "../data/data.json";
 import useFetch from "../hooks/useFetch";
@@ -43,6 +44,9 @@ function DetailPortofolio() {
       <MainProvider value={data.portfolio[0]}>
         <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto flex flex-col gap-y-14">
           <SectionDetailPorto />
+          <SliderProvider>
+            <Slider />
+          </SliderProvider>
         </main>
       </MainProvider>
 

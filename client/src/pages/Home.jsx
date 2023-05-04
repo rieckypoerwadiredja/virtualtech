@@ -19,6 +19,7 @@ import { PortosState } from "../context/PortosContext";
 import { HeaderProvider } from "../context/HeaderContext";
 import { MainProvider } from "../context/MainContext";
 import { FooterProvider } from "../context/FooterContext";
+import SliderProvider from "../context/SliderContext";
 
 // Data
 import jsonData from "../data/data.json";
@@ -116,7 +117,9 @@ function Home() {
             redirectTo="/portfolio"
             text="About Virtual Strategy"
           />
-          <Slider />
+          <SliderProvider>
+            <Slider />
+          </SliderProvider>
         </main>
       </MainProvider>
 

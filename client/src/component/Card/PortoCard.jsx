@@ -16,7 +16,7 @@ function PortoCard({
   darkGreen = true,
   redirect = false,
 }) {
-  const { background, bgPadding, image, creator, title } =
+  const { id, background, bgPadding, image, creator, title } =
     useContext(PortoCardContext);
   const [imageOnLoad, setImageOnLoad] = useState(true);
   const ref = useRef();
@@ -33,7 +33,7 @@ function PortoCard({
   const pushTo = (e) => {
     e.preventDefault();
     if (redirect && creator && title) {
-      navigate(`${creator.name}/${title}`);
+      navigate(`${creator.name}/${id}/${title}`);
     }
   };
 

@@ -77,7 +77,7 @@ nanti dibaca mengganti konten ke error atau data.
 Maka ada 2 seksi yang akan tampil error atau render datanya. Keduanya memilki mekanisme sama, yaitu slide pada Home Page.
 pada seksi keduanya memiliki :
 
-```bash
+```
 <motion.div
   initial={{ width: "100vw"}}
   animate={{

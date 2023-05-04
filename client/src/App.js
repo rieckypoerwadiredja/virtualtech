@@ -24,13 +24,13 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/portfolio">
             <Route index element={<Portfolio />} />
-            <Route path=":creator/:title" element={<DetailPortofolio />} />
+            <Route path=":creator/:id/:title" element={<DetailPortofolio />} />
           </Route>
+          <Route path="/aboutus" element={<Link to="/">about page</Link>} />
+          <Route path="/contact" element={<Link to="/">contact page</Link>} />
+          <Route path="*" element={<Link to="/">404 page</Link>} />
         </Routes>
       </PortosContext>
-      <Routes>
-        <Route path="/aboutus" element={<Link to="/">about page</Link>} />
-      </Routes>
     </div>
   );
 }

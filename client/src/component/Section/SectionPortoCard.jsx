@@ -24,12 +24,18 @@ function SectionPortoCard() {
       <div className="flex flex-col smXL:flex-row gap-5 pb-20">
         <div className="flex flex-col smXL:w-1/2 mt-[10%] gap-5">
           {[...Array(2)].map((porto, index) => (
-            <div className="w-full h-[400px] bg-slate-300 animate-pulse"></div>
+            <div
+              key={index}
+              className="w-full h-[400px] bg-slate-300 animate-pulse"
+            ></div>
           ))}
         </div>
         <div className="flex flex-col smXL:w-1/2 gap-5">
           {[...Array(2)].map((porto, index) => (
-            <div className="w-full h-[400px] bg-slate-300 animate-pulse"></div>
+            <div
+              key={index}
+              className="w-full h-[400px] bg-slate-300 animate-pulse"
+            ></div>
           ))}
         </div>
       </div>

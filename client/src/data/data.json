@@ -112,48 +112,7 @@
           "title": "Minutes spent controlling devices drone the air.",
           "desc": "So many people have already trusted us. This number is constantly growing thanks to the positive feedback from our customers."
         }
-      },
-      "slide": [
-        {
-          "id": 1,
-          "image": {
-            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
-            "alt": "Remote Drone"
-          },
-          "heading": "Experienced crew",
-          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
-          "link": {
-            "text": "About us",
-            "url": "/aboutus"
-          }
-        },
-        {
-          "id": 2,
-          "image": {
-            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
-            "alt": "Remote Drone"
-          },
-          "heading": "Experienced crew",
-          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
-          "link": {
-            "text": "About us",
-            "url": "/aboutus"
-          }
-        },
-        {
-          "id": 3,
-          "image": {
-            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
-            "alt": "Remote Drone"
-          },
-          "heading": "Experienced crew",
-          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
-          "link": {
-            "text": "About us",
-            "url": "/aboutus"
-          }
-        }
-      ]
+      }
     }
   },
   "portfolioPage": {
@@ -170,49 +129,7 @@
         "redirectTo": "#about-company"
       }
     },
-    "section": {
-      "slide": [
-        {
-          "id": 1,
-          "image": {
-            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
-            "alt": "Remote Drone"
-          },
-          "heading": "Experienced crew",
-          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
-          "link": {
-            "text": "About us",
-            "url": "/aboutus"
-          }
-        },
-        {
-          "id": 2,
-          "image": {
-            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
-            "alt": "Remote Drone"
-          },
-          "heading": "Experienced crew",
-          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
-          "link": {
-            "text": "About us",
-            "url": "/aboutus"
-          }
-        },
-        {
-          "id": 3,
-          "image": {
-            "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
-            "alt": "Remote Drone"
-          },
-          "heading": "Experienced crew",
-          "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
-          "link": {
-            "text": "About us",
-            "url": "/aboutus"
-          }
-        }
-      ]
-    }
+    "section": {}
   },
   "detailPortofolioPage": {
     "hero": {
@@ -227,6 +144,47 @@
       }
     }
   },
+  "slide": [
+    {
+      "id": 1,
+      "image": {
+        "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+        "alt": "Remote Drone"
+      },
+      "heading": "Experienced crew",
+      "desc": "Our specialists will take care of your order, check and talk to you if you have any questions when taking pictures of beautiful landscapes.",
+      "link": {
+        "text": "About us",
+        "url": "/aboutus"
+      }
+    },
+    {
+      "id": 2,
+      "image": {
+        "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+        "alt": "Remote Drone"
+      },
+      "heading": "New technology",
+      "desc": "We have equipment that is tailored to the expectations and necessary for flights during weather conditions. Our mission is to develop into modernity.",
+      "link": {
+        "text": "Check portfolio",
+        "url": "/portfolio"
+      }
+    },
+    {
+      "id": 3,
+      "image": {
+        "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+        "alt": "Remote Drone"
+      },
+      "heading": "Fast deadlines",
+      "desc": "We provide a contact form in which we answer questions related to beauty. We will answer in 24 hours. We accept orders and ensure short deadlines.",
+      "link": {
+        "text": "Contact now",
+        "url": "/contact"
+      }
+    }
+  ],
   "footer": {
     "title": "Start photography together",
     "desc": "We visited many interesting places and created a photo session with lanscapes and building.",

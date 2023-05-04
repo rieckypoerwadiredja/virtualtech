@@ -11,6 +11,7 @@ import HeroPortoPage from "../component/Hero/HeroPortoPage";
 import { HeaderProvider } from "../context/HeaderContext";
 import { FooterProvider } from "../context/FooterContext";
 import { MainProvider } from "../context/MainContext";
+import SliderProvider from "../context/SliderContext";
 
 // Data
 import jsonData from "../data/data.json";
@@ -34,7 +35,9 @@ function Portfolio() {
             redirectTo="/contact"
             text="About Virtual Strategy"
           />
-          <Slider />
+          <SliderProvider>
+            <Slider />
+          </SliderProvider>
         </main>
       </MainProvider>
 

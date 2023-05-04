@@ -11,7 +11,7 @@ function SliderCardList({ data }) {
       {data.map((slide, index) => {
         return (
           <SliderCardProvider key={slide.id} value={slide}>
-            <SliderCard index={index} animation />
+            <SliderCard index={index} animation redirect />
           </SliderCardProvider>
         );
       })}

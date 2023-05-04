@@ -1,6 +1,7 @@
 import React, { useContext, useRef } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 // Component
 import ImageCircle from "../Image/ImageCircle";
@@ -12,7 +13,7 @@ import ArrowLink from "../Navigation/ArrowLink";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import SliderCardContext from "../../context/SliderCardContext";
 
-function SliderCard({ index, animation = false }) {
+function SliderCard({ index, animation = false, redirect = false }) {
   const { image, heading, desc, link } = useContext(SliderCardContext);
 
   const ref = useRef(null);
@@ -21,9 +22,18 @@ function SliderCard({ index, animation = false }) {
     once: true,
   });
 
+  const navigate = useNavigate();
+  const pushTo = (e) => {
+    e.preventDefault();
+    if (redirect && link.url) {
+      navigate(`/${link.url}`);
+    }
+  };
+
   if (animation) {
     return (
       <motion.div
+        onClick={pushTo}
         ref={ref}
         initial={{ opacity: 0, translateY: "40px" }}
         animate={
