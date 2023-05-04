@@ -10,7 +10,12 @@ import { DarkGreenStars } from "../Profile/defaultProfile/GreenStars";
 // hooks
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
-function PortoCard({ animation = false, darkGreen = true, redirect = false }) {
+function PortoCard({
+  animation = false,
+  hover = true,
+  darkGreen = true,
+  redirect = false,
+}) {
   const { background, bgPadding, image, creator, title } =
     useContext(PortoCardContext);
   const [imageOnLoad, setImageOnLoad] = useState(true);
@@ -54,7 +59,7 @@ function PortoCard({ animation = false, darkGreen = true, redirect = false }) {
             : { opacity: 0, translateY: "40px" }
         }
         transition={{ duration: 0.5 }}
-        whileHover={{ scale: 0.95 }}
+        whileHover={hover && { scale: 0.95 }}
       >
         <PortoCardContent hover profile={!image} />{" "}
         {/* pada image true sudah ada image secara default !!lihat bawah!! */}
@@ -148,6 +153,7 @@ function PortoCard({ animation = false, darkGreen = true, redirect = false }) {
 PortoCard.propTypes = {
   animation: PropTypes.bool,
   redirect: PropTypes.bool,
+  hover: PropTypes.bool,
 };
 
 export default PortoCard;

@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 // COmponent
 import SectionTitleDesc from "../Section/SectionTitleDesc";
 import MainButton from "../Button/MainButton";
 // Context
-import { DetailPortoState } from "../../context/DetailPortoContext";
+import MainContext from "../../context/MainContext";
 function ArticleDesc() {
   const { title, desc, subTitle } =
-    DetailPortoState().data.portfolio[0].portofolio.portoDesc;
-
+    useContext(MainContext).portofolio.portoDesc;
   return (
     <>
       <div>

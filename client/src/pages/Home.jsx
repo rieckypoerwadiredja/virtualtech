@@ -119,6 +119,7 @@ function Home() {
           <Slider />
         </main>
       </MainProvider>
+
       <FooterProvider value={jsonData.footer}>
         <Footer />
       </FooterProvider>

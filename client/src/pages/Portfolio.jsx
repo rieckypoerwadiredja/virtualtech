@@ -19,6 +19,7 @@ function Portfolio() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <HeaderProvider value={{ jsonData: jsonData.portfolioPage.hero }}>

@@ -1,20 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 // Component
 import ImageWithAuthor from "../Image/ImageWithAuthor";
 import SectionArticle from "./SectionArticle";
 // Context
-import { DetailPortoState } from "../../context/DetailPortoContext";
+import MainContext from "../../context/MainContext";
 
 function SectionDetailPorto() {
-  const { data, loading, error } = DetailPortoState();
+  const { src, alt, name, source } = useContext(MainContext).portofolio.img;
 
-  if (error || !data) {
-    return <h1>YAHH ERROR SABARR YEEEE</h1>;
-  }
-  if (loading) {
-    return <h1>Loading</h1>;
-  }
-  const { src, alt, name, source } = data.portfolio[0].portofolio.img;
   return (
     <>
       <ImageWithAuthor

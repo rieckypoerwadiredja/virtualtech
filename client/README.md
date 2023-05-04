@@ -2,7 +2,7 @@
 
 ## Dokumantasi
 
-### Loading Screen with slide
+## Loading Screen with slide
 
 Loading screen with slide hanya dilakukan pada halaman home untuk mengurangi waktu tunggu berlebihan.
 
@@ -93,54 +93,42 @@ pada seksi keduanya memiliki :
 
 Pada fungsi ini akan slide (awalnya pada loading hanya menutupi dengan slide green), disini kita buat untuk membukanya. Dengan triger jika animasi pada loading telah selesai.
 
-### IntersectionObserver
+## useIntersectngObserve
 
-langkah - langkah:
+useIntersectngObserve adalah sebuah custom hooks yang mengamati suatu elemen HTML dan menentukan apakah elemen tersebut terlihat di dalam viewport / layar atau belum. Hook useIntersectionObserver menerima dua argumen, yaitu 'ref' dan 'options'.
 
-1. penggunaannya menggunakan
+- 'ref': digunakan untuk menentukan elemen yang akan diamati
+- 'options': digunakan untuk menentukan opsi pengamatan.
 
-```
-  const ref = useRef(null);
-   const isIntersecting = useIntersectionObserver(ref, {
-    threshold: 0.8,
-    once: true,
-  });
-```
+Dalam implementasinya, hook tersebut menggunakan state isIntersecting yang diinisialisasi dengan false. State isIntersecting digunakan untuk menyimpan data apakah element sudah bisa terlihat atau belum. (true = sudah terlihat).
 
 ```
-<div className={`${isIntersecting ? "bg-red-500" : ""}`} ref={ref}>
-</div>
-```
-
-Ref: akan mengembalikan nilai dari div (mengambil nilai DOM)
-variabel isIntersecting: Menjalankan hook untuk mendapatkan nilai boolean
-Jika true: Elemen berada pada screen user
-Jika falseL Element diluar screen user (masih dibawah atau atas screen usr hrs scroll lg)
-
-2. cara kerja pada hooks
-
-```
-const [isIntersecting, setIsIntersecting] = useState(false);
-```
-
-state untuk menyimpan nilai akhir (apakah emelen pada screen user atau tidak?)
-
-```
-    const observer = new IntersectionObserver(([entry]) => {
+   const observer = new IntersectionObserver(([entry]) => {
       setIsIntersecting(entry.isIntersecting);
       console.log("aa");
     }, option);
+```
 
-    if (ref.current) {
-      console.log("tes");
+- 'IntersectionObserver': API yang memungkinkan kita untuk mengamati apakah suatu elemen HTML terlihat dalam viewport
+- 'entry': Merupakan objek yang berisi informasi mengenai elemen yang diamati.
+- 'entry.isIntersecting': informasi elemen yang diamati, apakah elemen tersebut terlihat dalam viewport atau tidak??
+
+* 'option': Optional yang bisa digunakan untuk penggunaan 'IntersectionObserver' (root, rootMargin, threshold) [Learn More Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#creating_an_intersection_observer)
+
+* 'options.once': Option yang diberikan, jika nilai 'true' maka akan dijalankan 1x. Setelah element dilayar dan options.once = 'true' akan langsung disconect (elemen tidak diamati lagi)
+
+```
+  if (ref.current) {
       observer.observe(ref.current);
     }
+```
 
-    return () => {
-      observer.unobserve(ref.current);
+Untuk memastikan bahwa observe hanya dijalankan jika elemen ada
+
+```
+ return () => {
+      observer.disconnect();
     };
 ```
 
-pada fungsi observer: untuk mengecek apakah element berada pada screen user atau tidak
-if (ref.current) : untuk menjalankan fungsi observer (hanya dijalankan ketika nilai DOM dari ref valid)
-setelah itu element ditak dipantau lagi
+Untuk memastikan bahwa IntersectionObserver tidak lagi mengamati interseksi elemen

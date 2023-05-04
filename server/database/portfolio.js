@@ -14,6 +14,20 @@ const portfolios = [
       "https://plus.unsplash.com/premium_photo-1674635190997-1dcd4d61db13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=452&q=80",
     bgPadding: true,
     portofolio: {
+      portoHeader: {
+        img: null,
+        heading: {
+          highlighter: "Photos",
+          heading: "Most interesting",
+        },
+        desc: "Interesting places in your city to create design and elegant photography.",
+        mainButton: null,
+        circleButton: {
+          text: "Start Discovery",
+          redirectTo: "#about-company",
+        },
+        titleDesc: null,
+      },
       img: {
         src: "https://images.unsplash.com/photo-1528543413928-5447744645a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
         alt: "forest drone shot",
@@ -45,6 +59,20 @@ const portfolios = [
       "https://images.unsplash.com/photo-1553165558-424ffa9c4303?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     bgPadding: false,
     portofolio: {
+      portoHeader: {
+        img: null,
+        heading: {
+          highlighter: "software",
+          heading: "Best equipment",
+        },
+        desc: "Interesting places in your city to create design and elegant photography.",
+        mainButton: null,
+        circleButton: {
+          text: "Start Discovery",
+          redirectTo: "#about-company",
+        },
+        titleDesc: null,
+      },
       img: {
         src: "https://images.unsplash.com/photo-1553165558-424ffa9c4303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
         alt: "flying drone",
@@ -75,6 +103,20 @@ const portfolios = [
     background: null,
     bgPadding: false,
     portofolio: {
+      portoHeader: {
+        img: null,
+        heading: {
+          highlighter: "Photos",
+          heading: "Most interesting",
+        },
+        desc: "Interesting places in your city to create design and elegant photography.",
+        mainButton: null,
+        circleButton: {
+          text: "Start Discovery",
+          redirectTo: "#about-company",
+        },
+        titleDesc: null,
+      },
       img: {
         src: "https://images.unsplash.com/photo-1528543413928-5447744645a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
         alt: "forest drone shot",
@@ -106,6 +148,20 @@ const portfolios = [
       "https://images.unsplash.com/photo-1500472880779-eb5d1e15fe65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     bgPadding: false,
     portofolio: {
+      portoHeader: {
+        img: null,
+        heading: {
+          highlighter: "gallery",
+          heading: "Our portfolio",
+        },
+        desc: "Interesting places in your city to create design and elegant photography.",
+        mainButton: null,
+        circleButton: {
+          text: "Start Discovery",
+          redirectTo: "#about-company",
+        },
+        titleDesc: null,
+      },
       img: {
         src: "https://images.unsplash.com/photo-1528543413928-5447744645a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
         alt: "forest drone shot",
