@@ -9,11 +9,7 @@ import MiniTitleDesc from "../Desc/MiniTItleDesc";
 // Context
 import HeaderContext from "../../context/HeaderContext";
 
-function HeroSection({
-  withImage = false,
-  sectionButton = true,
-  sectionContentType = true,
-}) {
+function HeroSection({ withImage = false }) {
   const { heading, mainButton, circleButton, desc, titleDesc } =
     useContext(HeaderContext);
 
@@ -46,7 +42,7 @@ function HeroSection({
         >
           <Paragraph text={desc} />
         </div>
-        {sectionButton && (
+        {mainButton && (
           <MainButton
             text={mainButton.text}
             redirectTo={mainButton.redirectTo}
@@ -65,7 +61,7 @@ function HeroSection({
             redirectTo={circleButton.redirectTo}
           />
         </div>
-        {sectionContentType && (
+        {titleDesc && (
           <div className="w-full flex flex-col">
             <Paragraph text="02" bold />
             <span className="w-full h-[2px] bg-trans-white-400 my-2"></span>

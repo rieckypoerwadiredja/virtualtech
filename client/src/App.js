@@ -4,9 +4,9 @@ import { Routes, Route, Link } from "react-router-dom";
 import HomePage from "./pages/Home.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import DetailPortofolio from "./pages/DetailPortofolio.jsx";
+import Contact from "./pages/Contact.jsx";
 // style
 import "./input.css";
-
 // Context
 import PortosContext from "./context/PortosContext.js";
 
@@ -27,7 +27,7 @@ function App() {
             <Route path=":creator/:id/:title" element={<DetailPortofolio />} />
           </Route>
           <Route path="/aboutus" element={<Link to="/">about page</Link>} />
-          <Route path="/contact" element={<Link to="/">contact page</Link>} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Link to="/">404 page</Link>} />
         </Routes>
       </PortosContext>

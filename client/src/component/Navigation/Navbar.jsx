@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 // Context
 import MenuContext from "../../context/Menu";
-import HeaderContext from "../../context/HeaderContext";
 // Component
 import Paragraph from "../Desc/Paragraph";
 import BurgerButton from "../Button/BurgerButton";

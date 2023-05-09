@@ -13,7 +13,7 @@ function ProfileWithUser() {
     <div className="flex items-center">
       {src ? <ImageCircle src={src} alt={alt} /> : <GreenStars />}
       <div className="ml-[5%] max-w-[70%]">
-        <MiniTitleDesc title={name} desc={desc} />
+        <MiniTitleDesc title={name} desc={desc} dark={false} />
       </div>
     </div>
   );

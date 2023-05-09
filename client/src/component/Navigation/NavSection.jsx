@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
@@ -10,7 +10,6 @@ import MainButton from "../Button/MainButton";
 import CircleButton from "../Button/CircleButton";
 import MiniTitleDesc from "../Desc/MiniTItleDesc";
 import List from "../Navigation/List";
-import HeaderContext from "../../context/HeaderContext";
 import { NavbarOpenState } from "../../context/NavbarOpen";
 
 function NavSection({ navigation = false }) {

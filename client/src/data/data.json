@@ -144,6 +144,48 @@
       }
     }
   },
+  "contactPage": {
+    "hero": {
+      "img": {
+        "src": "./assets/images/tiny_image/forest.jpg",
+        "alt": "Forest"
+      },
+      "heading": {
+        "highlighter": "Contact",
+        "heading": "Send message"
+      },
+      "desc": "We will reply as soon as possible. Guarantee response within 24 hours!",
+      "mainButton": null,
+      "circleButton": {
+        "text": "Start Contact",
+        "redirectTo": "#contact-form"
+      },
+      "titleDesc": {
+        "title": "Send your inquiry",
+        "desc": "We created photography and videos."
+      }
+    },
+    "section": {
+      "imageDesc": {
+        "sectionImage": {
+          "title": "LANDSCAPE",
+          "author": "unsplash.com",
+          "img": {
+            "src": "https://images.unsplash.com/photo-1532302778427-ecc59820157d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80",
+            "alt": "Road beetwen Forest"
+          }
+        },
+        "sectionDesc": {
+          "title": "Commercial flights",
+          "subTitle": "Join cooperation",
+          "desc": [
+            "If you need interesting shots that you can use in your advertising campaigns and surprise your recipients, send us a message. We will reply to the message and present our price list and conditions for taking the shooting.",
+            "From time to time, we organize public trainings that you can sign up for. Such information can be obtained by browsing our website. Stay on top of the website and follow our social profiles."
+          ]
+        }
+      }
+    }
+  },
   "slide": [
     {
       "id": 1,

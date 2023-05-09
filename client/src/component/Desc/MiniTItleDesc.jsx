@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 // Component
 import Paragraph from "./Paragraph";
 
-function MiniTitleDesc({ title, desc, dark = false }) {
+function MiniTitleDesc({ title, desc, dark = true }) {
   return (
     <>
       <Paragraph text={title} bold />
