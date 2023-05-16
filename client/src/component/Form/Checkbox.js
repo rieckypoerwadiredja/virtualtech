@@ -1,20 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Input({
-  type,
+function Checkbox({
   name,
   title,
   placeholder,
   value,
   isRequired = false,
   getValue,
-  errorMessage,
 }) {
   return (
-    <div className="flex flex-col gap-y-2 my-5">
+    <div className="flex flex-row-reverse gap-x-4 my-5">
       <label
-        className="uppercase tracking-[3px] text-base font-semibold text-blackFont-800"
+        className="text-base font-medium text-blackFont-800"
         htmlFor={name}
       >
         {title} {"   "}
@@ -22,20 +20,18 @@ function Input({
       </label>
       <input
         onChange={(event) => getValue(event.target.value)}
-        className="py-5 px-6 border-[2px] border-custome-green-800 rounded-md placeholder:uppercase placeholder:text-custome-green-800 font-medium text-xl focus:bg-custome-green-800/20 transition"
-        type={type}
+        className="py-5 px-6 border-[2px] cursor-pointer border-custome-green-800 rounded-md placeholder:uppercase placeholder:text-custome-green-800 font-medium text-xl focus:bg-custome-green-800/20 transition"
+        type="checkbox"
         value={value}
         name={name}
         required={isRequired}
         placeholder={placeholder}
       />
-      {errorMessage && <p className="text-red-500">{errorMessage}</p>}
     </div>
   );
 }
 
-Input.propTypes = {
-  type: PropTypes.string.isRequired,
+Checkbox.propTypes = {
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -44,4 +40,4 @@ Input.propTypes = {
   value: PropTypes.string.isRequired,
 };
 
-export default Input;
+export default Checkbox;

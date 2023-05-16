@@ -6,7 +6,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 // component
 import Paragraph from "../Desc/Paragraph";
 
-function MainButton({ text, redirectTo, dark = true }) {
+function MainButton({ text, redirectTo, dark = true, onClick = false }) {
   return (
     <Link
       className={`w-full smXL:w-fit text-left py-5 px-6 flex justify-between items-center bg-transparent border-trans-white-400 border-[1px] rounded-full h-[70px] transition-all ease-out ${
@@ -14,7 +14,8 @@ function MainButton({ text, redirectTo, dark = true }) {
           ? "hover:bg-white hover:text-blackFont-800"
           : "hover:bg-blackFont-800 hover:text-white"
       } duration-500`}
-      to={redirectTo}
+      to={!onClick && redirectTo}
+      onClick={!redirectTo && onClick}
     >
       <Paragraph bold text={text} />
 

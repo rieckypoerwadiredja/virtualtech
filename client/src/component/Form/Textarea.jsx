@@ -8,6 +8,7 @@ function Textarea({
   isRequired = false,
   value,
   getValue,
+  errorMessage,
 }) {
   return (
     <div className="flex flex-col gap-y-2 my-5">
@@ -23,8 +24,10 @@ function Textarea({
         name={name}
         value={value}
         placeholder={placeholder}
+        required={isRequired}
         onChange={(event) => getValue(event.target.value)}
       />
+      {errorMessage && <p className="text-red-500">{errorMessage}</p>}
     </div>
   );
 }
