@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // Component
 import MainHero from "../component/Hero/MainHero";
 import Footer from "../component/Footer/Footer";
@@ -16,12 +16,15 @@ import Slider from "../component/Slider/Slider";
 import jsonData from "../data/data.json";
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <HeaderProvider value={jsonData.contactPage.hero}>
         <MainHero />
       </HeaderProvider>
-
       <MainProvider value={jsonData.contactPage.section}>
         <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto">
           <div className="py-16 flex flex-col gap-y-10 mdXL:flex-row">

@@ -10,7 +10,7 @@ function Checkbox({
   getValue,
 }) {
   return (
-    <div className="flex flex-row-reverse gap-x-4 my-5">
+    <div className="flex flex-row-reverse gap-x-4">
       <label
         className="text-base font-medium text-blackFont-800"
         htmlFor={name}
@@ -20,9 +20,9 @@ function Checkbox({
       </label>
       <input
         onChange={(event) => getValue(event.target.value)}
-        className="py-5 px-6 border-[2px] cursor-pointer border-custome-green-800 rounded-md placeholder:uppercase placeholder:text-custome-green-800 font-medium text-xl focus:bg-custome-green-800/20 transition"
+        className="px-6 border-[2px] cursor-pointer border-custome-green-800 rounded-md placeholder:uppercase placeholder:text-custome-green-800 font-medium text-xl focus:bg-custome-green-800/20 transition"
         type="checkbox"
-        value={value}
+        checked={value}
         name={name}
         required={isRequired}
         placeholder={placeholder}
@@ -38,6 +38,7 @@ Checkbox.propTypes = {
   isRequired: PropTypes.bool,
   getValue: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
+  errorMessage: PropTypes.string,
 };
 
 export default Checkbox;

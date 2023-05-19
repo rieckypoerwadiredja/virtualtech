@@ -46,12 +46,9 @@ function ContactForm() {
       errorMessage.message !== null ||
       errorMessage.policyAgreement !== null
     ) {
-      console.log("gagal pakkk");
+      console.error("fail send message");
       return;
     }
-    console.log(errorMessage);
-    console.log("berhasil pakkk");
-
     setIsLoading(true);
     try {
       const response = await fetch(scriptURL, {
@@ -61,6 +58,7 @@ function ContactForm() {
     } catch (error) {
       console.error("Error!", error.message);
     } finally {
+      console.log("success send message");
       setIsLoading(false);
       setFormData({
         name: "",
@@ -81,7 +79,7 @@ function ContactForm() {
     <>
       {isSuccessSubmit && <AlertBox success onClick={setIsSuccessSubmit} />}
       <form
-        className="flex flex-col"
+        className="flex flex-col gap-y-5"
         onSubmit={handleSubmit}
         name="contact-form"
       >
@@ -102,7 +100,7 @@ function ContactForm() {
         <Input
           title="email"
           name="email"
-          type="email"
+          type="text"
           placeholder="your email"
           value={formData.email}
           getValue={(value) => {
@@ -130,6 +128,7 @@ function ContactForm() {
           title="Click here to indicate that you have read and agree to the terms presented in the Privacy Policy agreement."
           name="policy_agreement"
           type="checkbox"
+          isRequired
           value={formData.policyAgreement}
           getValue={(value) => {
             setFormData((prevFormData) => ({

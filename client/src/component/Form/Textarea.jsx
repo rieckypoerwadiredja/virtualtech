@@ -11,7 +11,7 @@ function Textarea({
   errorMessage,
 }) {
   return (
-    <div className="flex flex-col gap-y-2 my-5">
+    <div className="flex flex-col gap-y-2">
       <label
         className="uppercase tracking-[3px] text-base font-semibold text-blackFont-800"
         htmlFor={name}
@@ -27,7 +27,9 @@ function Textarea({
         required={isRequired}
         onChange={(event) => getValue(event.target.value)}
       />
-      {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+      <p className={`text-red-500 ${!errorMessage && "py-[12px]"}`}>
+        {errorMessage}
+      </p>
     </div>
   );
 }
