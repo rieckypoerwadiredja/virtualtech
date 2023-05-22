@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Linked from "../Navigation/Linked";
 
 function Checkbox({
   name,
@@ -11,11 +12,10 @@ function Checkbox({
 }) {
   return (
     <div className="flex flex-row-reverse gap-x-4">
-      <label
-        className="text-base font-medium text-blackFont-800"
-        htmlFor={name}
-      >
-        {title} {"   "}
+      <label className="font-medium text-lg text-blackFont-800" htmlFor={name}>
+        Click here to indicate that you have read and agree to the terms
+        presented in the <Linked to="/privacy-policy" text="Privacy Policy" />{" "}
+        agreement. {"   "}
         {isRequired && <span className="text-custome-green-800">*</span>}
       </label>
       <input

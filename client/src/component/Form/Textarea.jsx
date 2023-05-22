@@ -24,7 +24,6 @@ function Textarea({
         name={name}
         value={value}
         placeholder={placeholder}
-        required={isRequired}
         onChange={(event) => getValue(event.target.value)}
       />
       <p className={`text-red-500 ${!errorMessage && "py-[12px]"}`}>

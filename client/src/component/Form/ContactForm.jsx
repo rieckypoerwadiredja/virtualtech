@@ -95,6 +95,7 @@ function ContactForm() {
               name: value,
             }));
           }}
+          isRequired
           errorMessage={isFormSubmitted && errorMessage.name}
         />
         <Input
@@ -109,6 +110,7 @@ function ContactForm() {
               email: value,
             }));
           }}
+          isRequired
           errorMessage={isFormSubmitted && errorMessage.email}
         />
         <Textarea
@@ -122,6 +124,7 @@ function ContactForm() {
               message: value,
             }));
           }}
+          isRequired
           errorMessage={isFormSubmitted && errorMessage.message}
         />
         <Checkbox

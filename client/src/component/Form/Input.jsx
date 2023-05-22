@@ -26,7 +26,6 @@ function Input({
         type={type}
         value={value}
         name={name}
-        required={isRequired}
         placeholder={placeholder}
       />
       <p className={`text-red-500 ${!errorMessage && "py-[12px]"}`}>
