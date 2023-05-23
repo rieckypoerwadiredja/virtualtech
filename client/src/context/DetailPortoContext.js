@@ -9,7 +9,7 @@ function DetailPortosContext({ children }) {
   const { id, title, creator } = useParams();
   console.log(id, title, creator);
   const { data, error, loading } = useFetch(
-    `http://localhost:5000/api/portfolios/${creator}/${id}/${title}`
+    `https://webster-backend.vercel.app/api/portfolios/${creator}/${id}/${title}`
   );
   return (
     <DetailPorto.Provider value={{ data, error, loading }}>
