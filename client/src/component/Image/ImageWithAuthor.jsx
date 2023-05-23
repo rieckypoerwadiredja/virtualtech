@@ -3,11 +3,17 @@ import PropTypes from "prop-types";
 // Component
 import ImageRounded from "./ImageRounded";
 import PhotoAuthor from "../Desc/PhotoAuthor";
+import SliderImage from "../Slider/SliderImage";
 
 function ImageWithAuthor({ img, title, author, reverse = false }) {
   return (
     <div className={`flex ${reverse ? "flex-col-reverse" : "flex-col"}`}>
-      <ImageRounded img={img} />
+      {img.src.length > 1 && Array.isArray(img.src) ? (
+        <SliderImage img={img} />
+      ) : (
+        <ImageRounded img={img} />
+      )}
+
       <div className={`${reverse ? "mb-5" : "mt-8"}`}>
         <PhotoAuthor title={title} author={author} />
       </div>
