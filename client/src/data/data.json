@@ -203,7 +203,7 @@
     {
       "id": 2,
       "image": {
-        "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+        "src": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
         "alt": "Remote Drone"
       },
       "heading": "New technology",
@@ -216,7 +216,7 @@
     {
       "id": 3,
       "image": {
-        "src": "https://images.unsplash.com/photo-1523346679608-dbbfe6c549d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NDd8fGRyb25lfGVufDB8fHx8MTY1MTMyMTExOQ&ixlib=rb-1.2.1&q=80&w=1080",
+        "src": "https://images.unsplash.com/photo-1518281361980-b26bfd556770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=405&q=80",
         "alt": "Remote Drone"
       },
       "heading": "Fast deadlines",
@@ -258,5 +258,37 @@
         "link": "https://www.facebook.com/"
       }
     ]
+  },
+  "privacyPolicy": {
+    "type": "Working with technology",
+    "title": "All valuable questions and answers for everyone starting their adventure with investment in technologies.",
+    "creator": {
+      "name": "Vinicius Moreno",
+      "desc": "Diagrams and analyzes",
+      "src": null,
+      "alt": "drone"
+    },
+    "portofolio": {
+      "img": {
+        "src": [
+          "https://images.unsplash.com/photo-1500472880779-eb5d1e15fe65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+        ],
+        "alt": "forest drone shot",
+        "name": "start drone",
+        "source": "unsplash.com"
+      },
+      "portoDesc": {
+        "bigText": {
+          "highlighter": "PhoPrivacy Policytos",
+          "heading": "Terms and"
+        },
+        "title": "Terms and condition",
+        "subTitle": "Privacy policy regulating the processing of personal data, the use of cookies and meeting the information criteria according to your country.",
+        "desc": [
+          "Insert your privacy policy tailored to your website. This is only a sample text and should be completed according to the criteria that apply in your country.",
+          "For the purposes of proper functioning, statistics and advertising, websites may use cookies. You can manage cookies from your browser for any website. More information on the conditions for storing or accessing cookies can be found in the privacy policy."
+        ]
+      }
+    }
   }
 }

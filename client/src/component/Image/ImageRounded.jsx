@@ -44,7 +44,7 @@ function ImageRounded({ img, overlap = false }) {
     <AnimatePresence>
       <motion.div
         ref={ref}
-        className="w-full h-[330px] mdXL:h-[620px] rounded-bl-[3rem] overflow-hidden"
+        className="w-full h-[330px] mdXL:h-[560px] xlX:h-[620px] rounded-bl-[3rem] overflow-hidden"
         initial={{ opacity: 0, translateY: "40px" }}
         animate={
           isIntersecting

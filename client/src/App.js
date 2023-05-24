@@ -5,6 +5,7 @@ import HomePage from "./pages/Home.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import DetailPortofolio from "./pages/DetailPortofolio.jsx";
 import Contact from "./pages/Contact.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 // style
 import "./input.css";
 // Context
@@ -28,6 +29,7 @@ function App() {
           </Route>
           <Route path="/aboutus" element={<Link to="/">about page</Link>} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<Link to="/">404 page</Link>} />
         </Routes>
       </PortosContext>

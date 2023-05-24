@@ -3,10 +3,21 @@ import PropTypes from "prop-types";
 // Component
 import TitleSectionWithTopSubTitle from "../Desc/TitleSectionWithTopSubTitle";
 import Paragraph from "../Desc/Paragraph";
+import PageTitle from "../Heading/PageTitle";
 
-function SectionTitleDesc({ title, subTitle, desc }) {
+function SectionTitleDesc({ title, subTitle, desc, bigTitle }) {
   return (
     <>
+      {bigTitle && (
+        <div className="flex flex-col gap-y-10 mb-10">
+          <PageTitle
+            withImage={false}
+            highlighter="Privacy Policy"
+            text="Terms and"
+          />
+        </div>
+      )}
+
       <TitleSectionWithTopSubTitle title={title} subTitle={subTitle} />
       <div className="mt-10">
         {desc.map((desc, idx) => (
@@ -20,6 +31,7 @@ function SectionTitleDesc({ title, subTitle, desc }) {
 }
 
 SectionTitleDesc.propTypes = {
+  bigTitle: PropTypes.isRequired,
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
   desc: PropTypes.array.isRequired,
