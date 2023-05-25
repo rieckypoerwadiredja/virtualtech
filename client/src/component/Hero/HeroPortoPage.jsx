@@ -11,19 +11,19 @@ function HeroPortoPage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="relative z-10 w-full h-auto mt-28 px-web-sm smXL:px-web-md xlX:px-web-lg pt-5 text-black flex flex-col justify-between items-start overflow-hidden">
-      <MenuProvider value={{ menuOpen, setMenuOpen }}>
-        <NavbarPrivider>
-          <Navbar dark fixed animation />
-        </NavbarPrivider>
-        {menuOpen && <Menu />}
-      </MenuProvider>
-      <HeroSection
-        withImage={false}
-        sectionButton={false}
-        sectionContentType={false}
-      />
-    </header>
+    <MenuProvider value={{ menuOpen, setMenuOpen }}>
+      <header className="relative w-full h-auto mt-28 px-web-sm smXL:px-web-md xlX:px-web-lg pt-5 text-black flex flex-col justify-between items-start overflow-hidden">
+        <HeroSection
+          withImage={false}
+          sectionButton={false}
+          sectionContentType={false}
+        />
+      </header>
+      {/* <NavbarPrivider>
+        <Navbar dark fixed animation />
+      </NavbarPrivider> */}
+      {menuOpen && <Menu />}
+    </MenuProvider>
   );
 }
 

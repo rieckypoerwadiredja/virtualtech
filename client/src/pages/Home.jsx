@@ -9,7 +9,7 @@ import SectionDescription from "../component/Section/SectionDescription";
 import IntermedietesSection from "../component/Intermediates/IntermedietesSection";
 import Slider from "../component/Slider/Slider";
 import Footer from "../component/Footer/Footer";
-import MainHero from "../component/Hero/MainHero";
+import HeroStructure from "../component/Hero/HeroStructure";
 
 // Context
 import { PortosState } from "../context/PortosContext";
@@ -20,6 +20,7 @@ import SliderProvider from "../context/SliderContext";
 
 // Data
 import jsonData from "../data/data.json";
+import MainHero from "../component/Hero/MainHero";
 
 function Home() {
   const { data, error } = PortosState();
@@ -82,7 +83,9 @@ function Home() {
       ></motion.div>
 
       <HeaderProvider value={jsonData.homePage.hero}>
-        <MainHero />
+        <HeroStructure>
+          <MainHero />
+        </HeroStructure>
       </HeaderProvider>
 
       <MainProvider value={jsonData.homePage.section}>

@@ -19,7 +19,7 @@
     "desc": "Discover our tabs and browse through interesting items in our portfolio.",
     "mainButton": {
       "text": "Privacy Policy",
-      "redirectTo": "/policy"
+      "redirectTo": "/privacy-policy"
     },
     "circleButton": {
       "text": "Contact Now",

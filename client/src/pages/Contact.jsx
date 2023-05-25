@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 // Component
-import MainHero from "../component/Hero/MainHero";
+import HeroStructure from "../component/Hero/HeroStructure";
 import Footer from "../component/Footer/Footer";
 // Context
 import { HeaderProvider } from "../context/HeaderContext";
@@ -14,6 +14,7 @@ import SectionForm from "../component/Section/SectionForm";
 import Slider from "../component/Slider/Slider";
 // Data
 import jsonData from "../data/data.json";
+import MainHero from "../component/Hero/MainHero";
 
 function Contact() {
   useEffect(() => {
@@ -23,7 +24,9 @@ function Contact() {
   return (
     <>
       <HeaderProvider value={jsonData.contactPage.hero}>
-        <MainHero />
+        <HeroStructure>
+          <MainHero />
+        </HeroStructure>
       </HeaderProvider>
       <MainProvider value={jsonData.contactPage.section}>
         <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto">

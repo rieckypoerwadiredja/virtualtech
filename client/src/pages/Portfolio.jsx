@@ -15,6 +15,7 @@ import SliderProvider from "../context/SliderContext";
 
 // Data
 import jsonData from "../data/data.json";
+import HeroStructure from "../component/Hero/HeroStructure";
 
 function Portfolio() {
   useEffect(() => {
@@ -24,7 +25,9 @@ function Portfolio() {
   return (
     <>
       <HeaderProvider value={jsonData.portfolioPage.hero}>
-        <HeroPortoPage />
+        <HeroStructure defaultNavigation={true}>
+          <HeroPortoPage />
+        </HeroStructure>
       </HeaderProvider>
 
       <MainProvider value={jsonData.portfolioPage.section}>

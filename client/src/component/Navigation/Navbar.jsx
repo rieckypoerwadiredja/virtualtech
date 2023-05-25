@@ -25,7 +25,7 @@ function Navbar({ dark = false, fixed = false, animation = false }) {
   if (animation) {
     return (
       <motion.nav
-        className={`w-full h-[75px] px-[20px] border-[1px] z-[9] ${
+        className={`w-full h-[75px] px-[20px] border-[1px] z-[1] ${
           dark ? "border-slate-300 shadow-md" : "border-trans-white-400"
         } ${
           fixed &&

@@ -10,6 +10,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import "./input.css";
 // Context
 import PortosContext from "./context/PortosContext.js";
+import AboutUs from "./pages/AboutUs.jsx";
 
 if (process.env.NODE_ENV !== "development") {
   console.error = (message) => {
@@ -27,7 +28,7 @@ function App() {
             <Route index element={<Portfolio />} />
             <Route path=":creator/:id/:title" element={<DetailPortofolio />} />
           </Route>
-          <Route path="/aboutus" element={<Link to="/">about page</Link>} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<Link to="/">404 page</Link>} />

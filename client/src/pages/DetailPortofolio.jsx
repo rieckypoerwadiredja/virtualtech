@@ -13,6 +13,7 @@ import Slider from "../component/Slider/Slider";
 import jsonData from "../data/data.json";
 import { MainProvider } from "../context/MainContext";
 import { PortosState } from "../context/PortosContext";
+import HeroStructure from "../component/Hero/HeroStructure";
 
 function DetailPortofolio() {
   useEffect(() => {
@@ -47,7 +48,9 @@ function DetailPortofolio() {
   return (
     <>
       <HeaderProvider value={findData[0].portofolio.portoHeader}>
-        <HeroPortoPage />
+        <HeroStructure defaultNavigation={true}>
+          <HeroPortoPage />
+        </HeroStructure>
       </HeaderProvider>
 
       <MainProvider value={findData[0]}>
