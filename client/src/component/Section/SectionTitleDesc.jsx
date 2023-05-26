@@ -12,8 +12,8 @@ function SectionTitleDesc({ title, subTitle, desc, bigTitle }) {
         <div className="flex flex-col gap-y-10 mb-10">
           <PageTitle
             withImage={false}
-            highlighter="Privacy Policy"
-            text="Terms and"
+            highlighter={bigTitle.highlighter}
+            text={bigTitle.heading}
           />
         </div>
       )}
@@ -31,7 +31,7 @@ function SectionTitleDesc({ title, subTitle, desc, bigTitle }) {
 }
 
 SectionTitleDesc.propTypes = {
-  bigTitle: PropTypes.isRequired,
+  bigTitle: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
   desc: PropTypes.array.isRequired,

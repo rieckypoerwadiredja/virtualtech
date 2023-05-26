@@ -19,7 +19,7 @@ function Checkbox({
         {isRequired && <span className="text-custome-green-800">*</span>}
       </label>
       <input
-        onChange={(event) => getValue(event.target.value)}
+        onChange={(event) => getValue(event.target.checked)}
         className="px-6 border-[2px] cursor-pointer border-custome-green-800 rounded-md placeholder:uppercase placeholder:text-custome-green-800 font-medium text-xl focus:bg-custome-green-800/20 transition"
         type="checkbox"
         checked={value}
@@ -33,11 +33,10 @@ function Checkbox({
 
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   isRequired: PropTypes.bool,
   getValue: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string,
 };
 

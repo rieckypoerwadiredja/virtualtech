@@ -278,8 +278,8 @@
         "source": "unsplash.com"
       },
       "portoDesc": {
-        "bigText": {
-          "highlighter": "PhoPrivacy Policytos",
+        "bigTitle": {
+          "highlighter": "Privacy Policy",
           "heading": "Terms and"
         },
         "title": "Terms and condition",

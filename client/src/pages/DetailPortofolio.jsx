@@ -12,8 +12,8 @@ import Slider from "../component/Slider/Slider";
 // Data
 import jsonData from "../data/data.json";
 import { MainProvider } from "../context/MainContext";
-import { PortosState } from "../context/PortosContext";
 import HeroStructure from "../component/Hero/HeroStructure";
+import usePortoDetail from "../hooks/usePortoDetail";
 
 function DetailPortofolio() {
   useEffect(() => {
@@ -21,39 +21,49 @@ function DetailPortofolio() {
   }, []);
 
   const { id, title, creator } = useParams();
-  const { data, error, loading } = PortosState();
+  // const { data, error, loading } = PortosState();
+
+  const searchId = parseInt(id.replace("%", " "));
+  const searchCreator = creator.replace("%", " ").toLowerCase();
+  const searchTitle = title.replace("%", " ").toLowerCase();
+  // console.log(searchId, searchCreator, searchTitle);
+
+  const { data, error, loading } = usePortoDetail(
+    searchCreator,
+    searchId,
+    searchTitle
+  );
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <div>Loading...</div>;
   }
 
-  if (error || !data) {
-    return <h1>error...</h1>;
+  if (error || data.error) {
+    return <div>Error fetching portfolio details: {data.message}</div>;
   }
+  // const findData = data.portfolio.filter((porto) => {
+  //   const searchId = porto.id === parseInt(id.replace("%", " "));
 
-  const findData = data.portfolio.filter((porto) => {
-    const searchId = porto.id === parseInt(id.replace("%", " "));
+  //   const searchCreator =
+  //     porto.creator.name.toLowerCase() ===
+  //     creator.replace("%", " ").toLowerCase();
 
-    const searchCreator =
-      porto.creator.name.toLowerCase() ===
-      creator.replace("%", " ").toLowerCase();
-
-    const searchTitle =
-      porto.title.toLowerCase() === title.replace("%", " ").toLowerCase();
-    // console.log(searchId, searchCreator, searchTitle);
-    if (!searchId || !searchCreator || !searchTitle) return null;
-    return porto;
-  });
+  //   const searchTitle =
+  //     porto.title.toLowerCase() === title.replace("%", " ").toLowerCase();
+  //   // console.log(searchId, searchCreator, searchTitle);
+  //   if (!searchId || !searchCreator || !searchTitle) return null;
+  //   return porto;
+  // });
 
   return (
     <>
-      <HeaderProvider value={findData[0].portofolio.portoHeader}>
+      <HeaderProvider value={data.portofolio.portoHeader}>
         <HeroStructure defaultNavigation={true}>
           <HeroPortoPage />
         </HeroStructure>
       </HeaderProvider>
 
-      <MainProvider value={findData[0]}>
+      <MainProvider value={data}>
         <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto flex flex-col gap-y-14">
           <SectionDetailPorto />
           <SliderProvider>
