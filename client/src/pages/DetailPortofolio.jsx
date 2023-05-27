@@ -21,7 +21,6 @@ function DetailPortofolio() {
   }, []);
 
   const { id, title, creator } = useParams();
-  // const { data, error, loading } = PortosState();
 
   const searchId = parseInt(id.replace("%", " "));
   const searchCreator = creator.replace("%", " ").toLowerCase();
@@ -41,19 +40,6 @@ function DetailPortofolio() {
   if (error || data.error) {
     return <div>Error fetching portfolio details: {data.message}</div>;
   }
-  // const findData = data.portfolio.filter((porto) => {
-  //   const searchId = porto.id === parseInt(id.replace("%", " "));
-
-  //   const searchCreator =
-  //     porto.creator.name.toLowerCase() ===
-  //     creator.replace("%", " ").toLowerCase();
-
-  //   const searchTitle =
-  //     porto.title.toLowerCase() === title.replace("%", " ").toLowerCase();
-  //   // console.log(searchId, searchCreator, searchTitle);
-  //   if (!searchId || !searchCreator || !searchTitle) return null;
-  //   return porto;
-  // });
 
   return (
     <>

@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Component
 import ImageCircle from "../Image/ImageCircle";
@@ -22,19 +22,11 @@ function SliderCard({ index, animation = false, redirect = false }) {
     once: true,
   });
 
-  // ! Problem ketika navigasi halaman
-  const navigate = useNavigate();
-  const pushTo = (e) => {
-    e.preventDefault();
-    if (redirect && link.url) {
-      navigate(`/${link.url}`);
-    }
-  };
-
   if (animation) {
     return (
       <motion.div
-        onClick={pushTo}
+        as={Link}
+        to={redirect && link.url}
         ref={ref}
         initial={{ opacity: 0, translateY: "40px" }}
         animate={
@@ -69,7 +61,8 @@ function SliderCard({ index, animation = false, redirect = false }) {
   }
   return (
     <div
-      onClick={pushTo}
+      as={Link}
+      to={redirect && link.url}
       className={`
       ${
         index === 0 && "text-black border-l-[2px] border-slate-100 rounded-none"
