@@ -5,6 +5,7 @@ import IntermedietesSection from "../component/Intermediates/IntermedietesSectio
 import Slider from "../component/Slider/Slider";
 import Footer from "../component/Footer/Footer";
 import SectionPortoCard from "../component/Section/SectionPortoCard";
+import Main from "../component/Structure/Main";
 
 // Context
 import HeroPortoPage from "../component/Hero/HeroPortoPage";
@@ -31,7 +32,7 @@ function Portfolio() {
       </HeaderProvider>
 
       <MainProvider value={jsonData.portfolioPage.section}>
-        <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto">
+        <Main>
           <SectionPortoCard />
           <IntermedietesSection
             btnText="Contact with agency"
@@ -41,7 +42,7 @@ function Portfolio() {
           <SliderProvider>
             <Slider />
           </SliderProvider>
-        </main>
+        </Main>
       </MainProvider>
 
       <FooterProvider value={jsonData.footer}>

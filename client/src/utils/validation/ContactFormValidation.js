@@ -8,7 +8,7 @@ function ContactFormValidation(values) {
     message: null,
     policyAgreement: null,
   };
-  console.log(values.email);
+  // console.log(values.email);
   if (!ValidateEmail(values.email)) error.email = "Email is not Valid";
   if (values.name === "") error.name = "Name is Required";
   if (values.email === "") error.email = "Email is Required";

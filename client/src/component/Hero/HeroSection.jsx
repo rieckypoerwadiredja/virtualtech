@@ -2,16 +2,14 @@ import React, { useContext, useLayoutEffect, useRef } from "react";
 
 // Component
 import Paragraph from "../Desc/Paragraph";
-import PageTitle from "../Heading/PageTitle";
-import MainButton from "../Button/MainButton";
 import CircleButton from "../Button/CircleButton";
 import MiniTitleDesc from "../Desc/MiniTItleDesc";
 // Context
 import HeaderContext from "../../context/HeaderContext";
+import HeroTitleDesc from "./HeroTitleDesc";
 
 function HeroSection({ withImage = false }) {
-  const { heading, mainButton, circleButton, desc, titleDesc } =
-    useContext(HeaderContext);
+  const { circleButton, titleDesc } = useContext(HeaderContext);
 
   const rightSection = useRef(null);
 
@@ -28,7 +26,7 @@ function HeroSection({ withImage = false }) {
 
   return (
     <div className="w-full h-[60%] smXL:h-fit flex flex-col mdXL:flex-row mdXL:justify-between max-w-[1532px] mx-auto">
-      <div className="w-full min-h-fit sm:w-[50%]">
+      {/* <div className="w-full min-h-fit sm:w-[50%]">
         <Paragraph text="01" bold />
         <PageTitle
           withImage={withImage}
@@ -48,6 +46,9 @@ function HeroSection({ withImage = false }) {
             redirectTo={mainButton.redirectTo}
           />
         )}
+      </div> */}
+      <div className="w-full min-h-fit sm:w-[50%]">
+        <HeroTitleDesc withImage={withImage} />
       </div>
 
       <div

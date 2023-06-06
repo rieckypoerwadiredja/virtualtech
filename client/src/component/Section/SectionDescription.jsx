@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import SectionTitleDesc from "./SectionTitleDesc";
 import SectionButton from "../Button/SectionButton";
 import ImageRounded from "../Image/ImageRounded";
+import RightSection from "./SplitSection/RightSection";
 
 // Context
 import MainContext from "../../context/MainContext";
@@ -10,7 +11,7 @@ import MainContext from "../../context/MainContext";
 function SectionDescription() {
   const { button, image, title, desc } = useContext(MainContext).description;
   return (
-    <div className="py-section-sm overflow-x-visible text-blackFont-800 mdXL:w-1/2 mdXL:mt-[70px] lg:mt-40 mdXL:ml-10 xlX:ml-16 flex flex-col justify-between">
+    <RightSection>
       <div>
         <SectionTitleDesc
           title={title.title}
@@ -24,9 +25,9 @@ function SectionDescription() {
       </div>
 
       <div className="relative overflow-x-visible w-[calc(100%+(1.75rem*2))] smXL:w-[calc(100%+((1.75rem+1.25rem)*2))] -ml-section-sm smXL:-ml-[calc(1.75rem+1.25rem)]">
-        <ImageRounded img={image} overlap />
+        <ImageRounded img={image} overlap animation />
       </div>
-    </div>
+    </RightSection>
   );
 }
 

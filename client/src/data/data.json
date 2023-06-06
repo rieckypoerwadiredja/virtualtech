@@ -186,6 +186,50 @@
       }
     }
   },
+  "aboutusPage": {
+    "hero": {
+      "img": {
+        "src": "https://images.unsplash.com/photo-1473773508845-188df298d2d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
+        "alt": "Drone"
+      },
+      "secondImg": {
+        "alt": "pohon",
+        "src": "https://images.unsplash.com/photo-1508778098176-23616634af4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1440&q=80"
+      },
+      "heading": {
+        "highlighter": "Mission",
+        "heading": "Begining with"
+      },
+      "secondHeading": "Photography <br/> Landscape",
+      "desc": "High resolution drone photos. Order photos from the drone at a convenient time.",
+      "mainButton": null,
+      "circleButton": {
+        "text": "Start Discovery",
+        "redirectTo": "#about-company"
+      },
+      "titleDesc": {
+        "title": "Creative content",
+        "desc": "Drone and photography services"
+      }
+    },
+    "section": {
+      "imageTitle": {
+        "sectionImage": {
+          "title": "Start Drone",
+          "author": "Photo by unsplash.com",
+          "image": {
+            "name": "drone man",
+            "src": "./assets/images/tiny_image/drone-man.jpg"
+          }
+        },
+        "sectionBigText": {
+          "bigText": "1400+",
+          "title": "Minutes spent controlling devices drone the air.",
+          "desc": "So many people have already trusted us. This number is constantly growing thanks to the positive feedback from our customers."
+        }
+      }
+    }
+  },
   "slide": [
     {
       "id": 1,

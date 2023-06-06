@@ -4,12 +4,13 @@ import React, { useContext } from "react";
 import SectionTitleDescWithBigText from "./SectionTitleDescWithBigText";
 import MainContext from "../../context/MainContext";
 import ImageWithAuthor from "../Image/ImageWithAuthor";
+import LeftSection from "./SplitSection/LeftSection";
 
 function SectionImageTitle() {
   const { sectionImage, sectionBigText } = useContext(MainContext).imageTitle;
 
   return (
-    <div className="flex flex-col py-section-sm w-full mdXL:w-1/2 mdXL:mr-10 xlX:mr-16">
+    <LeftSection>
       <ImageWithAuthor
         author={sectionImage.author}
         title={sectionImage.title}
@@ -20,7 +21,7 @@ function SectionImageTitle() {
         title={sectionBigText.title}
         desc={sectionBigText.desc}
       />
-    </div>
+    </LeftSection>
   );
 }
 

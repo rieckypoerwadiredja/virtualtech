@@ -43,7 +43,6 @@ function Navbar({ dark = false, fixed = false, animation = false }) {
           {navBrand}
         </Link>
 
-        {/* <Menu /> */}
         <div
           className="relative burger-menu h-full w-14 hover:bg-white/20 duration-300 mdXL:pl-0 flex flex-col justify-center items-center cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}

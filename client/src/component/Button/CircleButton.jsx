@@ -1,10 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-function CircleButton({ text, redirectTo, dark = false, withImage = false }) {
+function CircleButton({
+  text,
+  redirectTo,
+  dark = false,
+  withImage = false,
+  animation = false,
+}) {
+  const AnimatedComponent = motion(Link);
+  const animationVariant = {
+    initial: { scale: 0.8, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+  };
   return (
-    <Link
+    <AnimatedComponent
+      as={Link}
+      initial={animation ? "initial" : undefined}
+      animate={animation ? "animate" : undefined}
+      whileHover={{ scale: 1.05 }}
+      variants={animationVariant}
+      transition={0.3}
       data-testid="circle-btn"
       className={`relative w-[150px] h-[150px] xlX:w-[200px] xlX:h-[200px] rounded-[50%] aspect-square 
       ${
@@ -23,7 +41,7 @@ function CircleButton({ text, redirectTo, dark = false, withImage = false }) {
       <p className="font-semibold text-lg xlX::text-[22px] tracking-wide">
         {text}
       </p>
-    </Link>
+    </AnimatedComponent>
   );
 }
 
@@ -31,5 +49,6 @@ CircleButton.propTypes = {
   text: PropTypes.string.isRequired,
   redirectTo: PropTypes.string.isRequired,
   dark: PropTypes.bool,
+  animation: PropTypes.bool,
 };
 export default CircleButton;

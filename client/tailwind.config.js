@@ -165,6 +165,7 @@ module.exports = {
           800: "#2d9d6e",
           400: "#adbf64",
           300: "#adbf6433",
+          200: "#D3D9D3",
         },
         "trans-white": {
           800: "#ffffff80",

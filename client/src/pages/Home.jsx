@@ -10,6 +10,7 @@ import IntermedietesSection from "../component/Intermediates/IntermedietesSectio
 import Slider from "../component/Slider/Slider";
 import Footer from "../component/Footer/Footer";
 import HeroStructure from "../component/Hero/HeroStructure";
+import Main from "../component/Structure/Main";
 
 // Context
 import { PortosState } from "../context/PortosContext";
@@ -89,7 +90,7 @@ function Home() {
       </HeaderProvider>
 
       <MainProvider value={jsonData.homePage.section}>
-        <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto">
+        <Main>
           <SectionCompanyWords />
           <div className="flex flex-col mdXL:flex-row">
             <SectionImageTitle />
@@ -103,7 +104,7 @@ function Home() {
           <SliderProvider>
             <Slider />
           </SliderProvider>
-        </main>
+        </Main>
       </MainProvider>
 
       <FooterProvider value={jsonData.footer}>

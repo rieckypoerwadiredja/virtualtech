@@ -11,7 +11,7 @@ function ImageWithAuthor({ img, title, author, reverse = false }) {
       {img.src.length > 1 && Array.isArray(img.src) ? (
         <SliderImage img={img} />
       ) : (
-        <ImageRounded img={img} />
+        <ImageRounded img={img} animation />
       )}
 
       <div className={`${reverse ? "mb-5" : "mt-8"}`}>

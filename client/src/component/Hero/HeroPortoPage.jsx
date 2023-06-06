@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 // Component
-import Navbar from "../Navigation/Navbar";
 import Menu from "../Navigation/Menu";
 import HeroSection from "./HeroSection";
 // Context
 import { MenuProvider } from "../../context/Menu";
-import NavbarPrivider from "../../context/NavbarContext";
 
 function HeroPortoPage() {
   const [menuOpen, setMenuOpen] = useState(false);

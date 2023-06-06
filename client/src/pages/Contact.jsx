@@ -12,6 +12,7 @@ import SectionImageDesc from "../component/Section/SectionImageDesc";
 import IntermedietesSection from "../component/Intermediates/IntermedietesSection";
 import SectionForm from "../component/Section/SectionForm";
 import Slider from "../component/Slider/Slider";
+import Main from "../component/Structure/Main";
 // Data
 import jsonData from "../data/data.json";
 import MainHero from "../component/Hero/MainHero";
@@ -29,7 +30,7 @@ function Contact() {
         </HeroStructure>
       </HeaderProvider>
       <MainProvider value={jsonData.contactPage.section}>
-        <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto">
+        <Main>
           <div className="py-16 flex flex-col gap-y-10 mdXL:flex-row">
             <SectionImageDesc />
             <SectionForm />
@@ -42,7 +43,7 @@ function Contact() {
           <SliderProvider>
             <Slider />
           </SliderProvider>
-        </main>
+        </Main>
       </MainProvider>
 
       <FooterProvider value={jsonData.footer}>

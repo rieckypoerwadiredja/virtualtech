@@ -5,6 +5,8 @@ import SectionDetailPorto from "../component/Section/SectionDetailPorto";
 import Slider from "../component/Slider/Slider";
 import Navbar from "../component/Navigation/Navbar";
 import Menu from "../component/Navigation/Menu";
+import Main from "../component/Structure/Main";
+
 // Context
 import { FooterProvider } from "../context/FooterContext";
 import SliderProvider from "../context/SliderContext";
@@ -31,12 +33,12 @@ function PrivacyPolicy() {
       </MenuProvider>
 
       <MainProvider value={jsonData.privacyPolicy}>
-        <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mt-28  mx-auto flex flex-col gap-y-14">
+        <Main addClass="flex flex-col gap-y-14">
           <SectionDetailPorto />
           <SliderProvider>
             <Slider />
           </SliderProvider>
-        </main>
+        </Main>
       </MainProvider>
       <FooterProvider value={jsonData.footer}>
         <Footer />

@@ -9,11 +9,13 @@ import HeroPortoPage from "../component/Hero/HeroPortoPage";
 import Footer from "../component/Footer/Footer";
 import SectionDetailPorto from "../component/Section/SectionDetailPorto";
 import Slider from "../component/Slider/Slider";
+
 // Data
 import jsonData from "../data/data.json";
 import { MainProvider } from "../context/MainContext";
 import HeroStructure from "../component/Hero/HeroStructure";
 import usePortoDetail from "../hooks/usePortoDetail";
+import Main from "../component/Structure/Main";
 
 function DetailPortofolio() {
   useEffect(() => {
@@ -50,12 +52,12 @@ function DetailPortofolio() {
       </HeaderProvider>
 
       <MainProvider value={data}>
-        <main className="px-web-sm smXL:px-web-md xlX:px-web-lg max-w-[1532px] mx-auto flex flex-col gap-y-14">
+        <Main addClass="flex flex-col gap-y-14">
           <SectionDetailPorto />
           <SliderProvider>
             <Slider />
           </SliderProvider>
-        </main>
+        </Main>
       </MainProvider>
 
       <FooterProvider value={jsonData.footer}>
