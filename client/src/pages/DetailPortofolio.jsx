@@ -16,6 +16,8 @@ import { MainProvider } from "../context/MainContext";
 import HeroStructure from "../component/Hero/HeroStructure";
 import usePortoDetail from "../hooks/usePortoDetail";
 import Main from "../component/Structure/Main";
+// SEO
+import Head from "../component/Structure/Head";
 
 function DetailPortofolio() {
   useEffect(() => {
@@ -45,6 +47,12 @@ function DetailPortofolio() {
 
   return (
     <>
+      <Head
+        title={`${data.portofolio.portoDesc.title}`}
+        desc="Virtual© — creative agency that creating content design. We have knowledge and provide landscape photography services for our advanced clients."
+        keyword="Virtual Technology, Privacy, Policy, Agrement"
+        author={`${data.portofolio.img.name}`}
+      />
       <HeaderProvider value={data.portofolio.portoHeader}>
         <HeroStructure defaultNavigation={true}>
           <HeroPortoPage />

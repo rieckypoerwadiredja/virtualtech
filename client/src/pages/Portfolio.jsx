@@ -18,6 +18,9 @@ import SliderProvider from "../context/SliderContext";
 import jsonData from "../data/data.json";
 import HeroStructure from "../component/Hero/HeroStructure";
 
+// SEO
+import Head from "../component/Structure/Head";
+
 function Portfolio() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,6 +28,11 @@ function Portfolio() {
 
   return (
     <>
+      <Head
+        title="Virtual Technology - Portfolio"
+        desc="Virtual© — creative agency that creating content design. We have knowledge and provide landscape photography services for our advanced clients."
+        keyword="Virtual Technology, Portfolio"
+      />
       <HeaderProvider value={jsonData.portfolioPage.hero}>
         <HeroStructure defaultNavigation={true}>
           <HeroPortoPage />

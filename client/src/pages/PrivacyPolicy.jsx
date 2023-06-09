@@ -15,6 +15,7 @@ import { MenuProvider } from "../context/Menu";
 import NavbarPrivider from "../context/NavbarContext";
 // Data
 import jsonData from "../data/data.json";
+import Head from "../component/Structure/Head";
 
 function PrivacyPolicy() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,6 +26,12 @@ function PrivacyPolicy() {
 
   return (
     <>
+      <Head
+        title="Virtual Technology - Privacy Policy Agrement"
+        desc="Virtual© — creative agency that creating content design. We have knowledge and provide landscape photography services for our advanced clients."
+        keyword="Virtual Technology, Privacy, Policy, Agrement"
+      />
+
       <MenuProvider value={{ menuOpen, setMenuOpen }}>
         <NavbarPrivider>
           <Navbar dark fixed animation />

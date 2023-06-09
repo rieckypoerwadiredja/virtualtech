@@ -23,6 +23,9 @@ import SliderProvider from "../context/SliderContext";
 import jsonData from "../data/data.json";
 import MainHero from "../component/Hero/MainHero";
 
+// SEO
+import Head from "../component/Structure/Head";
+
 function Home() {
   const { data, error } = PortosState();
 
@@ -73,6 +76,11 @@ function Home() {
 
   return (
     <>
+      <Head
+        title="Virtual Technology"
+        desc="Virtual© — creative agency that creating content design. We have knowledge and provide landscape photography services for our advanced clients."
+        keyword="Virtual Technology, agency, design, photography"
+      />
       {/* slide warna hijau */}
       <motion.div
         initial={{ width: "100%" }}

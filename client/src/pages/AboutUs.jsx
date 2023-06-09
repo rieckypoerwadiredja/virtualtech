@@ -19,6 +19,8 @@ import { HeaderProvider } from "../context/HeaderContext";
 // Data
 import jsonData from "../data/data.json";
 import { MainProvider } from "../context/MainContext";
+// SEO
+import Head from "../component/Structure/Head";
 
 function AboutUs() {
   useEffect(() => {
@@ -27,6 +29,11 @@ function AboutUs() {
 
   return (
     <>
+      <Head
+        title="Virtual Technology - About Us"
+        desc="Virtual© — creative agency that creating content design. We have knowledge and provide landscape photography services for our advanced clients."
+        keyword="Virtual Technology, About, Company, aboutus, "
+      />
       <HeaderProvider value={jsonData.aboutusPage.hero}>
         <HeroStructure defaultNavigation={true}>
           <SplitHero />

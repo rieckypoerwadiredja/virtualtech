@@ -16,6 +16,8 @@ import Main from "../component/Structure/Main";
 // Data
 import jsonData from "../data/data.json";
 import MainHero from "../component/Hero/MainHero";
+// SEO
+import Head from "../component/Structure/Head";
 
 function Contact() {
   useEffect(() => {
@@ -24,6 +26,11 @@ function Contact() {
 
   return (
     <>
+      <Head
+        title="Virtual Technology - Contact"
+        desc="Virtual© — creative agency that creating content design. We have knowledge and provide landscape photography services for our advanced clients."
+        keyword="Virtual Technology, contact"
+      />
       <HeaderProvider value={jsonData.contactPage.hero}>
         <HeroStructure>
           <MainHero />
