@@ -24,7 +24,7 @@ function SectionCompanyWords() {
   return (
     <AnimatePresence>
       <motion.div
-        className="py-section-sm pt-14 min-h-fit mdXL:flex"
+        className="py-section-sm min-h-fit mdXL:flex"
         ref={ref}
         initial={{ opacity: 0, translateY: "40px" }}
         animate={

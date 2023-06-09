@@ -213,20 +213,43 @@
       }
     },
     "section": {
-      "imageTitle": {
-        "sectionImage": {
-          "title": "Start Drone",
-          "author": "Photo by unsplash.com",
-          "image": {
-            "name": "drone man",
-            "src": "./assets/images/tiny_image/drone-man.jpg"
-          }
-        },
-        "sectionBigText": {
-          "bigText": "1400+",
-          "title": "Minutes spent controlling devices drone the air.",
-          "desc": "So many people have already trusted us. This number is constantly growing thanks to the positive feedback from our customers."
+      "sectionImage": {
+        "title": "Start Drone",
+        "author": "Photo by unsplash.com",
+        "image": {
+          "name": "Forest",
+          "src": "https://images.unsplash.com/photo-1528543413928-5447744645a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
         }
+      },
+      "sectionTitleDesc": {
+        "title": "New technology",
+        "subTItle": "Working with technology",
+        "desc": [
+          "Thanks to the experience of our staff, we have learned to achieve professional quality. We have optical image stabilization, which is appreciated as one of the best available on the market.",
+          "During this time learned a lot of experience. Over 20 years of experience in the internet industry. Virtual Technology is a platform supporting technology fun providing software that makes it easier to work in your place."
+        ]
+      },
+      "sectionQuote": {
+        "quote": "Virtual © creating beatiful photography or video shots for advertising campaigns of famous brands. Interesting content and design for company.",
+        "title": "Thomas Minorski",
+        "desc": "Creative Direcor / CEO Virtual Technology"
+      },
+      "sectionCheckCards": {
+        "title": "Our Company <br/> numbers",
+        "checkCard": [
+          {
+            "id": 1,
+            "count": "300+",
+            "title": "Completed projects",
+            "desc": "Over the years, we have completed many projects for many places around the world."
+          },
+          {
+            "id": 2,
+            "count": "3500",
+            "title": "Great photography",
+            "desc": "We create landscape or buildings and video shots."
+          }
+        ]
       }
     }
   },

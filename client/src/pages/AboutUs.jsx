@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 // Component
 import HeroStructure from "../component/Hero/HeroStructure";
 import SplitHero from "../component/Hero/SplitHero";
-import ImageWithAuthor from "../component/Image/ImageWithAuthor";
-import SectionTitleDesc from "../component/Section/SectionTitleDesc";
 import LeftSection from "../component/Section/SplitSection/LeftSection";
 import Main from "../component/Structure/Main";
+import RightSection from "../component/Section/SplitSection/RightSection";
+import Footer from "../component/Footer/Footer";
+import Paragraph from "../component/Desc/Paragraph";
+import IntermedietesSection from "../component/Intermediates/IntermedietesSection";
+import SliderProvider from "../context/SliderContext";
+import Slider from "../component/Slider/Slider";
+import SectionQuoteWithMiniTitleDesc from "../component/Section/SectionQuoteWithMiniTitleDesc";
+import SectionImageAuthorWithTitleDesc from "../component/Section/SectionImageAuthorWithTitleDesc";
+import CheckCardList from "../component/Card/CheckCardList";
 // Context
+import { FooterProvider } from "../context/FooterContext";
 import { HeaderProvider } from "../context/HeaderContext";
 // Data
 import jsonData from "../data/data.json";
+import { MainProvider } from "../context/MainContext";
 
 function AboutUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <HeaderProvider value={jsonData.aboutusPage.hero}>
@@ -19,28 +32,33 @@ function AboutUs() {
           <SplitHero />
         </HeroStructure>
       </HeaderProvider>
-      <Main>
-        <LeftSection>
-          <div>
-            <SectionTitleDesc
-              title="New technology"
-              subTitle="Working with technology"
-              desc={[
-                "Thanks to the experience of our staff, we have learned to achieve professional quality. We have optical image stabilization, which is appreciated as one of the best available on the market.",
-                "During this time learned a lot of experience. Over 20 years of experience in the internet industry. Virtual Technology is a platform supporting technology fun providing software that makes it easier to work in your place.",
-              ]}
-            />
+
+      <MainProvider value={jsonData.aboutusPage.section}>
+        <Main>
+          <div className="flex flex-col mdXL:flex-row">
+            <LeftSection addClass="mdXL:flex-col-reverse">
+              <SectionImageAuthorWithTitleDesc />
+            </LeftSection>
+            <RightSection>
+              <Paragraph bold text="About mission" />
+              <SectionQuoteWithMiniTitleDesc />
+              <CheckCardList />
+            </RightSection>
           </div>
-          <ImageWithAuthor
-            author="unsplash.com"
-            title="START DRONE"
-            img={{
-              name: "drone man",
-              src: "./assets/images/tiny_image/drone-man.jpg",
-            }}
+          <IntermedietesSection
+            btnText="Awesome portfolio"
+            redirectTo="/portfolio"
+            text="About Virtual Strategy"
           />
-        </LeftSection>
-      </Main>
+          <SliderProvider>
+            <Slider />
+          </SliderProvider>
+        </Main>
+      </MainProvider>
+
+      <FooterProvider value={jsonData.footer}>
+        <Footer />
+      </FooterProvider>
     </>
   );
 }

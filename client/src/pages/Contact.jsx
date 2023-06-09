@@ -31,7 +31,7 @@ function Contact() {
       </HeaderProvider>
       <MainProvider value={jsonData.contactPage.section}>
         <Main>
-          <div className="py-16 flex flex-col gap-y-10 mdXL:flex-row">
+          <div className="pb-16 flex flex-col gap-y-10 mdXL:flex-row">
             <SectionImageDesc />
             <SectionForm />
           </div>

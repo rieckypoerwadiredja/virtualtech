@@ -11,7 +11,7 @@ import MainContext from "../../context/MainContext";
 function SectionDescription() {
   const { button, image, title, desc } = useContext(MainContext).description;
   return (
-    <RightSection>
+    <RightSection padTop>
       <div>
         <SectionTitleDesc
           title={title.title}
@@ -20,7 +20,7 @@ function SectionDescription() {
         />
       </div>
 
-      <div className="text-blackFont-800 mt-10 mb-8 lg:mb-16 w-full">
+      <div className="text-blackFont-800 w-full">
         <SectionButton texts={button} />
       </div>
 

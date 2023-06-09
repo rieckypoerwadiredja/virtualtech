@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 // Component
 import HeroTitleDesc from "./HeroTitleDesc";
 import SectionTitleHeadingTwo from "../Heading/SectionTitleHeadingTwo";

@@ -8,7 +8,7 @@ import Paragraph from "../Desc/Paragraph";
 
 function SectionTitleDescWithBigText({ bigText, title, desc }) {
   return (
-    <div className="py-section-sm pt-14">
+    <div className="py-section-sm">
       <BigText text={bigText} />
       <div className="mt-4 mb-12">
         <TitleSection text={title} />
