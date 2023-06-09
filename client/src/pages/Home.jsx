@@ -27,18 +27,18 @@ import MainHero from "../component/Hero/MainHero";
 import Head from "../component/Structure/Head";
 
 function Home() {
-  const { data, error } = PortosState();
+  const { data, error, loading } = PortosState();
 
   const [isLoading, setIsLoading] = useState(true);
   const [porto, setPorto] = useState(false); // apakah data sudah diload ?? -> ksh tau untuk jalankan fungsi animasi slide
 
   useEffect(() => {
     setTimeout(() => {
-      if (data) {
+      if (data && !loading) {
         setPorto(true);
       }
     }, 1600); // 1.6 dtk untuk total animasi (delay+duration) text "Loading" sblm slide hijau jika sdh ada data
-  }, [data]);
+  }, [data, loading]);
 
   function onLoadingAnimationDone(loadingStatus) {
     if (loadingStatus) {
