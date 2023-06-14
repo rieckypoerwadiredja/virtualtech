@@ -1,4 +1,4 @@
-# Webster Website
+# VirtualTech Website
 
 This project is a company website that aims to provide complete and engaging information for customers. By combining captivating animation and design, the website is designed to provide a fun and easy experience for users to access information about the company, products, and services offered.
 
