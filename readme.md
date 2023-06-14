@@ -27,13 +27,13 @@ Here are the installation steps for this project:
 1. Clone this repository
 
 ```
-    git clone https://github.com/rieckypoerwadiredja/webster
+    git clone https://github.com/rieckypoerwadiredja/virtualtech
 ```
 
 2. Open a terminal or command prompt, then switch to the project directory.
 
 ```
-    cd webster
+    cd virtualtech
 ```
 
 3. install all project dependencies.
@@ -45,27 +45,13 @@ Here are the installation steps for this project:
 4. Then
 
 ```
-    npm install-all
+    npm run install-all
 ```
 
 5.  Run web projects
 
 ```
     npm start
-```
-
-### Running Tests
-
-#### Client Test:
-
-```
-    npm test-client
-```
-
-#### Server Test:
-
-```
-    npm test-server
 ```
 
 ### License
