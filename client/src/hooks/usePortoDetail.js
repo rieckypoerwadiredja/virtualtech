@@ -1,7 +1,7 @@
 import useFetch from "./useFetch";
 
 const usePortoDetail = (creator, id, title) => {
-  const apiUrl = `http://localhost:5000/api/portfolios/${creator}/${id}/${title}`;
+  const apiUrl = `https://webster-backend.vercel.app/api/portfolios/${creator}/${id}/${title}`;
   const { data, error, loading } = useFetch(apiUrl);
   if (data) {
     const dataPorto =
