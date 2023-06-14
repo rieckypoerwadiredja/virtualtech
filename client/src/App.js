@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // Page
 import HomePage from "./pages/Home.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
@@ -11,6 +11,7 @@ import "./input.css";
 // Context
 import PortosContext from "./context/PortosContext.js";
 import AboutUs from "./pages/AboutUs.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
 
 if (process.env.NODE_ENV !== "development") {
   console.error = (message) => {
@@ -31,7 +32,16 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="*" element={<Link to="/">404 page</Link>} />
+          <Route
+            path="*"
+            element={
+              <ErrorPage
+                errorCode={404}
+                status="Not Found"
+                message="The requested resource was not found on the server."
+              />
+            }
+          />
         </Routes>
       </PortosContext>
     </div>

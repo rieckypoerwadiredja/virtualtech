@@ -4,6 +4,7 @@ import PortoCard from "../Card/PortoCard";
 // Context
 import { PortoCardProvider } from "../../context/PortoCardContext";
 import { PortosState } from "../../context/PortosContext";
+import ErrorPage from "../../pages/ErrorPage";
 
 function SectionPortoCard() {
   const [porto, setPorto] = useState([]);
@@ -14,10 +15,6 @@ function SectionPortoCard() {
       setPorto(data.portfolio);
     }
   }, [data]);
-
-  if (error) {
-    return <h1>Error yg sabarr yeeee</h1>;
-  }
 
   if (loading) {
     return (
@@ -41,6 +38,19 @@ function SectionPortoCard() {
       </div>
     );
   }
+
+  if (error || data.error) {
+    return (
+      <div className="App">
+        <ErrorPage
+          message={data.message || error.message}
+          errorCode={data.code || error.code}
+          status={data.status || error.status}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col smXL:flex-row gap-5 pb-20">
       <div className="flex flex-col smXL:w-1/2 mt-[10%] gap-5">

@@ -8,6 +8,8 @@ module.exports = {
       res.setHeader("Content-Type", "application/json");
       res.json({
         portfolio,
+        error: false,
+        code: 200,
       });
     } catch (err) {
       next(err);
@@ -34,9 +36,11 @@ module.exports = {
 
         if ((searchId, searchCreator, searchTitle)) return porto;
       });
-      if (portfolio.length < 1) return next();
+      if (portfolio.length < 1) return next(err);
       res.json({
         portfolio,
+        error: false,
+        code: 200,
       });
     } catch (err) {
       next(err);

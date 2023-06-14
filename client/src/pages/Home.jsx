@@ -25,6 +25,7 @@ import MainHero from "../component/Hero/MainHero";
 
 // SEO
 import Head from "../component/Structure/Head";
+import ErrorPage from "./ErrorPage";
 
 function Home() {
   const { data, error, loading } = PortosState();
@@ -68,8 +69,10 @@ function Home() {
           }}
           className="absolute top-0 left-0 z-10 bg-custome-green-400 w-full h-screen"
         ></motion.div>
-        ERROR BREEE YG SABARR YEEE
-        {data.message}
+        <ErrorPage
+          message={data.message || error.message}
+          errorCode={data.code || error.code}
+        />
       </div>
     );
   }
